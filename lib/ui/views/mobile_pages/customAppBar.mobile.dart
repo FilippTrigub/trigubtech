@@ -66,7 +66,7 @@ class CustomAppBarMobile extends StatelessWidget implements PreferredSizeWidget 
   Widget _buildButton(BuildContext context, String label, Widget page) {
     return Expanded(
       child: TextButton(
-        child: AutoSizeText(label, style: TextStyle(color: Colors.white, fontFamily: 'Headings', fontSize: 26), maxLines: 1,),
+        child: AutoSizeText(label, style: TextStyle(color: Colors.white, fontFamily: 'Headings', fontSize: bigBodySizeMobile), maxLines: 1,),
         onPressed: () {
           Navigator.push(
             context,

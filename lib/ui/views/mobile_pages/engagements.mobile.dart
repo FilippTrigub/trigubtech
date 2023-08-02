@@ -30,7 +30,7 @@ class AboutMePageMobile extends StatelessWidget {
               ),
               TextImageOverlay(
                 containerImagePath: 'images/eng1.jpg',
-                containerTextHeading: 'Strategic advisor to Vitsche e.V.',
+                containerTextHeading: 'Strategic Advisor, Vitsche',
                 containerTextSpanList: stringToTextSpans('''
 \nBorn in Dnipro, the city of Sputnik, I have been continuously engaged in volunteering with the Ukrainian diaspora of Berlin. I am particularly proud to have advised Vitsche, one of the most prolific and well-known Ukrainian organizations in Germany, on their organizational structure. I am forever grateful for the work these young activists are doing.
 \n
@@ -40,7 +40,7 @@ class AboutMePageMobile extends StatelessWidget {
               ),
               TextImageOverlay(
                 containerImagePath: 'images/eng2.jpg',
-                containerTextHeading: 'President & Event Coordinator, AEGEE',
+                containerTextHeading: 'President, AEGEE',
                 containerTextSpanList: stringToTextSpans('''
 \nWith just 20 years old I was thrown into management at the head of a small association in Berlin.
 \n

@@ -89,7 +89,7 @@ class HomePageMobile extends StatelessWidget {
                         _launchURL('https://www.linkedin.com/in/filipp-trigub/');
                       }),
                 ],
-                containerTextBodySize: 26,
+                containerTextBodySize: bigBodySizeMobile,
                 startColor: imageAndTextColor,
                 endColor: imageAndTextColor,
                 aspectRatio: 1.0,
