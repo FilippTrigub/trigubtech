@@ -35,25 +35,15 @@ class _TextImageOverlayState extends State<TextImageOverlay> {
           children: [
             // Full size image with opacity mask
             Positioned.fill(
-              child: ShaderMask(
-                shaderCallback: (rect) {
-                  return ui.Gradient.linear(
-                    widget.isImageOnRight ? rect.topRight : rect.topLeft,
-                    widget.isImageOnRight ? rect.topCenter : rect.topCenter,
-                    [Colors.black, Colors.transparent],
-                    [0.0, 1/2],
-                  );
-                },
-                blendMode: BlendMode.dstIn,
                 child: Image.asset(
                   widget.containerImagePath,
                   fit: BoxFit.cover,
                 ),
-              ),
             ),
             // Text overlay
             Center(
               child: Container(
+                color: darkColor,
                 width: constraints.maxWidth * imageAndTextFullWidthDesktop,
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
@@ -64,9 +54,10 @@ class _TextImageOverlayState extends State<TextImageOverlay> {
                       widget.containerTextHeading,
                       style: const TextStyle(
                           fontSize: bigBodySizeDesktop,
-                          color: Colors.white),
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
                       textAlign: TextAlign.left,
-                      maxLines: 1,
+                      maxLines: 2,
                     ),
                     const SizedBox(height: 20),
                     RichText(

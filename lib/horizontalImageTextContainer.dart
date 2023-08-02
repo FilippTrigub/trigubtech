@@ -76,7 +76,7 @@ class HorizontalImageTextContainer extends StatelessWidget {
             AutoSizeText(
               containerTextHeading,
               style: const TextStyle(
-                  fontSize: headingSizeDesktop, color: Colors.white),
+                  fontSize: headingSizeDesktop, color: Colors.white, fontWeight: FontWeight.bold),
               maxLines: 2,
             ),
             const SizedBox(height: 20),

@@ -20,8 +20,8 @@ const double imageAndTextFullWidthDesktop = 0.6;
 
 const double appBarheightMobile = 120;
 
-const double headingSizeMobile = 40;
-const double bigBodySizeMobile = 26;
+const double headingSizeMobile = 30;
+const double bigBodySizeMobile = 24;
 const double smallBodySizeMobile = 18;
 
 const double imageAndTextFullWidthMobile = 0.6;

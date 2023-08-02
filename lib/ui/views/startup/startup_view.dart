@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:stacked/stacked.dart';
+import 'package:trigubtech/ui/common/app_constants.dart';
 import 'package:trigubtech/ui/common/ui_helpers.dart';
 
 import 'startup_viewmodel.dart';
@@ -21,7 +22,7 @@ class StartupView extends StackedView<StartupViewModel> {
           children: [
             Text(
               'Welcome',
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900),
+              style: TextStyle(fontSize: headingSizeDesktop, fontWeight: FontWeight.w900),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
