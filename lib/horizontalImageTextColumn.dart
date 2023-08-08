@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:trigubtech/horizontalImageTextContainer.dart';
 import 'package:trigubtech/stringToTextSpans.dart';
+import 'package:trigubtech/ui/common/app_strings.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import 'ui/common/app_colors.dart';
 
@@ -21,21 +23,26 @@ class HorizontalImageTextColumn extends StatelessWidget {
     return ConstrainedBox(
       constraints: BoxConstraints(minWidth: horizontalImageTextMinWidth),
       child: SizedBox(
-        width:
-            screenSize.width * textContainerScreenRatio > horizontalImageTextMinWidth
-                ? screenSize.width * textContainerScreenRatio
-                : horizontalImageTextMinWidth,
+        width: screenSize.width * textContainerScreenRatio >
+                horizontalImageTextMinWidth
+            ? screenSize.width * textContainerScreenRatio
+            : horizontalImageTextMinWidth,
         child: Column(
           children: [
-            HorizontalImageTextContainer(
-              containerImagePath: 'images/salesbot.jpg',
-              containerTextHeading: 'Get you own sales bot',
-              containerTextSpanList: stringToTextSpans('''
+            InkWell(
+              onTap: () {
+                launchUrlString(aiSommelierlink);
+              },
+              child: HorizontalImageTextContainer(
+                containerImagePath: 'images/salesbot.jpg',
+                containerTextHeading: 'Get you own sales bot',
+                containerTextSpanList: stringToTextSpans('''
 You want your customers to buy your goods. That's why I am here. I build you a chatbot that understands their wishes and presents a recommendation. You get the data and a better way to understand your customers.
 '''),
-              containerTextBodySize: smallBodySize,
-              startColor: imageAndTextColor,
-              endColor: imageAndTextColor,
+                containerTextBodySize: smallBodySize,
+                startColor: imageAndTextColor,
+                endColor: imageAndTextColor,
+              ),
             ),
             HorizontalImageTextContainer(
               containerImagePath: 'images/pattern1.jpg',

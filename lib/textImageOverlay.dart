@@ -1,10 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui' as ui;
 
 import 'package:trigubtech/ui/common/app_colors.dart';
 import 'package:trigubtech/ui/common/app_constants.dart';
-import 'package:trigubtech/ui/common/app_strings.dart';
 
 class TextImageOverlay extends StatefulWidget {
   final String containerImagePath;

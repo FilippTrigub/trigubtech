@@ -37,7 +37,7 @@ class HomePageDesktop extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Image.asset(
-                'images/monitor_left_mod-min.jpg',
+                'images/image832_adjusted.png',
                 fit: BoxFit.cover,
               ),
               const BreakingLineContainer(
