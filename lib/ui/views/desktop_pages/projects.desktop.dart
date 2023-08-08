@@ -9,6 +9,7 @@ import 'package:trigubtech/textImageOverlay.dart';
 import 'package:trigubtech/ui/common/bottomSheet.dart';
 import 'package:trigubtech/ui/common/breakingLineContainer.dart';
 import 'package:trigubtech/ui/views/desktop_pages/customAppBar.desktop.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectsPageDesktop extends StatelessWidget {
   const ProjectsPageDesktop({Key? key}) : super(key: key);
@@ -98,10 +99,15 @@ class ProjectsPageDesktop extends StatelessWidget {
                 endColor: imageAndTextColor,
                 customWidget: Column(
                   children: [
-                    TextImageOverlay(
-                      containerImagePath: 'images/audio.jpg',
-                      containerTextHeading: 'Audio-Summarizer',
-                      containerTextSpanList: stringToTextSpans('''
+                    InkWell(
+                      onTap: () {
+                        launchUrlString(
+                            audioSummarizerLink);
+                      },
+                      child: TextImageOverlay(
+                        containerImagePath: 'images/audio.jpg',
+                        containerTextHeading: 'Audio-Summarizer',
+                        containerTextSpanList: stringToTextSpans('''
 \nDuration:	1 month (02-03.2023)
 \n
 \nGoal:
@@ -112,7 +118,31 @@ class ProjectsPageDesktop extends StatelessWidget {
 \n— Build a Flutter based UI allowing users to summarize their recordings and receive the summary by mail.
 \n— Dockerized and deployed to Vercel and Azure with Terraform and CI/CD.
 '''),
-                      containerTextBodySize: smallBodySizeDesktop,
+                        containerTextBodySize: smallBodySizeDesktop,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        launchUrlString(
+                            aiSommelierlink);
+                      },
+                      child: TextImageOverlay(
+                        containerImagePath: 'images/network1.jpg',
+                        containerTextHeading: 'AI Sommelier',
+                        containerTextSpanList: stringToTextSpans('''
+\nDuration: 1 month (06.2023)
+\n
+\nGoal:
+\n– Build a sales bot for a wine store with consistent identification and memorization of customer preferences to provide the customer with a sommelier-like experience.
+\n
+\nSolution:
+\n– Build an LLM agent with a recommendation tool based on a general haystack agent pattern design with a Streamlit UI.
+\n– Implemented a specified meta-prompt to correctly and consistently identify customer preferences and remember them.
+\n– Extracted these preferences programmatically to force usage of tool after a set number of preferences has been identified.
+\n– Dockized and deployed to Azure with Terraform.
+'''),
+                        containerTextBodySize: smallBodySizeDesktop,
+                      ),
                     ),
                   ],
                 ),
