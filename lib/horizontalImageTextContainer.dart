@@ -29,24 +29,34 @@ class HorizontalImageTextContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: <Color>[startColor, endColor],
+    var screenSize = MediaQuery.of(context).size;
+    return ConstrainedBox(
+      constraints: const BoxConstraints(minWidth: horizontalImageTextMinWidth),
+      child: SizedBox(
+        width: screenSize.width * textContainerScreenRatio >
+                horizontalImageTextMinWidth
+            ? screenSize.width * textContainerScreenRatio
+            : horizontalImageTextMinWidth,
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: <Color>[startColor, endColor],
+            ),
+          ),
+          child: Row(
+            children: isImageOnRight
+                ? <Widget>[
+                    _buildTextSection(),
+                    _buildImageSection(),
+                  ]
+                : <Widget>[
+                    _buildImageSection(),
+                    _buildTextSection(),
+                  ],
+          ),
         ),
-      ),
-      child: Row(
-        children: isImageOnRight
-            ? <Widget>[
-                _buildTextSection(),
-                _buildImageSection(),
-              ]
-            : <Widget>[
-                _buildImageSection(),
-                _buildTextSection(),
-              ],
       ),
     );
   }
@@ -76,7 +86,9 @@ class HorizontalImageTextContainer extends StatelessWidget {
             AutoSizeText(
               containerTextHeading,
               style: const TextStyle(
-                  fontSize: headingSizeDesktop, color: Colors.white, fontWeight: FontWeight.bold),
+                  fontSize: headingSizeDesktop,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
               maxLines: 2,
             ),
             const SizedBox(height: 20),

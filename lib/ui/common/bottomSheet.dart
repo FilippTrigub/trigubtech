@@ -14,14 +14,27 @@ class CustomBottomSheet extends StatelessWidget {
       child: const Center(
         child: Padding(
           padding: EdgeInsets.all(8.0),
-          child: AutoSizeText(
-            '$name \n$address \n$email',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 12,
-            ),
-            textAlign: TextAlign.center,
-            maxLines: 4,
+          child: Column(
+            children: [
+              AutoSizeText(
+                '$name \n$address',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                ),
+                textAlign: TextAlign.center,
+                maxLines: 4,
+              ),
+              AutoSizeText(
+                'Parts of the code, images and text of this website were, of course, AI-generated.',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 134, 134, 134),
+                  fontSize: 12,
+                ),
+                textAlign: TextAlign.center,
+                maxLines: 2,
+              ),
+            ],
           ),
         ),
       ),
