@@ -31,7 +31,7 @@ class HorizontalImageTextColumn extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-                launchUrlString(aiSommelierlink);
+                launchUrlString(aiSommelierLink);
               },
               child: HorizontalImageTextContainer(
                 containerImagePath: 'images/salesbot.jpg',

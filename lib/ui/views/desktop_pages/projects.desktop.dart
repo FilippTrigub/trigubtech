@@ -102,6 +102,29 @@ class ProjectsPageDesktop extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         launchUrlString(
+                            aiSommelierLink);
+                      },
+                      child: TextImageOverlay(
+                        containerImagePath: 'images/network1.jpg',
+                        containerTextHeading: 'AI Sommelier',
+                        containerTextSpanList: stringToTextSpans('''
+\nDuration: 1 month (06.2023)
+\n
+\nGoal:
+\n– Build a sales bot for a wine store with consistent identification and memorization of customer preferences to provide the customer with a sommelier-like experience.
+\n
+\nSolution:
+\n– Build an LLM agent with a recommendation tool based on a general haystack agent pattern design with a Streamlit UI.
+\n– Implemented a specified meta-prompt to correctly and consistently identify customer preferences and remember them.
+\n– Extracted these preferences programmatically to force usage of tool after a set number of preferences has been identified.
+\n– Dockized and deployed to Azure with Terraform.
+'''),
+                        containerTextBodySize: smallBodySizeDesktop,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        launchUrlString(
                             audioSummarizerLink);
                       },
                       child: TextImageOverlay(
@@ -124,22 +147,22 @@ class ProjectsPageDesktop extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         launchUrlString(
-                            aiSommelierlink);
+                            commGPTLink);
                       },
                       child: TextImageOverlay(
-                        containerImagePath: 'images/network1.jpg',
-                        containerTextHeading: 'AI Sommelier',
+                        containerImagePath: 'images/network2.jpg',
+                        containerTextHeading: 'Telegram Search&Chat',
                         containerTextSpanList: stringToTextSpans('''
-\nDuration: 1 month (06.2023)
+\nDuration:	1 month (03-04.2023)
 \n
 \nGoal:
-\n– Build a sales bot for a wine store with consistent identification and memorization of customer preferences to provide the customer with a sommelier-like experience.
+\n— Make Telegram searchable. Allow the automated exploration of a multitude of telegram channels via a GPT-bot fed by vectorized documents found by a search mechanism.
 \n
 \nSolution:
-\n– Build an LLM agent with a recommendation tool based on a general haystack agent pattern design with a Streamlit UI.
-\n– Implemented a specified meta-prompt to correctly and consistently identify customer preferences and remember them.
-\n– Extracted these preferences programmatically to force usage of tool after a set number of preferences has been identified.
-\n– Dockized and deployed to Azure with Terraform.
+\n— Retrieved chat contents from Telegram with Telethon and loaded these to a FAISS DB with OpenAI embeddings hosted in a FastAPI backend.
+\n— Implemented question-answer pipeline with Haystack, using Dense Passage Retrieval and OpenAI generation.
+\n— Provided a light-weight UI with user authentication to Telegram and subsequent chat window.
+\n— Deployed the bot to Azure with Docker.
 '''),
                         containerTextBodySize: smallBodySizeDesktop,
                       ),
