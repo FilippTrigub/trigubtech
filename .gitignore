@@ -45,5 +45,4 @@ app.*.map.json
 
 # Personal
 deployment_commands.txt
-/images/
-/fonts/
+images/*/
