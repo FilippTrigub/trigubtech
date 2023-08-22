@@ -13,6 +13,6 @@ const Color kcBackgroundColor = kcDarkGreyColor;
 
 const Color darkColor = Color.fromARGB(255, 1, 0, 12);
 const Color brightColor = Color.fromARGB(255, 59, 0, 0);
-const Color breakingLineColor = Color.fromARGB(255, 150, 60, 0);
+const Color breakingLineColor = brightColor;
 const Color attentionColor = Color.fromARGB(255, 230, 226, 0);
 const Color imageAndTextColor = Colors.transparent;
