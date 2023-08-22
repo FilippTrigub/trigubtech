@@ -75,7 +75,7 @@ class HomePageMobile extends StatelessWidget {
                   ),
                   TextSpan(
                       text: '\n\nLinkedIn',
-                      style: TextStyle(color: attentionColor),
+                      style: const TextStyle(color: attentionColor),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           _launchURL(
