@@ -82,6 +82,7 @@ flutter:
     - images/network2.jpg
     - images/arrows.jpg
     - images/mess.jpg
+    - images/Huberlin-logo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

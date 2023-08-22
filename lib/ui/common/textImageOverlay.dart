@@ -35,7 +35,7 @@ class _TextImageOverlayState extends State<TextImageOverlay> {
             Positioned.fill(
                 child: Image.asset(
                   widget.containerImagePath,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fitWidth,
                 ),
             ),
             // Text overlay

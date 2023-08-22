@@ -4,16 +4,17 @@ import '/ui/common/app_colors.dart';
 import '/ui/common/app_constants.dart';
 import '/ui/common/app_strings.dart';
 import '/ui/views/desktop_pages/contact.desktop.dart';
-import '/ui/views/desktop_pages/engagements.desktop.dart';
+import 'about.desktop.dart';
 import '/ui/views/desktop_pages/projects.desktop.dart';
 import '/ui/views/desktop_pages/services.desktop.dart';
 import '/ui/views/home/home.desktop.dart';
 
-class CustomAppBarDesktop extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppBarDesktop extends StatelessWidget
+    implements PreferredSizeWidget {
   final double height;
 
   const CustomAppBarDesktop({
-    super.key, 
+    super.key,
     this.height = appBarheightDesktop,
   });
 
@@ -27,6 +28,7 @@ class CustomAppBarDesktop extends StatelessWidget implements PreferredSizeWidget
       backgroundColor: darkColor,
       flexibleSpace: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           InkWell(
             onTap: () {
@@ -44,12 +46,19 @@ class CustomAppBarDesktop extends StatelessWidget implements PreferredSizeWidget
               children: [
                 Image.asset('images/icon.png', height: 30.0, fit: BoxFit.cover),
                 const SizedBox(width: 10),
-                const AutoSizeText(websiteTitle, style: TextStyle(fontSize: headingSizeDesktop, color: Colors.white), maxLines: 1,),
+                const AutoSizeText(
+                  websiteTitle,
+                  style: TextStyle(
+                      fontSize: headingSizeDesktop, color: Colors.white),
+                  maxLines: 1,
+                ),
               ],
             ),
           ),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               _buildButton(context, servicesPage, const ServicesPageDesktop()),
               _buildButton(context, projectsPage, const ProjectsPageDesktop()),
@@ -66,7 +75,12 @@ class CustomAppBarDesktop extends StatelessWidget implements PreferredSizeWidget
   Widget _buildButton(BuildContext context, String label, Widget page) {
     return Expanded(
       child: TextButton(
-        child: AutoSizeText(label, style: TextStyle(color: Colors.white, fontSize: bigBodySizeMobile), maxLines: 1,),
+        child: AutoSizeText(
+          label,
+          style:
+              const TextStyle(color: Colors.white, fontSize: bigBodySizeMobile),
+          maxLines: 1,
+        ),
         onPressed: () {
           Navigator.push(
             context,
