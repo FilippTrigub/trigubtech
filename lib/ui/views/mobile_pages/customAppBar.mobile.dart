@@ -5,15 +5,16 @@ import '/ui/common/app_constants.dart';
 import '/ui/common/app_strings.dart';
 import '/ui/views/home/home.mobile.dart';
 import '/ui/views/mobile_pages/contact.mobile.dart';
-import '/ui/views/mobile_pages/engagements.mobile.dart';
+import 'about.mobile.dart';
 import '/ui/views/mobile_pages/projects.mobile.dart';
 import '/ui/views/mobile_pages/services.mobile.dart';
 
-class CustomAppBarMobile extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppBarMobile extends StatelessWidget
+    implements PreferredSizeWidget {
   final double height;
 
   const CustomAppBarMobile({
-    super.key, 
+    super.key,
     this.height = appBarheightMobile,
   });
 
@@ -27,6 +28,7 @@ class CustomAppBarMobile extends StatelessWidget implements PreferredSizeWidget 
       backgroundColor: darkColor,
       flexibleSpace: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           InkWell(
             onTap: () {
@@ -44,12 +46,19 @@ class CustomAppBarMobile extends StatelessWidget implements PreferredSizeWidget 
               children: [
                 Image.asset('images/icon.png', height: 30.0, fit: BoxFit.cover),
                 const SizedBox(width: 10),
-                const AutoSizeText(websiteTitle, style: TextStyle(fontSize: headingSizeMobile, color: Colors.white), maxLines: 1,),
+                const AutoSizeText(
+                  websiteTitle,
+                  style: TextStyle(
+                      fontSize: headingSizeMobile, color: Colors.white),
+                  maxLines: 1,
+                ),
               ],
             ),
           ),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               _buildButton(context, servicesPage, const ServicesPageMobile()),
               _buildButton(context, projectsPage, const ProjectsPageMobile()),
@@ -66,7 +75,11 @@ class CustomAppBarMobile extends StatelessWidget implements PreferredSizeWidget 
   Widget _buildButton(BuildContext context, String label, Widget page) {
     return Expanded(
       child: TextButton(
-        child: AutoSizeText(label, style: TextStyle(color: Colors.white, fontSize: bigBodySizeMobile), maxLines: 1,),
+        child: AutoSizeText(
+          label,
+          style: TextStyle(color: Colors.white, fontSize: bigBodySizeMobile),
+          maxLines: 1,
+        ),
         onPressed: () {
           Navigator.push(
             context,
