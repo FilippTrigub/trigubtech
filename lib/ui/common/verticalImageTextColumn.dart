@@ -39,7 +39,7 @@ You want your customers to buy your goods. That's why I am here. I build you a c
             ),
             VerticalImageTextContainer(
               containerImagePath: 'images/pattern1.jpg',
-              containerTextHeading: 'Add the infrastrucutre',
+              containerTextHeading: 'Add the infrastructure',
               containerTextSpanList: stringToTextSpans('''
 Bots are cool, but they are not enough. You need databases and backend code and you want it to run seemlessly and be easily alterable. I'll write you clean code that you can use, extend and modify with little effort.
 '''),
