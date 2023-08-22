@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:trigubtech/horizontalImageTextContainer.dart';
-import 'package:trigubtech/stringToTextSpans.dart';
+import 'package:trigubtech/ui/common/app_colors.dart';
 import 'package:trigubtech/ui/common/app_strings.dart';
+import 'package:trigubtech/ui/common/horizontalImageTextContainer.dart';
+import 'package:trigubtech/ui/common/stringToTextSpans.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'ui/common/app_colors.dart';
 
 class HorizontalImageTextColumn extends StatelessWidget {
   final double smallBodySize;
   final double textContainerScreenRatio;
   final double horizontalImageTextMinWidth;
 
-  HorizontalImageTextColumn({
+  const HorizontalImageTextColumn({
     required this.smallBodySize,
     required this.textContainerScreenRatio,
     required this.horizontalImageTextMinWidth,

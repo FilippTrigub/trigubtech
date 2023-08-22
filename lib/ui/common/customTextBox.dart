@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 class CustomTextBox extends StatelessWidget {
   final double smallBodySize;
   final double textContainerScreenRatio;
   final double textContainerMinWidth;
 
-  CustomTextBox({
+  const CustomTextBox({
     required this.smallBodySize,
     required this.textContainerScreenRatio,
     required this.textContainerMinWidth,

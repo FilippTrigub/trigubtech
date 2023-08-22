@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:trigubtech/VerticalImageTextContainer.dart';
-import 'package:trigubtech/stringToTextSpans.dart';
-
-import 'ui/common/app_colors.dart';
+import 'package:trigubtech/ui/common/VerticalImageTextContainer.dart';
+import 'package:trigubtech/ui/common/app_colors.dart';
+import 'package:trigubtech/ui/common/stringToTextSpans.dart';
 
 class VerticalImageTextColumn extends StatelessWidget {
   final double smallBodySize;
   final double textContainerScreenRatio;
   final double verticalImageTextMinWidth;
 
-  VerticalImageTextColumn({
+  const VerticalImageTextColumn({
     required this.smallBodySize,
     required this.textContainerScreenRatio,
     required this.verticalImageTextMinWidth,

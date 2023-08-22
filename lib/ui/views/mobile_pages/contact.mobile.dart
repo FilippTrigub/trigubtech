@@ -1,16 +1,12 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:trigubtech/VerticalImageTextContainer.dart';
+import 'package:trigubtech/ui/common/VerticalImageTextContainer.dart';
 import 'package:trigubtech/ui/common/app_colors.dart';
 import 'package:trigubtech/ui/common/app_constants.dart';
 import 'package:trigubtech/ui/common/bottomSheet.dart';
 import 'package:trigubtech/ui/common/breakingLineContainer.dart';
-import 'package:trigubtech/ui/views/desktop_pages/customAppBar.desktop.dart';
 import 'package:trigubtech/ui/views/mobile_pages/customAppBar.mobile.dart';
-import 'package:trigubtech/verticalImageTextColumn.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
-import 'package:trigubtech/horizontalImageTextContainer.dart';
 
 class ContactPageMobile extends StatelessWidget {
   const ContactPageMobile({Key? key}) : super(key: key);
@@ -45,9 +41,6 @@ class ContactPageMobile extends StatelessWidget {
                       const BreakingLineContainer(
                         text: 'Let\'s get in touch!',
                         lineColor: breakingLineColor,
-                      ),
-                      const SizedBox(
-                        height: 20,
                       ),
                       VerticalImageTextContainer(
                         containerImagePath: 'images/coffee.jpg',
