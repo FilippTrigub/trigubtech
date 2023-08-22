@@ -30,7 +30,7 @@ class VerticalImageTextColumn extends StatelessWidget {
           children: [
             VerticalImageTextContainer(
               containerImagePath: 'images/salesbot.jpg',
-              containerTextHeading: 'Get you own sales bot',
+              containerTextHeading: 'Get your own sales bot',
               containerTextSpanList: stringToTextSpans('''
 You want your customers to buy your goods. That's why I am here. I build you a chatbot that understands their wishes and presents a recommendation. You get the data and a better way to understand your customers.
 '''),

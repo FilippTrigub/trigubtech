@@ -110,13 +110,13 @@ class ProjectsPageMobile extends StatelessWidget {
 \nDuration: 1 month (06.2023)
 \n
 \nGoal:
-\n– Build a sales bot for a wine store with consistent identification and memorization of customer preferences to provide the customer with a sommelier-like experience.
+\n— Build a sales bot for a wine store with consistent identification and memorization of customer preferences to provide the customer with a sommelier-like experience.
 \n
 \nSolution:
-\n– Build an LLM agent with a recommendation tool based on a general haystack agent pattern design with a Streamlit UI.
-\n– Implemented a specified meta-prompt to correctly and consistently identify customer preferences and remember them.
-\n– Extracted these preferences programmatically to force usage of tool after a set number of preferences has been identified.
-\n– Dockized and deployed to Azure with Terraform.
+\n— Build an LLM agent with a recommendation tool based on a general haystack agent pattern design with a Streamlit UI.
+\n— Implemented a specified meta-prompt to correctly and consistently identify customer preferences and remember them.
+\n— Extracted these preferences programmatically to force usage of tool after a set number of preferences has been identified.
+\n— Dockized and deployed to Azure with Terraform.
 '''),
                         containerTextBodySize: smallBodySizeDesktop,
                       ),

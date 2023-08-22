@@ -22,7 +22,7 @@ class BreakingLineContainer extends StatelessWidget {
       alignment: Alignment.center,
       child: AutoSizeText(
         text,
-        style: const TextStyle(fontFamily: 'Headings', fontSize: headingSizeDesktop, color: Colors.white),
+        style: const TextStyle(fontSize: headingSizeDesktop, color: Colors.white),
         textAlign: TextAlign.center,
         maxLines: 1,
       ),
