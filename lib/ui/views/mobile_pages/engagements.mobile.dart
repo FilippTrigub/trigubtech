@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:trigubtech/ui/common/app_colors.dart';
 import 'package:trigubtech/ui/common/app_constants.dart';
-import 'package:trigubtech/ui/common/app_strings.dart';
-import 'package:trigubtech/stringToTextSpans.dart';
-import 'package:trigubtech/textImageOverlay.dart';
+import 'package:trigubtech/ui/common/stringToTextSpans.dart';
+import 'package:trigubtech/ui/common/textImageOverlay.dart';
 import 'package:trigubtech/ui/common/bottomSheet.dart';
 import 'package:trigubtech/ui/common/breakingLineContainer.dart';
 import 'package:trigubtech/ui/views/mobile_pages/customAppBar.mobile.dart';

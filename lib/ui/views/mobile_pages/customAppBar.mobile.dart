@@ -54,7 +54,7 @@ class CustomAppBarMobile extends StatelessWidget implements PreferredSizeWidget 
               _buildButton(context, servicesPage, const ServicesPageMobile()),
               _buildButton(context, projectsPage, const ProjectsPageMobile()),
               _buildButton(context, aboutMePage, const AboutMePageMobile()),
-              _buildButton(context, contactsPage, const ContactPageMobile()),
+              _buildButton(context, contactPage, const ContactPageMobile()),
             ],
           ),
         ],

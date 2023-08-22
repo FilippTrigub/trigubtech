@@ -54,7 +54,7 @@ class CustomAppBarDesktop extends StatelessWidget implements PreferredSizeWidget
               _buildButton(context, servicesPage, const ServicesPageDesktop()),
               _buildButton(context, projectsPage, const ProjectsPageDesktop()),
               _buildButton(context, aboutMePage, const AboutMePageDesktop()),
-              _buildButton(context, contactsPage, const ContactPageDesktop()),
+              _buildButton(context, contactPage, const ContactPageDesktop()),
             ],
           ),
         ],
