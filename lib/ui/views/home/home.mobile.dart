@@ -1,14 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:trigubtech/ui/common/customTextContainer.dart';
-import 'package:trigubtech/ui/common/customTextBox.dart';
-import 'package:trigubtech/ui/common/app_colors.dart';
-import 'package:trigubtech/ui/common/app_constants.dart';
-import 'package:trigubtech/ui/common/VerticalImageTextContainer.dart';
-import 'package:trigubtech/ui/common/bottomSheet.dart';
-import 'package:trigubtech/ui/common/breakingLineContainer.dart';
-import 'package:trigubtech/ui/views/mobile_pages/customAppBar.mobile.dart';
-import 'package:trigubtech/ui/common/verticalImageTextColumn.dart';
+import '/ui/common/customTextContainer.dart';
+import '/ui/common/customTextBox.dart';
+import '/ui/common/app_colors.dart';
+import '/ui/common/app_constants.dart';
+import '/ui/common/VerticalImageTextContainer.dart';
+import '/ui/common/bottomSheet.dart';
+import '/ui/common/breakingLineContainer.dart';
+import '/ui/views/mobile_pages/customAppBar.mobile.dart';
+import '/ui/common/verticalImageTextColumn.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class HomePageMobile extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trigubtech/ui/common/app_colors.dart';
-import 'package:trigubtech/ui/common/ui_helpers.dart';
+import '/ui/common/app_colors.dart';
+import '/ui/common/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 

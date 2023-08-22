@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:trigubtech/ui/common/app_strings.dart';
+import '/ui/common/app_colors.dart';
+import '/ui/common/app_strings.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:logging/logging.dart';
@@ -8,7 +9,6 @@ import 'package:logging/logging.dart';
 import 'app/app.dialogs.dart';
 import 'app/app.locator.dart';
 import 'app/app.router.dart';
-import 'ui/common/app_colors.dart';
 
 void main() {
   Logger.root.level = Level.ALL; // defaults to Level.INFO

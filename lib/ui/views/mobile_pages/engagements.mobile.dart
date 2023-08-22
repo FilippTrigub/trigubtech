@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:trigubtech/ui/common/app_colors.dart';
-import 'package:trigubtech/ui/common/app_constants.dart';
-import 'package:trigubtech/ui/common/stringToTextSpans.dart';
-import 'package:trigubtech/ui/common/textImageOverlay.dart';
-import 'package:trigubtech/ui/common/bottomSheet.dart';
-import 'package:trigubtech/ui/common/breakingLineContainer.dart';
-import 'package:trigubtech/ui/views/mobile_pages/customAppBar.mobile.dart';
+import '/ui/common/app_colors.dart';
+import '/ui/common/app_constants.dart';
+import '/ui/common/stringToTextSpans.dart';
+import '/ui/common/textImageOverlay.dart';
+import '/ui/common/bottomSheet.dart';
+import '/ui/common/breakingLineContainer.dart';
+import '/ui/views/mobile_pages/customAppBar.mobile.dart';
 
 class AboutMePageMobile extends StatelessWidget {
   const AboutMePageMobile({Key? key}) : super(key: key);
