@@ -1,7 +1,7 @@
-import 'package:trigubtech/ui/dialogs/info_alert/info_alert_dialog.dart';
-import 'package:trigubtech/ui/views/home/home_view.dart';
-import 'package:trigubtech/ui/views/startup/startup_view.dart';
-import 'package:trigubtech/ui/views/unknown/unknown_view.dart';
+import '/ui/dialogs/info_alert/info_alert_dialog.dart';
+import '/ui/views/home/home_view.dart';
+import '/ui/views/startup/startup_view.dart';
+import '/ui/views/unknown/unknown_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 // @stacked-import

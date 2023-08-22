@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:trigubtech/ui/common/customTextContainer.dart';
-import 'package:trigubtech/ui/common/customTextBox.dart';
-import 'package:trigubtech/ui/common/horizontalImageTextColumn.dart';
-import 'package:trigubtech/ui/common/app_colors.dart';
-import 'package:trigubtech/ui/common/app_constants.dart';
-import 'package:trigubtech/ui/common/bottomSheet.dart';
-import 'package:trigubtech/ui/common/breakingLineContainer.dart';
-import 'package:trigubtech/ui/views/desktop_pages/customAppBar.desktop.dart';
+import '/ui/common/customTextContainer.dart';
+import '/ui/common/customTextBox.dart';
+import '/ui/common/horizontalImageTextColumn.dart';
+import '/ui/common/app_colors.dart';
+import '/ui/common/app_constants.dart';
+import '/ui/common/bottomSheet.dart';
+import '/ui/common/breakingLineContainer.dart';
+import '/ui/views/desktop_pages/customAppBar.desktop.dart';
 
 class ServicesPageDesktop extends StatelessWidget {
   const ServicesPageDesktop({Key? key}) : super(key: key);

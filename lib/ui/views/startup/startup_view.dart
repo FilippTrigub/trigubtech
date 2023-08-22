@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:stacked/stacked.dart';
-import 'package:trigubtech/ui/common/app_constants.dart';
-import 'package:trigubtech/ui/common/ui_helpers.dart';
+import '/ui/common/app_constants.dart';
+import '/ui/common/ui_helpers.dart';
 
 import 'startup_viewmodel.dart';
 

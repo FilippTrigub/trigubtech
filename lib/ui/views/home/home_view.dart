@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:stacked/stacked.dart';
-import 'package:trigubtech/ui/views/home/home.desktop.dart';
+import '/ui/views/home/home.desktop.dart';
 
 import 'home.mobile.dart';
 import 'home_viewmodel.dart';

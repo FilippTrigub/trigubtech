@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:trigubtech/ui/common/customTextContainer.dart';
-import 'package:trigubtech/ui/common/app_colors.dart';
-import 'package:trigubtech/ui/common/app_constants.dart';
-import 'package:trigubtech/ui/common/app_strings.dart';
-import 'package:trigubtech/ui/common/stringToTextSpans.dart';
-import 'package:trigubtech/ui/common/textImageOverlay.dart';
-import 'package:trigubtech/ui/common/bottomSheet.dart';
-import 'package:trigubtech/ui/common/breakingLineContainer.dart';
-import 'package:trigubtech/ui/views/desktop_pages/customAppBar.desktop.dart';
+import '/ui/common/customTextContainer.dart';
+import '/ui/common/app_colors.dart';
+import '/ui/common/app_constants.dart';
+import '/ui/common/app_strings.dart';
+import '/ui/common/stringToTextSpans.dart';
+import '/ui/common/textImageOverlay.dart';
+import '/ui/common/bottomSheet.dart';
+import '/ui/common/breakingLineContainer.dart';
+import '/ui/views/desktop_pages/customAppBar.desktop.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectsPageDesktop extends StatelessWidget {

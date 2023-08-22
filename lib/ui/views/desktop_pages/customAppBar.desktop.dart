@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:trigubtech/ui/common/app_colors.dart';
-import 'package:trigubtech/ui/common/app_constants.dart';
-import 'package:trigubtech/ui/common/app_strings.dart';
-import 'package:trigubtech/ui/views/desktop_pages/contact.desktop.dart';
-import 'package:trigubtech/ui/views/desktop_pages/engagements.desktop.dart';
-import 'package:trigubtech/ui/views/desktop_pages/projects.desktop.dart';
-import 'package:trigubtech/ui/views/desktop_pages/services.desktop.dart';
-import 'package:trigubtech/ui/views/home/home.desktop.dart';
+import '/ui/common/app_colors.dart';
+import '/ui/common/app_constants.dart';
+import '/ui/common/app_strings.dart';
+import '/ui/views/desktop_pages/contact.desktop.dart';
+import '/ui/views/desktop_pages/engagements.desktop.dart';
+import '/ui/views/desktop_pages/projects.desktop.dart';
+import '/ui/views/desktop_pages/services.desktop.dart';
+import '/ui/views/home/home.desktop.dart';
 
 class CustomAppBarDesktop extends StatelessWidget implements PreferredSizeWidget {
   final double height;

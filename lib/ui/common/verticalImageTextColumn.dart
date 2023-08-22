@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trigubtech/ui/common/VerticalImageTextContainer.dart';
-import 'package:trigubtech/ui/common/app_colors.dart';
-import 'package:trigubtech/ui/common/stringToTextSpans.dart';
+import '/ui/common/VerticalImageTextContainer.dart';
+import '/ui/common/app_colors.dart';
+import '/ui/common/stringToTextSpans.dart';
 
 class VerticalImageTextColumn extends StatelessWidget {
   final double smallBodySize;
