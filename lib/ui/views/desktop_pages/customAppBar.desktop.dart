@@ -44,7 +44,7 @@ class CustomAppBarDesktop extends StatelessWidget implements PreferredSizeWidget
               children: [
                 Image.asset('images/icon.png', height: 30.0, fit: BoxFit.cover),
                 const SizedBox(width: 10),
-                const AutoSizeText(websiteTitle, style: TextStyle(fontFamily: 'Headings', fontSize: headingSizeDesktop, color: Colors.white), maxLines: 1,),
+                const AutoSizeText(websiteTitle, style: TextStyle(fontSize: headingSizeDesktop, color: Colors.white), maxLines: 1,),
               ],
             ),
           ),
@@ -66,7 +66,7 @@ class CustomAppBarDesktop extends StatelessWidget implements PreferredSizeWidget
   Widget _buildButton(BuildContext context, String label, Widget page) {
     return Expanded(
       child: TextButton(
-        child: AutoSizeText(label, style: TextStyle(color: Colors.white, fontFamily: 'Headings', fontSize: bigBodySizeMobile), maxLines: 1,),
+        child: AutoSizeText(label, style: TextStyle(color: Colors.white, fontSize: bigBodySizeMobile), maxLines: 1,),
         onPressed: () {
           Navigator.push(
             context,
