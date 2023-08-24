@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trigubtech/ui/common/app_colors.dart';
 
 class CustomTextBox extends StatelessWidget {
   final double smallBodySize;
@@ -63,7 +64,7 @@ Dacades long engagements in my communities are the proof.
         textAlign: textAlign,
         style: TextStyle(
           fontSize: smallBodySize, 
-          color: Colors.white
+          color: kcText
         ),
       ),
     );

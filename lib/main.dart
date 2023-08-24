@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
                 primaryColor: kcBackgroundColor,
                 focusColor: kcPrimaryColor,
                 textTheme: Theme.of(context).textTheme.apply(
-                      bodyColor: Colors.black,
+                      bodyColor: kcBlack,
                     ),
               ),
               routerDelegate: stackedRouter.delegate(),

@@ -49,7 +49,7 @@ class CustomAppBarDesktop extends StatelessWidget
                 const AutoSizeText(
                   websiteTitle,
                   style: TextStyle(
-                      fontSize: headingSizeDesktop, color: Colors.white),
+                      fontSize: headingSizeDesktop, color: kcTextDark),
                   maxLines: 1,
                 ),
               ],
@@ -78,7 +78,7 @@ class CustomAppBarDesktop extends StatelessWidget
         child: AutoSizeText(
           label,
           style:
-              const TextStyle(color: Colors.white, fontSize: bigBodySizeMobile),
+              const TextStyle(color: kcTextDark, fontSize: bigBodySizeMobile),
           maxLines: 1,
         ),
         onPressed: () {

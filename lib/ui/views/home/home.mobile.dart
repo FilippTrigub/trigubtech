@@ -24,72 +24,61 @@ class HomePageMobile extends StatelessWidget {
     return Scaffold(
       appBar: const CustomAppBarMobile(),
       body: SingleChildScrollView(
-        child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
-          child: Column(
-            children: <Widget>[
-              Image.asset(
-                'images/image832_adjusted.png',
-                fit: BoxFit.cover,
+        child: Column(
+          children: <Widget>[
+            Image.asset(
+              'images/image832_adjusted.png',
+              fit: BoxFit.cover,
+            ),
+            const BreakingLineContainer(
+              text: 'I turn your ideas into bots!',
+              lineColor: breakingLineColor,
+            ),
+            const CustomTextContainer(
+              customWidget: CustomTextBox(
+                textContainerMinWidth: textContainerMinWidth,
+                textContainerScreenRatio: textContainerScreenRatio,
+                smallBodySize: smallBodySizeMobile,
               ),
-              const BreakingLineContainer(
-                text: 'I turn your ideas into bots!',
-                lineColor: breakingLineColor,
-              ),
-              const CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
-                customWidget: CustomTextBox(
-                  textContainerMinWidth: textContainerMinWidth,
+            ),
+            const BreakingLineContainer(
+              text: 'What I can do for you:',
+              lineColor: breakingLineColor,
+            ),
+            const CustomTextContainer(
+              customWidget: VerticalImageTextColumn(
+                  verticalImageTextMinWidth: verticalImageTextMinWidth,
                   textContainerScreenRatio: textContainerScreenRatio,
-                  smallBodySize: smallBodySizeMobile,
+                  smallBodySize: smallBodySizeMobile),
+            ),
+            const BreakingLineContainer(
+              text: 'Let\'s get in touch!',
+              lineColor: breakingLineColor,
+            ),
+            VerticalImageTextContainer(
+              containerImagePath: 'images/coffee.jpg',
+              containerTextHeading: 'LinkedIn is quickest, \nEmail works too',
+              containerTextSpanList: [
+                const TextSpan(
+                  text: '\nfilipp@trigub.tech',
+                  style: TextStyle(color: attentionColor),
                 ),
-              ),
-              const BreakingLineContainer(
-                text: 'What I can do for you:',
-                lineColor: breakingLineColor,
-              ),
-              const CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
-                customWidget: VerticalImageTextColumn(
-                    verticalImageTextMinWidth: verticalImageTextMinWidth,
-                    textContainerScreenRatio: textContainerScreenRatio,
-                    smallBodySize: smallBodySizeMobile),
-              ),
-              const BreakingLineContainer(
-                text: 'Let\'s get in touch!',
-                lineColor: breakingLineColor,
-              ),
-              VerticalImageTextContainer(
-                containerImagePath: 'images/coffee.jpg',
-                containerTextHeading: 'LinkedIn is quickest, \nEmail works too',
-                containerTextSpanList: [
-                  const TextSpan(
-                    text: '\nfilipp@trigub.tech',
-                    style: TextStyle(color: attentionColor),
-                  ),
-                  TextSpan(
-                      text: '\n\nLinkedIn',
-                      style: const TextStyle(color: attentionColor),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          _launchURL(
-                              'https://www.linkedin.com/in/filipp-trigub/');
-                        }),
-                ],
-                containerTextBodySize: bigBodySizeMobile,
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
-                aspectRatio: 1.0,
-              ),
-              const CustomBottomSheet(),
-            ],
-          ),
+                TextSpan(
+                    text: '\n\nLinkedIn',
+                    style: const TextStyle(color: attentionColor),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        _launchURL(
+                            'https://www.linkedin.com/in/filipp-trigub/');
+                      }),
+              ],
+              containerTextBodySize: bigBodySizeMobile,
+              aspectRatio: 1.0,
+              startColor: imageAndTextColor,
+              endColor: imageAndTextColor,
+            ),
+            const CustomBottomSheet(),
+          ],
         ),
       ),
     );

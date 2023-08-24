@@ -1,17 +1,16 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:trigubtech/ui/common/app_colors.dart';
 
 import '/ui/common/app_constants.dart';
 
 class HorizontalImageTextContainer extends StatelessWidget {
   final String containerImagePath;
   final String containerTextHeading;
-  final List<TextSpan> containerTextSpanList;
+  final List<InlineSpan> containerTextSpanList;
   final double containerTextBodySize;
   final double aspectRatio;
   final bool isImageOnRight;
-  final Color startColor;
-  final Color endColor;
 
   const HorizontalImageTextContainer({
     Key? key,
@@ -21,8 +20,6 @@ class HorizontalImageTextContainer extends StatelessWidget {
     required this.containerTextBodySize,
     this.aspectRatio = 2.0,
     this.isImageOnRight = false,
-    required this.startColor,
-    required this.endColor,
   }) : super(key: key);
 
   @override
@@ -35,25 +32,16 @@ class HorizontalImageTextContainer extends StatelessWidget {
                 horizontalImageTextMinWidth
             ? screenSize.width * textContainerScreenRatio
             : horizontalImageTextMinWidth,
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: <Color>[startColor, endColor],
-            ),
-          ),
-          child: Row(
-            children: isImageOnRight
-                ? <Widget>[
-                    _buildTextSection(),
-                    _buildImageSection(),
-                  ]
-                : <Widget>[
-                    _buildImageSection(),
-                    _buildTextSection(),
-                  ],
-          ),
+        child: Row(
+          children: isImageOnRight
+              ? <Widget>[
+                  _buildTextSection(),
+                  _buildImageSection(),
+                ]
+              : <Widget>[
+                  _buildImageSection(),
+                  _buildTextSection(),
+                ],
         ),
       ),
     );
@@ -81,23 +69,20 @@ class HorizontalImageTextContainer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: AutoSizeText(
+            AutoSizeText(
                 containerTextHeading,
                 style: const TextStyle(
                     fontSize: headingSizeDesktop,
-                    color: Colors.white,
+                    color: kcText,
                     fontWeight: FontWeight.bold),
                 maxLines: 2,
-              ),
             ),
             const SizedBox(height: 20),
             RichText(
               text: TextSpan(
                 children: containerTextSpanList,
                 style: TextStyle(
-                    fontSize: containerTextBodySize, color: Colors.white),
+                    fontSize: containerTextBodySize, color: kcText),
               ),
             ),
           ],

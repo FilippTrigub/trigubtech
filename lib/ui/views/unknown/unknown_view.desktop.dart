@@ -19,7 +19,7 @@ class UnknownViewDesktop extends ViewModelWidget<UnknownViewModel> {
             Text(
               '404',
               style: TextStyle(
-                color: Colors.white,
+                color: kcText,
                 fontSize: 80,
                 fontWeight: FontWeight.w800,
                 height: 0.95,
@@ -30,7 +30,7 @@ class UnknownViewDesktop extends ViewModelWidget<UnknownViewModel> {
             Text(
               'PAGE NOT FOUND',
               style: TextStyle(
-                color: Colors.white,
+                color: kcText,
                 fontSize: 20,
                 letterSpacing: 20.0,
                 wordSpacing: 10.0,

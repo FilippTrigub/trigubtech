@@ -16,7 +16,7 @@ const double headingSizeDesktop = 40;
 const double bigBodySizeDesktop = 26;
 const double smallBodySizeDesktop = 18;
 
-const double imageAndTextFullWidthDesktop = 0.6;
+const double imageAndTextFullWidthDesktop = 0.5;
 
 const double appBarheightMobile = 120;
 
