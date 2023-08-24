@@ -11,24 +11,24 @@ class CustomBottomSheet extends StatelessWidget {
     return Container(
       color: darkColor,
       height: 100.0,
-      child: const Center(
+      child: Center(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               AutoSizeText(
                 '$name \n$address',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Theme.of(context).textTheme.bodyMedium?.color,
                   fontSize: 12,
                 ),
                 textAlign: TextAlign.center,
                 maxLines: 4,
               ),
-              AutoSizeText(
+              const AutoSizeText(
                 'Parts of the code, images and text of this website were, of course, AI-generated.',
                 style: TextStyle(
-                  color: Color.fromARGB(255, 134, 134, 134),
+                  color: kcLightGrey,
                   fontSize: 12,
                 ),
                 textAlign: TextAlign.center,

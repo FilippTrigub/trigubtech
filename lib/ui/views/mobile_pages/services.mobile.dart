@@ -17,18 +17,18 @@ class ServicesPageMobile extends StatelessWidget {
       appBar: const CustomAppBarMobile(),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
-          child: const Column(
+                  colors: <Color>[Theme.of(context).colorScheme.primary, Theme.of(context).colorScheme.secondary])),
+          child: Column(
             children: <Widget>[
               BreakingLineContainer(
                 text: 'I turn your ideas into bots!',
-                lineColor: breakingLineColor,
+                lineColor: Theme.of(context).colorScheme.secondary,
               ),
-              CustomTextContainer(
+              const CustomTextContainer(
                 startColor: imageAndTextColor,
                 endColor: imageAndTextColor,
                 customWidget: CustomTextBox(
@@ -39,9 +39,9 @@ class ServicesPageMobile extends StatelessWidget {
               ),
               BreakingLineContainer(
                 text: 'What I can do for you:',
-                lineColor: breakingLineColor,
+                lineColor: Theme.of(context).colorScheme.secondary,
               ),
-              CustomTextContainer(
+              const CustomTextContainer(
                 startColor: imageAndTextColor,
                 endColor: imageAndTextColor,
                 customWidget: VerticalImageTextColumn(

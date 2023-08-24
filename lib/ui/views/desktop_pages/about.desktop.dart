@@ -16,16 +16,16 @@ class AboutMePageDesktop extends StatelessWidget {
       appBar: const CustomAppBarDesktop(),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
+                  colors: <Color>[Theme.of(context).colorScheme.primary, Theme.of(context).colorScheme.secondary])),
           child: Column(
             children: <Widget>[
-              const BreakingLineContainer(
+              BreakingLineContainer(
                 text: 'I am a bit of a nerd.',
-                lineColor: breakingLineColor,
+                lineColor: Theme.of(context).colorScheme.secondary,
               ),
               TextImageOverlay(
                 containerImagePath: 'images/Huberlin-logo.jpg',
@@ -43,9 +43,9 @@ class AboutMePageDesktop extends StatelessWidget {
 '''),
                 containerTextBodySize: smallBodySizeMobile,
               ),
-              const BreakingLineContainer(
+              BreakingLineContainer(
                 text: 'I don\'t just work for money:',
-                lineColor: breakingLineColor,
+                lineColor: Theme.of(context).colorScheme.secondary,
               ),
               TextImageOverlay(
                 containerImagePath: 'images/eng1.jpg',

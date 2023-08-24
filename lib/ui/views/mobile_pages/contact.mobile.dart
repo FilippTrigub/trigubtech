@@ -23,11 +23,11 @@ class ContactPageMobile extends StatelessWidget {
       body: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints viewportConstraints) {
         return Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
+                  colors: <Color>[Theme.of(context).colorScheme.primary, Theme.of(context).colorScheme.secondary])),
           child: Stack(
             children: <Widget>[
               SingleChildScrollView(
@@ -38,9 +38,9 @@ class ContactPageMobile extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      const BreakingLineContainer(
+                      BreakingLineContainer(
                         text: 'Let\'s get in touch!',
-                        lineColor: breakingLineColor,
+                        lineColor: Theme.of(context).colorScheme.secondary,
                       ),
                       VerticalImageTextContainer(
                         containerImagePath: 'images/coffee.jpg',

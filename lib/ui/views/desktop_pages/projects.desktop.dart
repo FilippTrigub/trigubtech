@@ -19,16 +19,16 @@ class ProjectsPageDesktop extends StatelessWidget {
       appBar: const CustomAppBarDesktop(),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
+                  colors: <Color>[Theme.of(context).colorScheme.primary, Theme.of(context).colorScheme.secondary])),
           child: Column(
             children: <Widget>[
-              const BreakingLineContainer(
+              BreakingLineContainer(
                 text: 'My previous projects:',
-                lineColor: breakingLineColor,
+                lineColor: Theme.of(context).colorScheme.secondary,
               ),
               CustomTextContainer(
                 startColor: imageAndTextColor,
@@ -89,9 +89,9 @@ class ProjectsPageDesktop extends StatelessWidget {
                   ],
                 ),
               ),
-              const BreakingLineContainer(
+              BreakingLineContainer(
                 text: 'I code in my free time as well:',
-                lineColor: breakingLineColor,
+                lineColor: Theme.of(context).colorScheme.secondary,
               ),
               CustomTextContainer(
                 startColor: imageAndTextColor,

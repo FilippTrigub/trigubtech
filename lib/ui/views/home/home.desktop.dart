@@ -25,20 +25,20 @@ class HomePageDesktop extends StatelessWidget {
       appBar: const CustomAppBarDesktop(),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
+                  colors: <Color>[Theme.of(context).colorScheme.primary, Theme.of(context).colorScheme.secondary])),
           child: Column(
             children: <Widget>[
               Image.asset(
                 'images/image832_adjusted.png',
                 fit: BoxFit.cover,
               ),
-              const BreakingLineContainer(
+              BreakingLineContainer(
                 text: 'I turn your ideas into bots!',
-                lineColor: breakingLineColor,
+                lineColor: Theme.of(context).colorScheme.secondary,
               ),
               const CustomTextContainer(
                 startColor: imageAndTextColor,
@@ -49,9 +49,9 @@ class HomePageDesktop extends StatelessWidget {
                   smallBodySize: smallBodySizeDesktop,
                 ),
               ),
-              const BreakingLineContainer(
+              BreakingLineContainer(
                 text: 'What I can do for you:',
-                lineColor: breakingLineColor,
+                lineColor: Theme.of(context).colorScheme.secondary,
               ),
               const CustomTextContainer(
                 startColor: imageAndTextColor,
@@ -61,9 +61,9 @@ class HomePageDesktop extends StatelessWidget {
                     textContainerScreenRatio: textContainerScreenRatio,
                     smallBodySize: smallBodySizeDesktop),
               ),
-              const BreakingLineContainer(
+              BreakingLineContainer(
                 text: 'Let\'s get in touch!',
-                lineColor: breakingLineColor,
+                lineColor: Theme.of(context).colorScheme.secondary,
               ),
               HorizontalImageTextContainer(
                 containerImagePath: 'images/coffee.jpg',
