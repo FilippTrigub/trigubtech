@@ -25,11 +25,6 @@ class HomePageDesktop extends StatelessWidget {
       appBar: const CustomAppBarDesktop(),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
           child: Column(
             children: <Widget>[
               Image.asset(
@@ -41,8 +36,6 @@ class HomePageDesktop extends StatelessWidget {
                 lineColor: breakingLineColor,
               ),
               const CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
                 customWidget: CustomTextBox(
                   textContainerMinWidth: textContainerMinWidth,
                   textContainerScreenRatio: textContainerScreenRatio,
@@ -54,8 +47,6 @@ class HomePageDesktop extends StatelessWidget {
                 lineColor: breakingLineColor,
               ),
               const CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
                 customWidget: HorizontalImageTextColumn(
                     horizontalImageTextMinWidth: horizontalImageTextMinWidth,
                     textContainerScreenRatio: textContainerScreenRatio,
@@ -83,8 +74,6 @@ class HomePageDesktop extends StatelessWidget {
                         }),
                 ],
                 containerTextBodySize: bigBodySizeMobile,
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
                 aspectRatio: 1.0,
               ),
               const CustomBottomSheet(),

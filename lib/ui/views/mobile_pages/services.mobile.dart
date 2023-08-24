@@ -17,11 +17,6 @@ class ServicesPageMobile extends StatelessWidget {
       appBar: const CustomAppBarMobile(),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
           child: const Column(
             children: <Widget>[
               BreakingLineContainer(
@@ -29,8 +24,6 @@ class ServicesPageMobile extends StatelessWidget {
                 lineColor: breakingLineColor,
               ),
               CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
                 customWidget: CustomTextBox(
                   textContainerMinWidth: textContainerMinWidth,
                   textContainerScreenRatio: textContainerScreenRatio,
@@ -42,8 +35,6 @@ class ServicesPageMobile extends StatelessWidget {
                 lineColor: breakingLineColor,
               ),
               CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
                 customWidget: VerticalImageTextColumn(
                     verticalImageTextMinWidth: verticalImageTextMinWidth,
                     textContainerScreenRatio: textContainerScreenRatio,

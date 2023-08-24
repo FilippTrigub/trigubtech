@@ -16,11 +16,6 @@ class AboutMePageMobile extends StatelessWidget {
       appBar: const CustomAppBarMobile(),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
           child: Column(
             children: <Widget>[
               const BreakingLineContainer(

@@ -40,8 +40,6 @@ class HorizontalImageTextColumn extends StatelessWidget {
 You want your customers to buy your goods. That's why I am here. I build you a chatbot that understands their wishes and presents a recommendation. You get the data and a better way to understand your customers.
 '''),
                 containerTextBodySize: smallBodySize,
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
               ),
             ),
             HorizontalImageTextContainer(
@@ -51,8 +49,6 @@ You want your customers to buy your goods. That's why I am here. I build you a c
 Bots are cool, but they are not enough. You need databases and backend code and you want it to run seemlessly and be easily alterable. I'll write you clean code that you can use, extend and modify with little effort.
 '''),
               containerTextBodySize: smallBodySize,
-              startColor: imageAndTextColor,
-              endColor: imageAndTextColor,
               isImageOnRight: true,
             ),
             HorizontalImageTextContainer(
@@ -62,8 +58,6 @@ Bots are cool, but they are not enough. You need databases and backend code and 
 Azure, AWS or the Edge itself. my work is only done, once your app must be accessible for your customers.
 '''),
               containerTextBodySize: smallBodySize,
-              startColor: imageAndTextColor,
-              endColor: imageAndTextColor,
             ),
           ],
         ),

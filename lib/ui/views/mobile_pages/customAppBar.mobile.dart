@@ -49,7 +49,7 @@ class CustomAppBarMobile extends StatelessWidget
                 const AutoSizeText(
                   websiteTitle,
                   style: TextStyle(
-                      fontSize: headingSizeMobile, color: Colors.white),
+                      fontSize: headingSizeMobile, color: kcTextDark),
                   maxLines: 1,
                 ),
               ],
@@ -77,7 +77,7 @@ class CustomAppBarMobile extends StatelessWidget
       child: TextButton(
         child: AutoSizeText(
           label,
-          style: TextStyle(color: Colors.white, fontSize: bigBodySizeMobile),
+          style: TextStyle(color: kcTextDark, fontSize: bigBodySizeMobile),
           maxLines: 1,
         ),
         onPressed: () {

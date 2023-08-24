@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:trigubtech/ui/common/app_colors.dart';
 
 import '/ui/common/app_constants.dart';
 
@@ -71,7 +72,7 @@ class VerticalImageTextContainer extends StatelessWidget {
             AutoSizeText(
               containerTextHeading,
               style: const TextStyle(
-                  fontSize: headingSizeDesktop, color: Colors.white, fontWeight: FontWeight.bold),
+                  fontSize: headingSizeDesktop, color: kcText, fontWeight: FontWeight.bold),
               maxLines: 2,
             ),
             const SizedBox(height: 20),
@@ -79,7 +80,7 @@ class VerticalImageTextContainer extends StatelessWidget {
               text: TextSpan(
                 children: containerTextSpanList,
                 style: TextStyle(
-                    fontSize: containerTextBodySize, color: Colors.white),
+                    fontSize: containerTextBodySize, color: kcText),
               ),
             ),
           ],

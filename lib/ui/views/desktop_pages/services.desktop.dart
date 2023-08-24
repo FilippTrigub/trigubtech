@@ -17,11 +17,6 @@ class ServicesPageDesktop extends StatelessWidget {
       appBar: const CustomAppBarDesktop(),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
           child: const Column(
             children: <Widget>[
               BreakingLineContainer(
@@ -29,8 +24,6 @@ class ServicesPageDesktop extends StatelessWidget {
                 lineColor: breakingLineColor,
               ),
               CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
                 customWidget: CustomTextBox(
                   textContainerMinWidth: textContainerMinWidth,
                   textContainerScreenRatio: textContainerScreenRatio,
@@ -42,8 +35,6 @@ class ServicesPageDesktop extends StatelessWidget {
                 lineColor: breakingLineColor,
               ),
               CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
                 customWidget: HorizontalImageTextColumn(
                     horizontalImageTextMinWidth: horizontalImageTextMinWidth,
                     textContainerScreenRatio: textContainerScreenRatio,
