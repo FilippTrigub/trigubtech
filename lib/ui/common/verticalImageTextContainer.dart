@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:trigubtech/ui/common/app_colors.dart';
 
 import '/ui/common/app_constants.dart';
-
-class VerticalImageTextContainer extends StatelessWidget {
+class VerticalImageTextContainer extends StatefulWidget {
   final String containerImagePath;
   final String containerTextHeading;
   final List<TextSpan> containerTextSpanList;
@@ -27,21 +26,46 @@ class VerticalImageTextContainer extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _VerticalImageTextContainerState createState() =>
+      _VerticalImageTextContainerState();
+}
+
+class _VerticalImageTextContainerState
+    extends State<VerticalImageTextContainer> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: fadeInTime),
+    )..forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: <Color>[startColor, endColor],
+          colors: <Color>[widget.startColor, widget.endColor],
         ),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-        _buildImageSection(),
-        _buildTextSection(),
-      ]),
+          _buildImageSection(),
+          _buildTextSection(),
+        ],
+      ),
     );
   }
 
@@ -49,11 +73,14 @@ class VerticalImageTextContainer extends StatelessWidget {
     return Flexible(
       fit: FlexFit.loose,
       child: AspectRatio(
-        aspectRatio: aspectRatio,
-        child: ClipRect(
-          child: Image.asset(
-            containerImagePath,
-            fit: BoxFit.fitWidth,
+        aspectRatio: widget.aspectRatio,
+        child: FadeTransition(
+          opacity: _controller,
+          child: ClipRect(
+            child: Image.asset(
+              widget.containerImagePath,
+              fit: BoxFit.fitWidth,
+            ),
           ),
         ),
       ),
@@ -70,7 +97,7 @@ class VerticalImageTextContainer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AutoSizeText(
-              containerTextHeading,
+              widget.containerTextHeading,
               style: const TextStyle(
                   fontSize: headingSizeDesktop, color: kcText, fontWeight: FontWeight.bold),
               maxLines: 2,
@@ -78,9 +105,9 @@ class VerticalImageTextContainer extends StatelessWidget {
             const SizedBox(height: 20),
             RichText(
               text: TextSpan(
-                children: containerTextSpanList,
+                children: widget.containerTextSpanList,
                 style: TextStyle(
-                    fontSize: containerTextBodySize, color: kcText),
+                    fontSize: widget.containerTextBodySize, color: kcText),
               ),
             ),
           ],

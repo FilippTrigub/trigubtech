@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '/ui/common/app_colors.dart';
 import '/ui/common/app_constants.dart';
-
 class TextImageOverlay extends StatefulWidget {
   final String containerImagePath;
   final String containerTextHeading;
@@ -25,6 +24,18 @@ class TextImageOverlay extends StatefulWidget {
 }
 
 class _TextImageOverlayState extends State<TextImageOverlay> {
+  double _opacity = 0.0;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      setState(() {
+        _opacity = 1.0;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -33,10 +44,14 @@ class _TextImageOverlayState extends State<TextImageOverlay> {
           children: [
             // Full size image with opacity mask
             Positioned.fill(
+              child: AnimatedOpacity(
+                duration: const Duration(milliseconds: fadeInTime),
+                opacity: _opacity,
                 child: Image.asset(
                   widget.containerImagePath,
                   fit: BoxFit.fitWidth,
                 ),
+              ),
             ),
             // Text overlay
             Center(

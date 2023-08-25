@@ -25,3 +25,5 @@ const double bigBodySizeMobile = 24;
 const double smallBodySizeMobile = 18;
 
 const double imageAndTextFullWidthMobile = 0.6;
+
+const int fadeInTime = 1400;

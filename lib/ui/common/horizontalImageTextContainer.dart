@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:trigubtech/ui/common/app_colors.dart';
 
 import '/ui/common/app_constants.dart';
-
-class HorizontalImageTextContainer extends StatelessWidget {
+class HorizontalImageTextContainer extends StatefulWidget {
   final String containerImagePath;
   final String containerTextHeading;
   final List<InlineSpan> containerTextSpanList;
@@ -23,6 +22,31 @@ class HorizontalImageTextContainer extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _HorizontalImageTextContainerState createState() =>
+      _HorizontalImageTextContainerState();
+}
+
+class _HorizontalImageTextContainerState
+    extends State<HorizontalImageTextContainer>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: fadeInTime), // Adjust the duration as needed
+    )..forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return ConstrainedBox(
@@ -33,7 +57,7 @@ class HorizontalImageTextContainer extends StatelessWidget {
             ? screenSize.width * textContainerScreenRatio
             : horizontalImageTextMinWidth,
         child: Row(
-          children: isImageOnRight
+          children: widget.isImageOnRight
               ? <Widget>[
                   _buildTextSection(),
                   _buildImageSection(),
@@ -50,11 +74,14 @@ class HorizontalImageTextContainer extends StatelessWidget {
   Widget _buildImageSection() {
     return Expanded(
       child: AspectRatio(
-        aspectRatio: aspectRatio,
-        child: ClipRect(
-          child: Image.asset(
-            containerImagePath,
-            fit: BoxFit.fitWidth,
+        aspectRatio: widget.aspectRatio,
+        child: FadeTransition(
+          opacity: _controller,
+          child: ClipRect(
+            child: Image.asset(
+              widget.containerImagePath,
+              fit: BoxFit.fitWidth,
+            ),
           ),
         ),
       ),
@@ -70,19 +97,19 @@ class HorizontalImageTextContainer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AutoSizeText(
-                containerTextHeading,
-                style: const TextStyle(
-                    fontSize: headingSizeDesktop,
-                    color: kcText,
-                    fontWeight: FontWeight.bold),
-                maxLines: 2,
+              widget.containerTextHeading,
+              style: const TextStyle(
+                  fontSize: headingSizeDesktop,
+                  color: kcText,
+                  fontWeight: FontWeight.bold),
+              maxLines: 2,
             ),
             const SizedBox(height: 20),
-            RichText(
-              text: TextSpan(
-                children: containerTextSpanList,
+            SelectableText.rich(
+              TextSpan(
+                children: widget.containerTextSpanList,
                 style: TextStyle(
-                    fontSize: containerTextBodySize, color: kcText),
+                    fontSize: widget.containerTextBodySize, color: kcText),
               ),
             ),
           ],
