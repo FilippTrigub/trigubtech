@@ -18,19 +18,17 @@ class BreakingLineContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: BoxDecoration(
-        border: Border(
-          top:
-              BorderSide(width: 1.0, color: lineColor),
-          bottom:
-              BorderSide(width: 1.0, color: lineColor),
-        ),
+      decoration: const BoxDecoration(
+        color: kcVeryLightGrey,
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 2.0),
+        padding: const EdgeInsets.symmetric(vertical: 4.0),
         child: AutoSizeText(
           text,
-          style: const TextStyle(fontSize: headingSizeDesktop, color: kcText),
+          style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: headingSizeDesktop,
+              color: kcText),
           textAlign: TextAlign.center,
           maxLines: 1,
         ),

@@ -26,10 +26,6 @@ class HomePageMobile extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Image.asset(
-              'images/image832_adjusted.png',
-              fit: BoxFit.cover,
-            ),
             const BreakingLineContainer(
               text: 'I turn your ideas into bots!',
               lineColor: breakingLineColor,

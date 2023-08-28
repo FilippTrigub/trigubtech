@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:trigubtech/ui/common/horizontalImageTextContainer.dart';
+import 'package:trigubtech/ui/common/stringToTextSpans.dart';
 import '/ui/common/customTextContainer.dart';
 import '/ui/common/customTextBox.dart';
 import '/ui/common/horizontalImageTextColumn.dart';
@@ -16,33 +18,44 @@ class ServicesPageDesktop extends StatelessWidget {
     return Scaffold(
       appBar: const CustomAppBarDesktop(),
       body: SingleChildScrollView(
-        child: Container(
-          child: const Column(
-            children: <Widget>[
-              BreakingLineContainer(
-                text: 'I turn your ideas into bots!',
-                lineColor: breakingLineColor,
+        child: Column(
+          children: <Widget>[
+            const BreakingLineContainer(
+              text: 'I turn your ideas into bots!',
+              lineColor: breakingLineColor,
+            ),
+            CustomTextContainer(
+              customWidget: HorizontalImageTextContainer(
+                containerImagePath: 'images/me1.jpg',
+                containerTextHeading: 'Hello!',
+                containerTextSpanList: stringToTextSpans('''
+From strategy to architecture and implementation
+My goal is to get you results!
+\n
+More than a software developer, I am your personal consultant:
+— an M.Sc. in theoretical physics.
+— over 8 years experience as a full-stack dev.
+— hands on experience with AI (ML, LLM).
+\n
+My word counts! 
+Dacades long engagements in my communities are the proof.
+'''),
+                containerTextBodySize: smallBodySizeDesktop,
+                isImageOnRight: true,
               ),
-              CustomTextContainer(
-                customWidget: CustomTextBox(
-                  textContainerMinWidth: textContainerMinWidth,
+            ),
+            const BreakingLineContainer(
+              text: 'What I can do for you:',
+              lineColor: breakingLineColor,
+            ),
+            const CustomTextContainer(
+              customWidget: HorizontalImageTextColumn(
+                  horizontalImageTextMinWidth: horizontalImageTextMinWidth,
                   textContainerScreenRatio: textContainerScreenRatio,
-                  smallBodySize: smallBodySizeDesktop,
-                ),
-              ),
-              BreakingLineContainer(
-                text: 'What I can do for you:',
-                lineColor: breakingLineColor,
-              ),
-              CustomTextContainer(
-                customWidget: HorizontalImageTextColumn(
-                    horizontalImageTextMinWidth: horizontalImageTextMinWidth,
-                    textContainerScreenRatio: textContainerScreenRatio,
-                    smallBodySize: smallBodySizeDesktop),
-              ),
-              CustomBottomSheet(),
-            ],
-          ),
+                  smallBodySize: smallBodySizeDesktop),
+            ),
+            const CustomBottomSheet(),
+          ],
         ),
       ),
     );

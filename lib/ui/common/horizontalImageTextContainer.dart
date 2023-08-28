@@ -36,7 +36,7 @@ class _HorizontalImageTextContainerState
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: fadeInTime), // Adjust the duration as needed
+      duration: const Duration(milliseconds: fadeInTime),
     )..forward();
   }
 
