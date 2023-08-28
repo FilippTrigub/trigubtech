@@ -10,6 +10,8 @@ import '/ui/common/bottomSheet.dart';
 import '/ui/common/breakingLineContainer.dart';
 import '/ui/views/desktop_pages/customAppBar.desktop.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import '/ui/common/stringToTextSpans.dart';
+
 
 class HomePageDesktop extends StatefulWidget {
   const HomePageDesktop({Key? key}) : super(key: key);
@@ -24,7 +26,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(milliseconds: 100), () {
+    Future.delayed(const Duration(milliseconds: 100), () {
       setState(() {
         _opacity = 1.0;
       });
@@ -45,7 +47,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: MediaQuery.of(context).size.width * 9 / 16, // 16:9 ratio
+              height: MediaQuery.of(context).size.width * 9 / 16 - appBarheightDesktop,
               child: AnimatedOpacity(
                 duration: const Duration(milliseconds: fadeInTime),
                 opacity: _opacity,
@@ -59,11 +61,25 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
               text: 'I turn your ideas into bots!',
               lineColor: breakingLineColor,
             ),
-            const CustomTextContainer(
-              customWidget: CustomTextBox(
-                textContainerMinWidth: textContainerMinWidth,
-                textContainerScreenRatio: textContainerScreenRatio,
-                smallBodySize: smallBodySizeDesktop,
+            CustomTextContainer(
+              customWidget: HorizontalImageTextContainer(
+                containerImagePath: 'images/me1.jpg',
+                containerTextHeading: 'Hello!',
+                containerTextSpanList: stringToTextSpans('''
+From strategy to architecture and implementation
+My goal is to get you results!
+\n
+More than a software developer, I am your personal consultant:
+— an M.Sc. in theoretical physics.
+— over 8 years experience as a full-stack dev.
+— hands on experience with AI (ML, LLM).
+\n
+My word counts! 
+Dacades long engagements in my communities are the proof.
+'''
+),
+                containerTextBodySize: smallBodySizeDesktop,
+                isImageOnRight: true,
               ),
             ),
             const BreakingLineContainer(
