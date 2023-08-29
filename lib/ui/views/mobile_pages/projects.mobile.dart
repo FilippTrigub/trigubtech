@@ -19,11 +19,6 @@ class ProjectsPageMobile extends StatelessWidget {
       appBar: const CustomAppBarMobile(),
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
           child: Column(
             children: <Widget>[
               const BreakingLineContainer(
@@ -31,8 +26,6 @@ class ProjectsPageMobile extends StatelessWidget {
                 lineColor: breakingLineColor,
               ),
               CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
                 customWidget: Column(
                   children: [
                     TextImageOverlay(
@@ -94,8 +87,6 @@ class ProjectsPageMobile extends StatelessWidget {
                 lineColor: breakingLineColor,
               ),
               CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
                 customWidget: Column(
                   children: [
                     InkWell(

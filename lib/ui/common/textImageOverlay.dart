@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '/ui/common/app_colors.dart';
 import '/ui/common/app_constants.dart';
-
 class TextImageOverlay extends StatefulWidget {
   final String containerImagePath;
   final String containerTextHeading;
@@ -25,6 +24,18 @@ class TextImageOverlay extends StatefulWidget {
 }
 
 class _TextImageOverlayState extends State<TextImageOverlay> {
+  double _opacity = 0.0;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      setState(() {
+        _opacity = 1.0;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -33,28 +44,31 @@ class _TextImageOverlayState extends State<TextImageOverlay> {
           children: [
             // Full size image with opacity mask
             Positioned.fill(
+              child: AnimatedOpacity(
+                duration: const Duration(milliseconds: fadeInTime),
+                opacity: _opacity,
                 child: Image.asset(
                   widget.containerImagePath,
                   fit: BoxFit.fitWidth,
                 ),
+              ),
             ),
             // Text overlay
             Center(
               child: Container(
-                color: darkColor,
+                color: brightColor,
                 width: constraints.maxWidth * imageAndTextFullWidthDesktop,
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const SizedBox(height: 20,),
                     AutoSizeText(
                       widget.containerTextHeading,
+                      textAlign: TextAlign.center,
                       style: const TextStyle(
                           fontSize: bigBodySizeDesktop,
-                          color: Colors.white,
+                          color: kcText,
                           fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.left,
                       maxLines: 2,
                     ),
                     const SizedBox(height: 20),
@@ -64,7 +78,7 @@ class _TextImageOverlayState extends State<TextImageOverlay> {
                         children: widget.containerTextSpanList,
                         style: TextStyle(
                             fontSize: widget.containerTextBodySize,
-                            color: Colors.white),
+                            color: kcText),
                       ),
                     ),
                   ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trigubtech/ui/common/app_colors.dart';
 import '/app/app.dialogs.dart';
 import '/app/app.locator.dart';
 import 'package:stacked/stacked.dart';
@@ -47,7 +48,7 @@ class HomeViewModel extends BaseViewModel {
           opacity: 0.8,
           child: ModalBarrier(
             dismissible: false,
-            color: Colors.black,
+            color: kcBlack,
           ),
         ),
         Center(
