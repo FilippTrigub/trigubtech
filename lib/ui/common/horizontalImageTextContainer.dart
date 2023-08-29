@@ -1,17 +1,15 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:trigubtech/ui/common/app_colors.dart';
 
 import '/ui/common/app_constants.dart';
-
-class HorizontalImageTextContainer extends StatelessWidget {
+class HorizontalImageTextContainer extends StatefulWidget {
   final String containerImagePath;
   final String containerTextHeading;
-  final List<TextSpan> containerTextSpanList;
+  final List<InlineSpan> containerTextSpanList;
   final double containerTextBodySize;
   final double aspectRatio;
   final bool isImageOnRight;
-  final Color startColor;
-  final Color endColor;
 
   const HorizontalImageTextContainer({
     Key? key,
@@ -21,9 +19,32 @@ class HorizontalImageTextContainer extends StatelessWidget {
     required this.containerTextBodySize,
     this.aspectRatio = 2.0,
     this.isImageOnRight = false,
-    required this.startColor,
-    required this.endColor,
   }) : super(key: key);
+
+  @override
+  _HorizontalImageTextContainerState createState() =>
+      _HorizontalImageTextContainerState();
+}
+
+class _HorizontalImageTextContainerState
+    extends State<HorizontalImageTextContainer>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: fadeInTime),
+    )..forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,25 +56,16 @@ class HorizontalImageTextContainer extends StatelessWidget {
                 horizontalImageTextMinWidth
             ? screenSize.width * textContainerScreenRatio
             : horizontalImageTextMinWidth,
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: <Color>[startColor, endColor],
-            ),
-          ),
-          child: Row(
-            children: isImageOnRight
-                ? <Widget>[
-                    _buildTextSection(),
-                    _buildImageSection(),
-                  ]
-                : <Widget>[
-                    _buildImageSection(),
-                    _buildTextSection(),
-                  ],
-          ),
+        child: Row(
+          children: widget.isImageOnRight
+              ? <Widget>[
+                  _buildTextSection(),
+                  _buildImageSection(),
+                ]
+              : <Widget>[
+                  _buildImageSection(),
+                  _buildTextSection(),
+                ],
         ),
       ),
     );
@@ -62,11 +74,14 @@ class HorizontalImageTextContainer extends StatelessWidget {
   Widget _buildImageSection() {
     return Expanded(
       child: AspectRatio(
-        aspectRatio: aspectRatio,
-        child: ClipRect(
-          child: Image.asset(
-            containerImagePath,
-            fit: BoxFit.fitWidth,
+        aspectRatio: widget.aspectRatio,
+        child: FadeTransition(
+          opacity: _controller,
+          child: ClipRect(
+            child: Image.asset(
+              widget.containerImagePath,
+              fit: BoxFit.fitWidth,
+            ),
           ),
         ),
       ),
@@ -81,23 +96,20 @@ class HorizontalImageTextContainer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: AutoSizeText(
-                containerTextHeading,
-                style: const TextStyle(
-                    fontSize: headingSizeDesktop,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-                maxLines: 2,
-              ),
+            AutoSizeText(
+              widget.containerTextHeading,
+              style: const TextStyle(
+                  fontSize: headingSizeDesktop,
+                  color: kcText,
+                  fontWeight: FontWeight.bold),
+              maxLines: 2,
             ),
             const SizedBox(height: 20),
-            RichText(
-              text: TextSpan(
-                children: containerTextSpanList,
+            SelectableText.rich(
+              TextSpan(
+                children: widget.containerTextSpanList,
                 style: TextStyle(
-                    fontSize: containerTextBodySize, color: Colors.white),
+                    fontSize: widget.containerTextBodySize, color: kcText),
               ),
             ),
           ],

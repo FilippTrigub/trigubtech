@@ -23,11 +23,6 @@ class ContactPageMobile extends StatelessWidget {
       body: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints viewportConstraints) {
         return Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
           child: Stack(
             children: <Widget>[
               SingleChildScrollView(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:stacked/stacked.dart';
+import 'package:trigubtech/ui/common/app_colors.dart';
 import '/ui/common/app_constants.dart';
 import '/ui/common/ui_helpers.dart';
 
@@ -33,7 +34,7 @@ class StartupView extends StackedView<StartupViewModel> {
                   width: 16,
                   height: 16,
                   child: CircularProgressIndicator(
-                    color: Colors.black,
+                    color: kcBlack,
                     strokeWidth: 6,
                   ),
                 )

@@ -13,45 +13,34 @@ class ServicesPageMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBarMobile(),
+    return const Scaffold(
+      appBar: CustomAppBarMobile(),
       body: SingleChildScrollView(
-        child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[darkColor, brightColor])),
-          child: const Column(
-            children: <Widget>[
-              BreakingLineContainer(
-                text: 'I turn your ideas into bots!',
-                lineColor: breakingLineColor,
+        child: Column(
+          children: <Widget>[
+            BreakingLineContainer(
+              text: 'I turn your ideas into bots!',
+              lineColor: breakingLineColor,
+            ),
+            CustomTextContainer(
+              customWidget: CustomTextBox(
+                textContainerMinWidth: textContainerMinWidth,
+                textContainerScreenRatio: textContainerScreenRatio,
+                smallBodySize: smallBodySizeMobile,
               ),
-              CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
-                customWidget: CustomTextBox(
-                  textContainerMinWidth: textContainerMinWidth,
+            ),
+            BreakingLineContainer(
+              text: 'What I can do for you:',
+              lineColor: breakingLineColor,
+            ),
+            CustomTextContainer(
+              customWidget: VerticalImageTextColumn(
+                  verticalImageTextMinWidth: verticalImageTextMinWidth,
                   textContainerScreenRatio: textContainerScreenRatio,
-                  smallBodySize: smallBodySizeMobile,
-                ),
-              ),
-              BreakingLineContainer(
-                text: 'What I can do for you:',
-                lineColor: breakingLineColor,
-              ),
-              CustomTextContainer(
-                startColor: imageAndTextColor,
-                endColor: imageAndTextColor,
-                customWidget: VerticalImageTextColumn(
-                    verticalImageTextMinWidth: verticalImageTextMinWidth,
-                    textContainerScreenRatio: textContainerScreenRatio,
-                    smallBodySize: smallBodySizeMobile),
-              ),
-              CustomBottomSheet(),
-            ],
-          ),
+                  smallBodySize: smallBodySizeMobile),
+            ),
+            CustomBottomSheet(),
+          ],
         ),
       ),
     );

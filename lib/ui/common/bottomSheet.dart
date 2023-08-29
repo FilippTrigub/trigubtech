@@ -19,7 +19,7 @@ class CustomBottomSheet extends StatelessWidget {
               AutoSizeText(
                 '$name \n$address',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: kcTextDark,
                   fontSize: 12,
                 ),
                 textAlign: TextAlign.center,
