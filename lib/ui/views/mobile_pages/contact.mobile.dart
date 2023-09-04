@@ -22,59 +22,65 @@ class ContactPageMobile extends StatelessWidget {
       appBar: const CustomAppBarMobile(),
       body: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints viewportConstraints) {
-        return Container(
-          child: Stack(
-            children: <Widget>[
-              SingleChildScrollView(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                    minHeight: viewportConstraints.maxHeight,
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      const BreakingLineContainer(
-                        text: 'Let\'s get in touch!',
-                        lineColor: breakingLineColor,
-                      ),
-                      VerticalImageTextContainer(
-                        containerImagePath: 'images/coffee.jpg',
-                        containerTextHeading:
-                            'LinkedIn is quickest, \nEmail works too',
-                        containerTextSpanList: [
-                          const TextSpan(
-                            text: '\nfilipp@trigub.tech',
-                            style: TextStyle(color: attentionColor),
-                          ),
-                          TextSpan(
-                              text: '\n\nLinkedIn',
-                              style: const TextStyle(color: attentionColor),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () {
-                                  _launchURL(
-                                      'https://www.linkedin.com/in/filipp-trigub/');
-                                }),
-                        ],
-                        containerTextBodySize: bigBodySizeMobile,
-                        startColor: imageAndTextColor,
-                        endColor: imageAndTextColor,
-                        aspectRatio: 1.0,
-                      ),
-                      const SizedBox(
-                        height: 100,
-                      ),
-                    ],
-                  ),
+        return Stack(
+          children: <Widget>[
+            SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: viewportConstraints.maxHeight,
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const BreakingLineContainer(
+                      text: 'Let\'s get in touch!',
+                      lineColor: breakingLineColor,
+                    ),
+                    VerticalImageTextContainer(
+                      containerImagePath: 'images/coffee.jpg',
+                      containerTextHeading:
+                          'Book a call directly!\nOr simply write me.',
+                      containerTextSpanList: [
+                        TextSpan(
+                            text: '\nBook a call',
+                            style: const TextStyle(color: attentionColor),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                _launchURL(
+                                    'https://my.meetergo.com/filipp-trigub/get-to-know-meeting');
+                              }),
+                        TextSpan(
+                            text: '\n\nLinkedIn',
+                            style: const TextStyle(color: attentionColor),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                _launchURL(
+                                    'https://www.linkedin.com/in/filipp-trigub/');
+                              }),
+                        const TextSpan(
+                          text: '\n\nfilipp@trigub.tech',
+                          style: TextStyle(color: attentionColor),
+                        ),
+                      ],
+                      containerTextBodySize: bigBodySizeMobile,
+                      startColor: imageAndTextColor,
+                      endColor: imageAndTextColor,
+                      aspectRatio: 1.0,
+                    ),
+                    const SizedBox(
+                      height: 100,
+                    ),
+                  ],
                 ),
               ),
-              const Positioned.fill(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: CustomBottomSheet(),
-                ),
-              )
-            ],
-          ),
+            ),
+            const Positioned.fill(
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: CustomBottomSheet(),
+              ),
+            )
+          ],
         );
       }),
     );
