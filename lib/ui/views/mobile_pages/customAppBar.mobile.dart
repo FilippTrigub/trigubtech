@@ -77,7 +77,7 @@ class CustomAppBarMobile extends StatelessWidget
       child: TextButton(
         child: AutoSizeText(
           label,
-          style: TextStyle(color: kcTextDark, fontSize: bigBodySizeMobile),
+          style: const TextStyle(color: kcTextDark, fontSize: bigBodySizeMobile),
           maxLines: 1,
         ),
         onPressed: () {
