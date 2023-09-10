@@ -53,12 +53,17 @@ class HomePageMobile extends StatelessWidget {
             ),
             VerticalImageTextContainer(
               containerImagePath: 'images/coffee.jpg',
-              containerTextHeading: 'LinkedIn is quickest, \nEmail works too',
+              containerTextHeading:
+                  'Book a call directly!\nOr write me a message.',
               containerTextSpanList: [
-                const TextSpan(
-                  text: '\nfilipp@trigub.tech',
-                  style: TextStyle(color: attentionColor),
-                ),
+                TextSpan(
+                    text: '\nBook a call',
+                    style: const TextStyle(color: attentionColor),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        _launchURL(
+                            'https://my.meetergo.com/filipp-trigub/get-to-know-meeting');
+                      }),
                 TextSpan(
                     text: '\n\nLinkedIn',
                     style: const TextStyle(color: attentionColor),
@@ -67,11 +72,15 @@ class HomePageMobile extends StatelessWidget {
                         _launchURL(
                             'https://www.linkedin.com/in/filipp-trigub/');
                       }),
+                const TextSpan(
+                  text: '\n\nfilipp@trigub.tech',
+                  style: TextStyle(color: attentionColor),
+                ),
               ],
               containerTextBodySize: bigBodySizeMobile,
-              aspectRatio: 1.0,
               startColor: imageAndTextColor,
               endColor: imageAndTextColor,
+              aspectRatio: 1.0,
             ),
             const CustomBottomSheet(),
           ],
