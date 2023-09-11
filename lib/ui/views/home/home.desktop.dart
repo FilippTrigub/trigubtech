@@ -12,7 +12,6 @@ import '/ui/views/desktop_pages/customAppBar.desktop.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '/ui/common/stringToTextSpans.dart';
 
-
 class HomePageDesktop extends StatefulWidget {
   const HomePageDesktop({Key? key}) : super(key: key);
 
@@ -34,10 +33,9 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
   }
 
   // Function to launch URL
-  void _launchURL(String _url) async =>
-      await canLaunchUrlString(_url)
-          ? await launchUrlString(_url)
-          : throw 'Could not launch $_url';
+  void _launchURL(String _url) async => await canLaunchUrlString(_url)
+      ? await launchUrlString(_url)
+      : throw 'Could not launch $_url';
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +45,8 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: MediaQuery.of(context).size.width * 9 / 16 - appBarheightDesktop,
+              height: MediaQuery.of(context).size.width * 9 / 16 -
+                  appBarheightDesktop,
               child: AnimatedOpacity(
                 duration: const Duration(milliseconds: fadeInTime),
                 opacity: _opacity,
@@ -76,8 +75,7 @@ More than a software developer, I am your personal consultant:
 \n
 My word counts! 
 Dacades long engagements in my communities are the proof.
-'''
-),
+'''),
                 containerTextBodySize: smallBodySizeDesktop,
                 isImageOnRight: true,
               ),
@@ -98,12 +96,17 @@ Dacades long engagements in my communities are the proof.
             ),
             HorizontalImageTextContainer(
               containerImagePath: 'images/coffee.jpg',
-              containerTextHeading: 'LinkedIn is quickest, \nEmail works too',
+              containerTextHeading:
+                  'Book a call directly!\nOr write me a message.',
               containerTextSpanList: [
-                const TextSpan(
-                  text: '\nfilipp@trigub.tech',
-                  style: TextStyle(color: attentionColor),
-                ),
+                TextSpan(
+                    text: '\nBook a call',
+                    style: const TextStyle(color: attentionColor),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        _launchURL(
+                            'https://my.meetergo.com/filipp-trigub/get-to-know-meeting');
+                      }),
                 TextSpan(
                     text: '\n\nLinkedIn',
                     style: const TextStyle(color: attentionColor),
@@ -112,8 +115,12 @@ Dacades long engagements in my communities are the proof.
                         _launchURL(
                             'https://www.linkedin.com/in/filipp-trigub/');
                       }),
+                const TextSpan(
+                  text: '\n\nfilipp@trigub.tech',
+                  style: TextStyle(color: attentionColor),
+                ),
               ],
-              containerTextBodySize: bigBodySizeMobile,
+              containerTextBodySize: bigBodySizeDesktop,
               aspectRatio: 1.0,
             ),
             const CustomBottomSheet(),
