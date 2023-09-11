@@ -4,7 +4,7 @@ import '/ui/common/app_colors.dart';
 import '/ui/common/app_constants.dart';
 import '/ui/common/app_strings.dart';
 import '/ui/common/stringToTextSpans.dart';
-import '/ui/common/textImageOverlay.dart';
+import 'textImageOverlay.mobile.dart';
 import '/ui/common/bottomSheet.dart';
 import '/ui/common/breakingLineContainer.dart';
 import '/ui/views/mobile_pages/customAppBar.mobile.dart';
@@ -28,7 +28,7 @@ class ProjectsPageMobile extends StatelessWidget {
               CustomTextContainer(
                 customWidget: Column(
                   children: [
-                    TextImageOverlay(
+                    TextImageOverlayMobile(
                       containerImagePath: 'images/arrows.jpg',
                       containerTextHeading:
                           'GPT-powered service staff assistant',
@@ -46,7 +46,7 @@ class ProjectsPageMobile extends StatelessWidget {
                       containerTextBodySize: smallBodySizeMobile,
                       isImageOnRight: true,
                     ),
-                    TextImageOverlay(
+                    TextImageOverlayMobile(
                         containerImagePath: 'images/network1.jpg',
                         containerTextHeading:
                             'Full-stack application design and development',
@@ -63,7 +63,7 @@ class ProjectsPageMobile extends StatelessWidget {
 '''),
                         containerTextBodySize: smallBodySizeMobile,
                         isImageOnRight: true),
-                    TextImageOverlay(
+                    TextImageOverlayMobile(
                         containerImagePath: 'images/mess.jpg',
                         containerTextHeading:
                             'Complex legacy software augmentation',
@@ -93,7 +93,7 @@ class ProjectsPageMobile extends StatelessWidget {
                       onTap: () {
                         launchUrlString(aiSommelierLink);
                       },
-                      child: TextImageOverlay(
+                      child: TextImageOverlayMobile(
                         containerImagePath: 'images/network1.jpg',
                         containerTextHeading: 'AI Sommelier',
                         containerTextSpanList: stringToTextSpans('''
@@ -115,7 +115,7 @@ class ProjectsPageMobile extends StatelessWidget {
                       onTap: () {
                         launchUrlString(audioSummarizerLink);
                       },
-                      child: TextImageOverlay(
+                      child: TextImageOverlayMobile(
                         containerImagePath: 'images/audio.jpg',
                         containerTextHeading: 'Audio-Summarizer',
                         containerTextSpanList: stringToTextSpans('''
@@ -136,7 +136,7 @@ class ProjectsPageMobile extends StatelessWidget {
                       onTap: () {
                         launchUrlString(commGPTLink);
                       },
-                      child: TextImageOverlay(
+                      child: TextImageOverlayMobile(
                         containerImagePath: 'images/network1.jpg',
                         containerTextHeading: 'Telegram Search&Chat',
                         containerTextSpanList: stringToTextSpans('''

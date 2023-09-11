@@ -49,7 +49,9 @@ class CustomAppBarMobile extends StatelessWidget
                 const AutoSizeText(
                   websiteTitle,
                   style: TextStyle(
-                      fontSize: headingSizeMobile, color: kcTextDark),
+                      fontFamily: 'Dosis',
+                      fontSize: headingSizeMobile,
+                      color: kcTextDark),
                   maxLines: 1,
                 ),
               ],
@@ -75,9 +77,12 @@ class CustomAppBarMobile extends StatelessWidget
   Widget _buildButton(BuildContext context, String label, Widget page) {
     return Expanded(
       child: TextButton(
-        child: AutoSizeText(
+        child: Text(
           label,
-          style: TextStyle(color: kcTextDark, fontSize: bigBodySizeMobile),
+          style: const TextStyle(
+              fontFamily: 'Dosis',
+              color: kcTextDark,
+              fontSize: bigBodySizeMobile),
           maxLines: 1,
         ),
         onPressed: () {
