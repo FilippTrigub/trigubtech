@@ -5,7 +5,6 @@ import '/ui/common/horizontalImageTextContainer.dart';
 import '/ui/common/stringToTextSpans.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-
 class HorizontalImageTextColumn extends StatelessWidget {
   final double smallBodySize;
   final double textContainerScreenRatio;
@@ -29,33 +28,40 @@ class HorizontalImageTextColumn extends StatelessWidget {
             : horizontalImageTextMinWidth,
         child: Column(
           children: [
-            InkWell(
-              onTap: () {
-                launchUrlString(aiSommelierLink);
-              },
-              child: HorizontalImageTextContainer(
-                containerImagePath: 'images/salesbot.jpg',
-                containerTextHeading: 'Get your own AI-powered bot',
-                containerTextSpanList: stringToTextSpans('''
-You want to harness the power of GenAI. That's why I am here. I build consult you on the options and possibilities. Advanced chatbots, AI powered sales and decision making AI. I have build them all.
+            HorizontalImageTextContainer(
+              containerImagePath: 'images/salesbot.jpg',
+              containerTextHeading: '''Make it clear''',
+              containerTextSpanList: stringToTextSpans('''
+GPT is amazing, but how can you really use it? As the space of possible applications is quickly eveolving, it is difficult to keep track. 
+\nI consult you on what LLM's can do for you.
+\nTogether we create the architecture fitting your use case.
+\nAn MVP is finally deployed for you to examine.
+\nThe initial consultation is always free so just reach out!
 '''),
-                containerTextBodySize: smallBodySize,
-              ),
+              containerTextBodySize: smallBodySize,
             ),
             HorizontalImageTextContainer(
-              containerImagePath: 'images/pattern1.jpg',
-              containerTextHeading: 'Add the infrastructure',
+              containerImagePath: 'images/network2.jpg',
+              containerTextHeading: '''Make it fit''',
               containerTextSpanList: stringToTextSpans('''
-Bots are cool, but they are not enough. You need databases and backend code and you want it to run seemlessly and be easily alterable. I'll write you clean code that you can use, extend and modify with little effort.
+GPT is amazing, but how can you really use it? As the space of possible applications is quickly eveolving, it is difficult to keep track. 
+\nChoose the right LLM for your use case based on costs and performance
+\nGive your bot the ability to do tasks outside of the chat.
+\nAssure data privacy by using an on-prem LLM or a hybrid one.
+\nYour use case is unique and so it the solution!
 '''),
               containerTextBodySize: smallBodySize,
               isImageOnRight: true,
             ),
             HorizontalImageTextContainer(
-              containerImagePath: 'images/network2.jpg',
-              containerTextHeading: 'Bring it to the cloud',
+              containerImagePath: 'images/pattern1.jpg',
+              containerTextHeading: 'Make the bots work',
               containerTextSpanList: stringToTextSpans('''
-Azure, AWS or the Edge itself. my work is only done, once your app must be accessible for your customers.
+Your MVP is a good start, but it is not enough. You need databases and backend code and you want it to run seemlessly and augmentable. 
+\nTogether we will create a holistic solution for your system and needs.
+\nIf a part of the work requires additional expertise, my network of freelancers will quickly fill in the gaps.
+\nI'll write you clean code that you can use, extend, and modify with little effort.
+The task is only done, when you are reaping it's benefits.
 '''),
               containerTextBodySize: smallBodySize,
             ),

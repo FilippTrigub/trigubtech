@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:trigubtech/ui/views/desktop_pages/textImageOverlay.desktop.dart';
 import '/ui/common/app_colors.dart';
 import '/ui/common/app_constants.dart';
 import '/ui/common/bottomSheet.dart';
 import '/ui/common/breakingLineContainer.dart';
 import '/ui/common/stringToTextSpans.dart';
-import '/ui/common/textImageOverlay.dart';
 import '/ui/views/desktop_pages/customAppBar.desktop.dart';
 
 class AboutMePageDesktop extends StatelessWidget {
@@ -15,17 +15,16 @@ class AboutMePageDesktop extends StatelessWidget {
     return Scaffold(
       appBar: const CustomAppBarDesktop(),
       body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              const BreakingLineContainer(
-                text: 'I am a bit of a nerd.',
-                lineColor: breakingLineColor,
-              ),
-              TextImageOverlay(
-                containerImagePath: 'images/Huberlin-logo.jpg',
-                containerTextHeading: 'Humboldt University of Berlin',
-                containerTextSpanList: stringToTextSpans('''
+        child: Column(
+          children: <Widget>[
+            const BreakingLineContainer(
+              text: 'I am a bit of a nerd.',
+              lineColor: breakingLineColor,
+            ),
+            TextImageOverlayDesktop(
+              containerImagePath: 'images/Huberlin-logo.jpg',
+              containerTextHeading: 'Humboldt University of Berlin',
+              containerTextSpanList: stringToTextSpans('''
 \nM.Sc. in theoretical Physics GPA 3.6 (GER scale 1.4)
 \nHumboldt university of Berlin 10.2013 – 03.2019
 \n\nThesis:
@@ -36,26 +35,26 @@ class AboutMePageDesktop extends StatelessWidget {
 \n— Statistical Mechanics: Theoretical Statistics at an advanced level with coding exercises.
 \n— Fluctuation Induced Phenomena: Deep understanding of complex processes driven by randomness fostered by advanced mathematical and numerical exercises
 '''),
-                containerTextBodySize: smallBodySizeMobile,
-              ),
-              const BreakingLineContainer(
-                text: 'I don\'t just work for money:',
-                lineColor: breakingLineColor,
-              ),
-              TextImageOverlay(
-                containerImagePath: 'images/eng1.jpg',
-                containerTextHeading: 'Strategic advisor to Vitsche e.V.',
-                containerTextSpanList: stringToTextSpans('''
+              containerTextBodySize: smallBodySizeMobile,
+            ),
+            const BreakingLineContainer(
+              text: 'I don\'t just work for money:',
+              lineColor: breakingLineColor,
+            ),
+            TextImageOverlayDesktop(
+              containerImagePath: 'images/eng1.jpg',
+              containerTextHeading: 'Strategic advisor to Vitsche e.V.',
+              containerTextSpanList: stringToTextSpans('''
 \nBorn in Dnipro, the city of Sputnik, I have been continuously engaged in volunteering with the Ukrainian diaspora of Berlin. I am particularly proud to have advised Vitsche, one of the most prolific and well-known Ukrainian organizations in Germany, on their organizational structure. I am forever grateful for the work these young activists are doing.
 \n
 \nVitsche’s organizational challenges grew out of its rapid development following the 2022 full-scale Russian invasion of Ukraine. The initially flat hierarchy of the organization was quickly insufficient to handle the shire number of contributors leading to a crystallization of structure around key individuals. The resulting opaqueness led to friction within the organization and inhibited smooth operations.
 '''),
-                containerTextBodySize: smallBodySizeDesktop,
-              ),
-              TextImageOverlay(
-                containerImagePath: 'images/eng2.jpg',
-                containerTextHeading: 'President & Event Coordinator, AEGEE',
-                containerTextSpanList: stringToTextSpans('''
+              containerTextBodySize: smallBodySizeDesktop,
+            ),
+            TextImageOverlayDesktop(
+              containerImagePath: 'images/eng2.jpg',
+              containerTextHeading: 'President & Event Coordinator, AEGEE',
+              containerTextSpanList: stringToTextSpans('''
 \nWith just 20 years old I was thrown into management at the head of a small association in Berlin.
 \n
 \nNo doubt: leading a small NGO is not the most prestigious experience. However, it is a challanging one as I was
@@ -69,12 +68,11 @@ class AboutMePageDesktop extends StatelessWidget {
 \n
 \nI am grateful to the people I’ve met on this path and for the experiences I’ve made.
 '''),
-                containerTextBodySize: smallBodySizeDesktop,
-                isImageOnRight: true,
-              ),
-              const CustomBottomSheet(),
-            ],
-          ),
+              containerTextBodySize: smallBodySizeDesktop,
+              isImageOnRight: true,
+            ),
+            const CustomBottomSheet(),
+          ],
         ),
       ),
     );

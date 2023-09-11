@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '/ui/common/app_colors.dart';
 import '/ui/common/app_constants.dart';
 import '/ui/common/stringToTextSpans.dart';
-import '/ui/common/textImageOverlay.dart';
+import 'textImageOverlay.mobile.dart';
 import '/ui/common/bottomSheet.dart';
 import '/ui/common/breakingLineContainer.dart';
 import '/ui/views/mobile_pages/customAppBar.mobile.dart';
@@ -22,7 +22,7 @@ class AboutMePageMobile extends StatelessWidget {
                 text: 'I am a bit of a nerd.',
                 lineColor: breakingLineColor,
               ),
-              TextImageOverlay(
+              TextImageOverlayMobile(
                 containerImagePath: 'images/Huberlin-logo.jpg',
                 containerTextHeading: 'Humboldt University of Berlin',
                 containerTextSpanList: stringToTextSpans('''
@@ -42,7 +42,7 @@ class AboutMePageMobile extends StatelessWidget {
                 text: 'I don\'t just work for money:',
                 lineColor: breakingLineColor,
               ),
-              TextImageOverlay(
+              TextImageOverlayMobile(
                 containerImagePath: 'images/eng1.jpg',
                 containerTextHeading: 'Strategic Advisor, Vitsche',
                 containerTextSpanList: stringToTextSpans('''
@@ -52,7 +52,7 @@ class AboutMePageMobile extends StatelessWidget {
 '''),
                 containerTextBodySize: smallBodySizeMobile,
               ),
-              TextImageOverlay(
+              TextImageOverlayMobile(
                 containerImagePath: 'images/eng2.jpg',
                 containerTextHeading: 'President, AEGEE',
                 containerTextSpanList: stringToTextSpans('''

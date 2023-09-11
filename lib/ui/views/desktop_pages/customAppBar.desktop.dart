@@ -78,7 +78,7 @@ class CustomAppBarDesktop extends StatelessWidget
   Widget _buildButton(BuildContext context, String label, Widget page) {
     return Expanded(
       child: TextButton(
-        child: AutoSizeText(
+        child: Text(
           label,
           style: const TextStyle(
               fontFamily: 'Dosis',
