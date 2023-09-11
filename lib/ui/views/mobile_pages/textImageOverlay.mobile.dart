@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 
 import '/ui/common/app_colors.dart';
 import '/ui/common/app_constants.dart';
-class TextImageOverlay extends StatefulWidget {
+
+class TextImageOverlayMobile extends StatefulWidget {
   final String containerImagePath;
   final String containerTextHeading;
   final List<TextSpan> containerTextSpanList;
   final double containerTextBodySize;
   final bool isImageOnRight;
 
-  const TextImageOverlay({
+  const TextImageOverlayMobile({
     Key? key,
     required this.containerImagePath,
     required this.containerTextHeading,
@@ -20,10 +21,10 @@ class TextImageOverlay extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _TextImageOverlayState createState() => _TextImageOverlayState();
+  _TextImageOverlayMobileState createState() => _TextImageOverlayMobileState();
 }
 
-class _TextImageOverlayState extends State<TextImageOverlay> {
+class _TextImageOverlayMobileState extends State<TextImageOverlayMobile> {
   double _opacity = 0.0;
 
   @override
@@ -49,7 +50,7 @@ class _TextImageOverlayState extends State<TextImageOverlay> {
                 opacity: _opacity,
                 child: Image.asset(
                   widget.containerImagePath,
-                  fit: BoxFit.fitWidth,
+                  fit: BoxFit.fitHeight,
                 ),
               ),
             ),
@@ -57,7 +58,7 @@ class _TextImageOverlayState extends State<TextImageOverlay> {
             Center(
               child: Container(
                 color: brightColor,
-                width: constraints.maxWidth * imageAndTextFullWidthDesktop,
+                width: constraints.maxWidth * imageAndTextFullWidthMobile,
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
                   children: [

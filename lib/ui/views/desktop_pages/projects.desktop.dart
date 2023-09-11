@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:trigubtech/ui/views/desktop_pages/textImageOverlay.desktop.dart';
 import '/ui/common/customTextContainer.dart';
 import '/ui/common/app_colors.dart';
 import '/ui/common/app_constants.dart';
 import '/ui/common/app_strings.dart';
 import '/ui/common/stringToTextSpans.dart';
-import '/ui/common/textImageOverlay.dart';
 import '/ui/common/bottomSheet.dart';
 import '/ui/common/breakingLineContainer.dart';
 import '/ui/views/desktop_pages/customAppBar.desktop.dart';
@@ -28,7 +28,7 @@ class ProjectsPageDesktop extends StatelessWidget {
               CustomTextContainer(
                 customWidget: Column(
                   children: [
-                    TextImageOverlay(
+                    TextImageOverlayDesktop(
                       containerImagePath: 'images/arrows.jpg',
                       containerTextHeading:
                           'GPT-powered service staff assistant',
@@ -46,7 +46,7 @@ class ProjectsPageDesktop extends StatelessWidget {
                       containerTextBodySize: smallBodySizeDesktop,
                       isImageOnRight: true,
                     ),
-                    TextImageOverlay(
+                    TextImageOverlayDesktop(
                         containerImagePath: 'images/network1.jpg',
                         containerTextHeading:
                             'Full-stack application design and development',
@@ -63,7 +63,7 @@ class ProjectsPageDesktop extends StatelessWidget {
 '''),
                         containerTextBodySize: smallBodySizeDesktop,
                         isImageOnRight: true),
-                    TextImageOverlay(
+                    TextImageOverlayDesktop(
                         containerImagePath: 'images/mess.jpg',
                         containerTextHeading:
                             'Complex legacy software augmentation',
@@ -93,7 +93,7 @@ class ProjectsPageDesktop extends StatelessWidget {
                       onTap: () {
                         launchUrlString(aiSommelierLink);
                       },
-                      child: TextImageOverlay(
+                      child: TextImageOverlayDesktop(
                         containerImagePath: 'images/network1.jpg',
                         containerTextHeading: 'AI Sommelier',
                         containerTextSpanList: stringToTextSpans('''
@@ -115,7 +115,7 @@ class ProjectsPageDesktop extends StatelessWidget {
                       onTap: () {
                         launchUrlString(audioSummarizerLink);
                       },
-                      child: TextImageOverlay(
+                      child: TextImageOverlayDesktop(
                         containerImagePath: 'images/audio.jpg',
                         containerTextHeading: 'Audio-Summarizer',
                         containerTextSpanList: stringToTextSpans('''
@@ -136,7 +136,7 @@ class ProjectsPageDesktop extends StatelessWidget {
                       onTap: () {
                         launchUrlString(commGPTLink);
                       },
-                      child: TextImageOverlay(
+                      child: TextImageOverlayDesktop(
                         containerImagePath: 'images/network2.jpg',
                         containerTextHeading: 'Telegram Search&Chat',
                         containerTextSpanList: stringToTextSpans('''
