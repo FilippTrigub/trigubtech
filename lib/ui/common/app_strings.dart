@@ -11,5 +11,5 @@ const String email = 'filipp@trigub.tech';
 
 const String audioSummarizerLink = 'https://book-summarizer-ecru.vercel.app/';
 const String aiSommelierLink = 'https://ai-sommelier-beta.vercel.app/';
-const String commGPTLink = 'https://commgpt.azurewebsites.net/';
+const String commGPTLink = 'https://commgptapp.agreeablebush-cb151091.westeurope.azurecontainerapps.io';
 const String meetergoLink = 'https://my.meetergo.com/filipp-trigub/get-to-know-meeting';
