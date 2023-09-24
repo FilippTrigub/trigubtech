@@ -21,6 +21,7 @@ class ServicesPageMobile extends StatelessWidget {
             BreakingLineContainer(
               text: 'I turn your ideas into bots!',
               lineColor: breakingLineColor,
+              isMobile: true,
             ),
             CustomTextContainer(
               customWidget: CustomTextBox(
@@ -32,6 +33,7 @@ class ServicesPageMobile extends StatelessWidget {
             BreakingLineContainer(
               text: 'What I can do for you:',
               lineColor: breakingLineColor,
+              isMobile: true,
             ),
             CustomTextContainer(
               customWidget: VerticalImageTextColumn(

@@ -20,6 +20,7 @@ class AboutMePageDesktop extends StatelessWidget {
             const BreakingLineContainer(
               text: 'I am a bit of a nerd.',
               lineColor: breakingLineColor,
+              isMobile: false,
             ),
             TextImageOverlayDesktop(
               containerImagePath: 'images/Huberlin-logo.jpg',
@@ -40,6 +41,7 @@ class AboutMePageDesktop extends StatelessWidget {
             const BreakingLineContainer(
               text: 'I don\'t just work for money:',
               lineColor: breakingLineColor,
+              isMobile: false,
             ),
             TextImageOverlayDesktop(
               containerImagePath: 'images/eng1.jpg',

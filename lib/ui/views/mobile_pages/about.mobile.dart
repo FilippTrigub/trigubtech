@@ -21,6 +21,7 @@ class AboutMePageMobile extends StatelessWidget {
               const BreakingLineContainer(
                 text: 'I am a bit of a nerd.',
                 lineColor: breakingLineColor,
+                isMobile: true,
               ),
               TextImageOverlayMobile(
                 containerImagePath: 'images/Huberlin-logo.jpg',
@@ -41,6 +42,7 @@ class AboutMePageMobile extends StatelessWidget {
               const BreakingLineContainer(
                 text: 'I don\'t just work for money:',
                 lineColor: breakingLineColor,
+                isMobile: true,
               ),
               TextImageOverlayMobile(
                 containerImagePath: 'images/eng1.jpg',

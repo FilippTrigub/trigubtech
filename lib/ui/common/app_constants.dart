@@ -21,7 +21,7 @@ const double imageAndTextFullWidthDesktop = 0.5;
 const double appBarheightMobile = 120;
 
 const double headingSizeMobile = 30;
-const double bigBodySizeMobile = 24;
+const double bigBodySizeMobile = 22;
 const double smallBodySizeMobile = 18;
 
 const double imageAndTextFullWidthMobile = 0.8;

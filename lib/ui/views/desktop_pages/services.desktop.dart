@@ -23,6 +23,7 @@ class ServicesPageDesktop extends StatelessWidget {
             const BreakingLineContainer(
               text: 'I turn your ideas into bots!',
               lineColor: breakingLineColor,
+              isMobile: false,
             ),
             CustomTextContainer(
               customWidget: HorizontalImageTextContainer(
@@ -47,6 +48,7 @@ Dacades long engagements in my communities are the proof.
             const BreakingLineContainer(
               text: 'What I can do for you:',
               lineColor: breakingLineColor,
+              isMobile: false,
             ),
             const CustomTextContainer(
               customWidget: HorizontalImageTextColumn(
