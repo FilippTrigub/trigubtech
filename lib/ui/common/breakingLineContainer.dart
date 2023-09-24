@@ -7,11 +7,13 @@ import 'app_constants.dart';
 class BreakingLineContainer extends StatelessWidget {
   final String text;
   final Color lineColor;
+  final bool isMobile;
 
   const BreakingLineContainer({
     Key? key,
     required this.text,
     required this.lineColor,
+    required this.isMobile,
   }) : super(key: key);
 
   @override
@@ -25,9 +27,9 @@ class BreakingLineContainer extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 4.0),
         child: AutoSizeText(
           text,
-          style: const TextStyle(
+          style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: headingSizeDesktop,
+              fontSize: isMobile ? headingSizeMobile : headingSizeDesktop,
               color: kcText),
           textAlign: TextAlign.center,
           maxLines: 1,

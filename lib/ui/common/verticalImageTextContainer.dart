@@ -99,7 +99,7 @@ class _VerticalImageTextContainerState
             AutoSizeText(
               widget.containerTextHeading,
               style: const TextStyle(
-                  fontSize: headingSizeDesktop, color: kcText, fontWeight: FontWeight.bold),
+                  fontSize: headingSizeMobile, color: kcText, fontWeight: FontWeight.bold),
               maxLines: 2,
             ),
             const SizedBox(height: 20),

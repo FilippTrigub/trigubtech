@@ -35,6 +35,7 @@ class ContactPageDesktop extends StatelessWidget {
                     const BreakingLineContainer(
                       text: 'Let\'s get in touch!',
                       lineColor: breakingLineColor,
+                      isMobile: false,
                     ),
                     HorizontalImageTextContainer(
                       containerImagePath: 'images/coffee.jpg',

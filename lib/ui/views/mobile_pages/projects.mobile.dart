@@ -24,6 +24,7 @@ class ProjectsPageMobile extends StatelessWidget {
               const BreakingLineContainer(
                 text: 'My previous projects:',
                 lineColor: breakingLineColor,
+                isMobile: true,
               ),
               CustomTextContainer(
                 customWidget: Column(
@@ -85,6 +86,7 @@ class ProjectsPageMobile extends StatelessWidget {
               const BreakingLineContainer(
                 text: 'I code in my free time as well:',
                 lineColor: breakingLineColor,
+                isMobile: true,
               ),
               CustomTextContainer(
                 customWidget: Column(

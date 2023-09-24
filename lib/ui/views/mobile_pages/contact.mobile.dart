@@ -35,6 +35,7 @@ class ContactPageMobile extends StatelessWidget {
                     const BreakingLineContainer(
                       text: 'Let\'s get in touch!',
                       lineColor: breakingLineColor,
+                      isMobile: true,
                     ),
                     VerticalImageTextContainer(
                       containerImagePath: 'images/coffee.jpg',

@@ -29,6 +29,7 @@ class HomePageMobile extends StatelessWidget {
             const BreakingLineContainer(
               text: 'I turn your ideas into bots!',
               lineColor: breakingLineColor,
+              isMobile: true,
             ),
             const CustomTextContainer(
               customWidget: CustomTextBox(
@@ -40,6 +41,7 @@ class HomePageMobile extends StatelessWidget {
             const BreakingLineContainer(
               text: 'What I can do for you:',
               lineColor: breakingLineColor,
+              isMobile: true,
             ),
             const CustomTextContainer(
               customWidget: VerticalImageTextColumn(
@@ -50,6 +52,7 @@ class HomePageMobile extends StatelessWidget {
             const BreakingLineContainer(
               text: 'Let\'s get in touch!',
               lineColor: breakingLineColor,
+              isMobile: true,
             ),
             VerticalImageTextContainer(
               containerImagePath: 'images/coffee.jpg',

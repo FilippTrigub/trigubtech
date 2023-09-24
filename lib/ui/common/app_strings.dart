@@ -2,7 +2,7 @@ const String websiteTitle = 'Tech shapes Your Future';
 
 const String servicesPage = 'Services';
 const String projectsPage = 'Projects';
-const String aboutMePage = 'About me';
+const String aboutMePage = 'About Me';
 const String contactPage = 'Contacts';
 
 const String name = 'Filipp Trigub';
