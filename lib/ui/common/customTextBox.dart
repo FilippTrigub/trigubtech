@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:trigubtech/ui/common/app_colors.dart';
 
-class CustomTextBox extends StatelessWidget {
+class MobileIntroTextBox extends StatelessWidget {
   final double smallBodySize;
   final double textContainerScreenRatio;
   final double textContainerMinWidth;
 
-  const CustomTextBox({
+  const MobileIntroTextBox({
     required this.smallBodySize,
     required this.textContainerScreenRatio,
     required this.textContainerMinWidth,
@@ -30,7 +30,8 @@ My goal is to get you results!
             height: 10,
           ),
           _customContainer(screenSize, '''
-More than a software developer, I am your personal consultant:
+More than a software developer, I am your 
+personal consultant:
 ''', textAlign: TextAlign.center),
           const SizedBox(
             height: 10,
@@ -45,7 +46,8 @@ More than a software developer, I am your personal consultant:
           ),
           _customContainer(screenSize, '''
 My word counts! 
-Dacades long engagements in my communities are the proof.
+Dacades long engagements in my communities are 
+the proof.
 ''', textAlign: TextAlign.center),
           const SizedBox(
             height: 20,
