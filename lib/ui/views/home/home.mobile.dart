@@ -32,7 +32,7 @@ class HomePageMobile extends StatelessWidget {
               isMobile: true,
             ),
             const CustomTextContainer(
-              customWidget: CustomTextBox(
+              customWidget: MobileIntroTextBox(
                 textContainerMinWidth: textContainerMinWidth,
                 textContainerScreenRatio: textContainerScreenRatio,
                 smallBodySize: smallBodySizeMobile,

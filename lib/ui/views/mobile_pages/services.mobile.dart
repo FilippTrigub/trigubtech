@@ -24,7 +24,7 @@ class ServicesPageMobile extends StatelessWidget {
               isMobile: true,
             ),
             CustomTextContainer(
-              customWidget: CustomTextBox(
+              customWidget: MobileIntroTextBox(
                 textContainerMinWidth: textContainerMinWidth,
                 textContainerScreenRatio: textContainerScreenRatio,
                 smallBodySize: smallBodySizeMobile,
