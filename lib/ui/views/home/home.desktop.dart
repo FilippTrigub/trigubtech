@@ -11,6 +11,7 @@ import '/ui/common/breakingLineContainer.dart';
 import '/ui/views/desktop_pages/customAppBar.desktop.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '/ui/common/stringToTextSpans.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePageDesktop extends StatefulWidget {
   const HomePageDesktop({Key? key}) : super(key: key);
@@ -51,7 +52,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                 duration: const Duration(milliseconds: fadeInTime),
                 opacity: _opacity,
                 child: Image.asset(
-                  'images/image832_adjusted.png',
+                  'images/image832_adjusted.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -71,7 +72,7 @@ My goal is to get you results!
 \n
 More than a software developer, I am your personal consultant:
 — an M.Sc. in theoretical physics.
-— over 8 years experience as a full-stack dev.
+— over 9 years experience as a full-stack dev.
 — hands on experience with AI (ML, LLM).
 \n
 My word counts! 
@@ -98,7 +99,7 @@ Dacades long engagements in my communities are the proof.
               isMobile: false,
             ),
             HorizontalImageTextContainer(
-              containerImagePath: 'images/coffee.jpg',
+              containerImagePath: 'images/coffee3.jpg',
               containerTextHeading:
                   'Book a call directly!\nOr write me a message.',
               containerTextSpanList: [

@@ -31,7 +31,7 @@ class VerticalImageTextColumn extends StatelessWidget {
               containerImagePath: 'images/salesbot.jpg',
               containerTextHeading: '''Make it clear''',
               containerTextSpanList: stringToTextSpans('''
-GPT is amazing, but how can you really use it? As the space of possible applications is quickly eveolving, it is difficult to keep track. 
+AI is amazing, but how can you really use it? As the space of possible applications is quickly eveolving, it is difficult to keep track. 
 \nI consult you on what LLM's can do for you.
 \nTogether we create the architecture fitting your use case.
 \nAn MVP is finally deployed for you to examine.
@@ -42,10 +42,10 @@ GPT is amazing, but how can you really use it? As the space of possible applicat
               endColor: imageAndTextColor,
             ),
             VerticalImageTextContainer(
-              containerImagePath: 'images/network2.jpg',
+              containerImagePath: 'images/computer1.jpg',
               containerTextHeading: '''Make it fit''',
               containerTextSpanList: stringToTextSpans('''
-GPT is amazing, but how can you really use it? As the space of possible applications is quickly eveolving, it is difficult to keep track. 
+Which setup works best for you? What is the cost-performance tradeoff? Which is the most efficient infrastructure?
 \nChoose the right LLM for your use case based on costs and performance
 \nGive your bot the ability to do tasks outside of the chat.
 \nAssure data privacy by using an on-prem LLM or a hybrid one.
@@ -57,7 +57,7 @@ GPT is amazing, but how can you really use it? As the space of possible applicat
               isImageOnRight: true,
             ),
             VerticalImageTextContainer(
-              containerImagePath: 'images/pattern1.jpg',
+              containerImagePath: 'images/success1.jpg',
               containerTextHeading: 'Make the bots work',
               containerTextSpanList: stringToTextSpans('''
 Your MVP is a good start, but it is not enough. You need databases and backend code and you want it to run seemlessly and augmentable. 

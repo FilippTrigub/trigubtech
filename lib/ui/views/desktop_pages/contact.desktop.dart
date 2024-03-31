@@ -38,7 +38,7 @@ class ContactPageDesktop extends StatelessWidget {
                       isMobile: false,
                     ),
                     HorizontalImageTextContainer(
-                      containerImagePath: 'images/coffee.jpg',
+                      containerImagePath: 'images/coffee3.jpg',
                       containerTextHeading:
                           'Book a call directly!\nOr simply write me.',
                       containerTextSpanList: [

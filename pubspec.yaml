@@ -43,6 +43,7 @@ dependencies:
   url_launcher: ^6.0.12 
   http: ^1.0.0
   logging: ^1.0.1
+  flutter_svg: ^0.22.0
 
 
 dev_dependencies:
@@ -69,20 +70,40 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - images/icon.png
     - images/me1.jpg
     - images/eng1.jpg
     - images/eng2.jpg
-    - images/audio.jpg
-    - images/icon.png
-    - images/image832_adjusted.png
+    - images/computer1.jpg
+    - images/computer2.jpg
+    - images/computer_dark.jpg
+    - images/confluence1.jpg
+    - images/confluence2.jpg
+    - images/cartoon_bot.jpg
+    - images/sound.jpg
+    - images/image832_adjusted.jpg
     - images/salesbot.jpg
-    - images/coffee.jpg
-    - images/pattern1.jpg
-    - images/network1.jpg
-    - images/network2.jpg
+    - images/coffee3.jpg
     - images/arrows.jpg
-    - images/mess.jpg
+    - images/success1.jpg
+    - images/success2.jpg
     - images/Huberlin-logo.jpg
+    # - images/me1.svg
+    # - images/eng1.svg
+    # - images/eng2.svg
+    # - images/computer1.svg
+    # - images/computer2.svg
+    # - images/computer_dark.svg
+    # - images/confluence1.svg
+    # - images/confluence2.svg
+    # - images/icon.png
+    # - images/image832_adjusted.svg
+    # - images/salesbot.svg
+    # - images/coffee3.svg
+    # - images/arrows.svg
+    # - images/success1.svg
+    # - images/success2.svg
+    # - images/Huberlin-logo.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
