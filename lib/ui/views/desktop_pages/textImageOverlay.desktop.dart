@@ -21,7 +21,8 @@ class TextImageOverlayDesktop extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _TextImageOverlayDesktopState createState() => _TextImageOverlayDesktopState();
+  _TextImageOverlayDesktopState createState() =>
+      _TextImageOverlayDesktopState();
 }
 
 class _TextImageOverlayDesktopState extends State<TextImageOverlayDesktop> {
@@ -45,13 +46,34 @@ class _TextImageOverlayDesktopState extends State<TextImageOverlayDesktop> {
           children: [
             // Full size image with opacity mask
             Positioned.fill(
-              child: AnimatedOpacity(
-                duration: const Duration(milliseconds: fadeInTime),
-                opacity: _opacity,
-                child: Image.asset(
-                  widget.containerImagePath,
-                  fit: BoxFit.fitWidth,
-                ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: constraints.maxWidth * (1 - imageAndTextFullWidthDesktop) / 2,
+                    child: AnimatedOpacity(
+                      duration: const Duration(milliseconds: fadeInTime),
+                      opacity: _opacity,
+                      child: Image.asset(
+                        widget.containerImagePath,
+                        fit: BoxFit.fitHeight,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: constraints.maxWidth * imageAndTextFullWidthDesktop,
+                  ),
+                  SizedBox(
+                    width: constraints.maxWidth * (1 - imageAndTextFullWidthDesktop) / 2,
+                    child: AnimatedOpacity(
+                      duration: const Duration(milliseconds: fadeInTime),
+                      opacity: _opacity,
+                      child: Image.asset(
+                        widget.containerImagePath,
+                        fit: BoxFit.fitHeight,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             // Text overlay
@@ -62,7 +84,9 @@ class _TextImageOverlayDesktopState extends State<TextImageOverlayDesktop> {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
                   children: [
-                    const SizedBox(height: 20,),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     AutoSizeText(
                       widget.containerTextHeading,
                       textAlign: TextAlign.center,

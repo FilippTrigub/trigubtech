@@ -30,13 +30,13 @@ class AboutMePageDesktop extends StatelessWidget {
 \nHumboldt university of Berlin 10.2013 – 03.2019
 \n\nThesis:
 \n— “Makovian and Non-Markovian Dissipation Mechanisms in Nonequilibrium Dispersion Forces.”
-\n— Modelled stochastic processes with memory effects mathematically. Validated the model numerically using an implementation in C.
+\n— Modelled stochastic processes with memory effects mathematically. \nValidated the model numerically using an implementation in C.
 \n\nRelevant coursework
 \n— Statistical Data Analysis: Mathematical foundation and practical application of data processing and machine learning on real world data in python notebooks.
 \n— Statistical Mechanics: Theoretical Statistics at an advanced level with coding exercises.
 \n— Fluctuation Induced Phenomena: Deep understanding of complex processes driven by randomness fostered by advanced mathematical and numerical exercises
 '''),
-              containerTextBodySize: smallBodySizeMobile,
+              containerTextBodySize: smallBodySizeDesktop,
             ),
             const BreakingLineContainer(
               text: 'I don\'t just work for money:',
@@ -47,9 +47,13 @@ class AboutMePageDesktop extends StatelessWidget {
               containerImagePath: 'images/eng1.jpg',
               containerTextHeading: 'Strategic advisor to Vitsche e.V.',
               containerTextSpanList: stringToTextSpans('''
-\nBorn in Dnipro, the city of Sputnik, I have been continuously engaged in volunteering with the Ukrainian diaspora of Berlin. I am particularly proud to have advised Vitsche, one of the most prolific and well-known Ukrainian organizations in Germany, on their organizational structure. I am forever grateful for the work these young activists are doing.
+\nBorn in Dnipro, the city of Sputnik, I have been continuously engaged in volunteering with the Ukrainian diaspora of Berlin. 
+\nI am particularly proud to have advised Vitsche, one of the most prolific and well-known Ukrainian organizations in Germany, on their organizational structure. I am forever grateful for the work these young activists are doing.
 \n
-\nVitsche’s organizational challenges grew out of its rapid development following the 2022 full-scale Russian invasion of Ukraine. The initially flat hierarchy of the organization was quickly insufficient to handle the shire number of contributors leading to a crystallization of structure around key individuals. The resulting opaqueness led to friction within the organization and inhibited smooth operations.
+\nVitsche’s organizational challenges grew out of its rapid development following the 2022 full-scale Russian invasion of Ukraine. 
+\nThe initially flat hierarchy of the organization was quickly insufficient to handle the shire number of contributors leading to a crystallization of structure around key individuals. 
+\n
+\nThe resulting opaqueness led to friction within the organization and inhibited smooth operations.
 '''),
               containerTextBodySize: smallBodySizeDesktop,
             ),
@@ -65,9 +69,7 @@ class AboutMePageDesktop extends StatelessWidget {
 \n— organising international events with 50 participants.
 \n— convincing new members to join us instead of doing anything else in Berlin.
 \nOver my 2 year long tenure, I learned to lead, to persuade, to sell and to plan and my team and me were successful leaving the association richer and bigger than we found it.
-\n
 \nAfterwards I continued to serve among others in the leadership of the Eastern Partnership Project, managing a remote team across 3 time zones long before Covid.
-\n
 \nI am grateful to the people I’ve met on this path and for the experiences I’ve made.
 '''),
               containerTextBodySize: smallBodySizeDesktop,

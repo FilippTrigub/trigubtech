@@ -35,8 +35,8 @@ My goal is to get you results!
 \n
 More than a software developer, I am your personal consultant:
 — an M.Sc. in theoretical physics.
-— over 8 years experience as a full-stack dev.
-— hands on experience with AI (ML, LLM).
+— over 9 years experience as a full-stack dev.
+— hands on experience with LLM development.
 \n
 My word counts! 
 Dacades long engagements in my communities are the proof.

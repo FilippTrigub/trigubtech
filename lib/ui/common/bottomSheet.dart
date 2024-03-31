@@ -26,7 +26,7 @@ class CustomBottomSheet extends StatelessWidget {
                 maxLines: 4,
               ),
               AutoSizeText(
-                'Parts of the code, images and text of this website were, of course, AI-generated.',
+                'Parts of the code, images and text of this website are, of course, AI-generated.',
                 style: TextStyle(
                   color: Color.fromARGB(255, 134, 134, 134),
                   fontSize: 12,

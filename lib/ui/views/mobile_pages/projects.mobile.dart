@@ -30,6 +30,23 @@ class ProjectsPageMobile extends StatelessWidget {
                 customWidget: Column(
                   children: [
                     TextImageOverlayMobile(
+                      containerImagePath: 'images/success2.jpg',
+                      containerTextHeading:
+                          'Multi-chain LLM copilot for academic teaching and studying',
+                      containerTextSpanList: stringToTextSpans('''
+\nClient:	Universities
+\nDuration:	6 month (10.2023-03.2024)
+\nGoal: 
+\n— Build a sophisticated AI copilot to augment the students’ learning experience and provide AI-derived insights to professors.
+\nSolution:
+\n— Build a multi-chain LLM system adapting to user needs at its own accord with a Weaviate vector DB based RAG system and evaluated it.
+\n— Build responsive react frontend, and backend systems handling auth, data management and auxiliary services as a RESTful API.
+\n— Deployed and managed the app to the cloud in a production environment including the CICD via multi-stage deployment.
+'''),
+                      containerTextBodySize: smallBodySizeMobile,
+                      isImageOnRight: true,
+                    ),
+                    TextImageOverlayMobile(
                       containerImagePath: 'images/arrows.jpg',
                       containerTextHeading:
                           'GPT-powered service staff assistant',
@@ -48,7 +65,7 @@ class ProjectsPageMobile extends StatelessWidget {
                       isImageOnRight: true,
                     ),
                     TextImageOverlayMobile(
-                        containerImagePath: 'images/network1.jpg',
+                        containerImagePath: 'images/computer2.jpg',
                         containerTextHeading:
                             'Full-stack application design and development',
                         containerTextSpanList: stringToTextSpans('''
@@ -65,7 +82,7 @@ class ProjectsPageMobile extends StatelessWidget {
                         containerTextBodySize: smallBodySizeMobile,
                         isImageOnRight: true),
                     TextImageOverlayMobile(
-                        containerImagePath: 'images/mess.jpg',
+                        containerImagePath: 'images/confluence1.jpg',
                         containerTextHeading:
                             'Complex legacy software augmentation',
                         containerTextSpanList: stringToTextSpans('''
@@ -84,7 +101,7 @@ class ProjectsPageMobile extends StatelessWidget {
                 ),
               ),
               const BreakingLineContainer(
-                text: 'I code in my free time as well:',
+                text: 'I code quickly as well:',
                 lineColor: breakingLineColor,
                 isMobile: true,
               ),
@@ -96,7 +113,7 @@ class ProjectsPageMobile extends StatelessWidget {
                         launchUrlString(aiSommelierLink);
                       },
                       child: TextImageOverlayMobile(
-                        containerImagePath: 'images/network1.jpg',
+                        containerImagePath: 'images/cartoon_bot.jpg',
                         containerTextHeading: 'AI Sommelier',
                         containerTextSpanList: stringToTextSpans('''
 \nDuration: 1 month (06.2023)
@@ -118,7 +135,7 @@ class ProjectsPageMobile extends StatelessWidget {
                         launchUrlString(audioSummarizerLink);
                       },
                       child: TextImageOverlayMobile(
-                        containerImagePath: 'images/audio.jpg',
+                        containerImagePath: 'images/sound.jpg',
                         containerTextHeading: 'Audio-Summarizer',
                         containerTextSpanList: stringToTextSpans('''
 \nDuration:	1 month (02-03.2023)
@@ -139,7 +156,7 @@ class ProjectsPageMobile extends StatelessWidget {
                         launchUrlString(commGPTLink);
                       },
                       child: TextImageOverlayMobile(
-                        containerImagePath: 'images/network1.jpg',
+                        containerImagePath: 'images/confluence2.jpg',
                         containerTextHeading: 'Telegram Search&Chat',
                         containerTextSpanList: stringToTextSpans('''
 \nDuration:	1 month (03-04.2023)
