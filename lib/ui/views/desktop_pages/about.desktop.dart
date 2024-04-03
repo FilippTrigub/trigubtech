@@ -39,7 +39,7 @@ class AboutMePageDesktop extends StatelessWidget {
               containerTextBodySize: smallBodySizeDesktop,
             ),
             const BreakingLineContainer(
-              text: 'I don\'t just work for money:',
+              text: 'Engaged for values:',
               lineColor: breakingLineColor,
               isMobile: false,
             ),

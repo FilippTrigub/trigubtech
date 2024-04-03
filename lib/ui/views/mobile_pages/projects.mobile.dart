@@ -101,7 +101,7 @@ class ProjectsPageMobile extends StatelessWidget {
                 ),
               ),
               const BreakingLineContainer(
-                text: 'I code quickly as well:',
+                text: 'I develop cutting edge PoCs:',
                 lineColor: breakingLineColor,
                 isMobile: true,
               ),
@@ -127,7 +127,7 @@ class ProjectsPageMobile extends StatelessWidget {
 \n— Extracted these preferences programmatically to force usage of tool after a set number of preferences has been identified.
 \n— Dockized and deployed to Azure with Terraform.
 '''),
-                        containerTextBodySize: smallBodySizeDesktop,
+                        containerTextBodySize: smallBodySizeMobile,
                       ),
                     ),
                     InkWell(
@@ -170,7 +170,7 @@ class ProjectsPageMobile extends StatelessWidget {
 \n— Provided a light-weight UI with user authentication to Telegram and subsequent chat window.
 \n— Deployed the bot to Azure with Docker.
 '''),
-                        containerTextBodySize: smallBodySizeDesktop,
+                        containerTextBodySize: smallBodySizeMobile,
                       ),
                     ),
                   ],

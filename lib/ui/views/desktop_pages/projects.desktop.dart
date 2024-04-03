@@ -101,7 +101,7 @@ class ProjectsPageDesktop extends StatelessWidget {
                 ),
               ),
               const BreakingLineContainer(
-                text: 'I code quickly as well:',
+                text: 'I develop cutting edge PoCs:',
                 lineColor: breakingLineColor,
                 isMobile: false,
               ),
