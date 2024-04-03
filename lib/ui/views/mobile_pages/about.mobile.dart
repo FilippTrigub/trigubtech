@@ -40,7 +40,7 @@ class AboutMePageMobile extends StatelessWidget {
                 containerTextBodySize: smallBodySizeMobile,
               ),
               const BreakingLineContainer(
-                text: 'I don\'t just work for money:',
+                text: 'Engaged for values:',
                 lineColor: breakingLineColor,
                 isMobile: true,
               ),
