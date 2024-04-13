@@ -109,9 +109,9 @@ class ProjectsPageMobile extends StatelessWidget {
                 customWidget: Column(
                   children: [
                     InkWell(
-                      onTap: () {
-                        launchUrlString(aiSommelierLink);
-                      },
+                      // onTap: () {
+                      //   launchUrlString(aiSommelierLink);
+                      // },
                       child: TextImageOverlayMobile(
                         containerImagePath: 'images/cartoon_bot.jpg',
                         containerTextHeading: 'AI Sommelier',
@@ -131,9 +131,9 @@ class ProjectsPageMobile extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        launchUrlString(audioSummarizerLink);
-                      },
+                      // onTap: () {
+                      //   launchUrlString(audioSummarizerLink);
+                      // },
                       child: TextImageOverlayMobile(
                         containerImagePath: 'images/sound.jpg',
                         containerTextHeading: 'Audio-Summarizer',
@@ -152,9 +152,9 @@ class ProjectsPageMobile extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        launchUrlString(commGPTLink);
-                      },
+                      // onTap: () {
+                      //   launchUrlString(commGPTLink);
+                      // },
                       child: TextImageOverlayMobile(
                         containerImagePath: 'images/confluence2.jpg',
                         containerTextHeading: 'Telegram Search&Chat',
