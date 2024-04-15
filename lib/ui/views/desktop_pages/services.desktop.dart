@@ -23,7 +23,7 @@ class ServicesPageDesktop extends StatelessWidget {
               isMobile: false,
             ),
             TextImageOverlayDesktop(
-              containerImagePath: 'images/success2.jpg',
+              containerImagePath: 'images/services_RAG.jpg',
               containerTextHeading:
                   'Optimized Retriaval-Augmented Generation (RAG) System',
               containerTextSpanList: stringToTextSpans('''
@@ -45,7 +45,7 @@ class ServicesPageDesktop extends StatelessWidget {
               isImageOnRight: true,
             ),
             TextImageOverlayDesktop(
-              containerImagePath: 'images/success2.jpg',
+              containerImagePath: 'images/services_evaluation.jpg',
               containerTextHeading:
                   'LLM System Evaluation',
               containerTextSpanList: stringToTextSpans('''
@@ -65,7 +65,7 @@ class ServicesPageDesktop extends StatelessWidget {
               isImageOnRight: true,
             ),
             TextImageOverlayDesktop(
-              containerImagePath: 'images/success2.jpg',
+              containerImagePath: 'images/services_security.jpg',
               containerTextHeading:
                   'Security and Privacy',
               containerTextSpanList: stringToTextSpans('''
@@ -84,7 +84,7 @@ class ServicesPageDesktop extends StatelessWidget {
               isImageOnRight: true,
             ),
             TextImageOverlayDesktop(
-              containerImagePath: 'images/success2.jpg',
+              containerImagePath: 'images/services_deployment.jpg',
               containerTextHeading:
                   'Integration and Deployment',
               containerTextSpanList: stringToTextSpans('''
