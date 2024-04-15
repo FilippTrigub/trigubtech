@@ -88,6 +88,10 @@ flutter:
     - images/success1.jpg
     - images/success2.jpg
     - images/Huberlin-logo.jpg
+    - images/services_RAG.jpg
+    - images/services_evaluation.jpg
+    - images/services_security.jpg
+    - images/services_deployment.jpg
     # - images/me1.svg
     # - images/eng1.svg
     # - images/eng2.svg
