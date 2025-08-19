@@ -6,6 +6,9 @@ import 'package:url_strategy/url_strategy.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:logging/logging.dart';
 
+// Import our theme patch to fix the backgroundColor issue
+import '/utils/get_theme_patch.dart';
+
 import 'app/app.dialogs.dart';
 import 'app/app.locator.dart';
 import 'app/app.router.dart';

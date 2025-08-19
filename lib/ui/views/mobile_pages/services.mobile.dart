@@ -18,7 +18,7 @@ class ServicesPageMobile extends StatelessWidget {
         child: Column(
           children: <Widget>[
             const BreakingLineContainer(
-              text: 'A selction of my services:',
+              text: 'A selection of my services:',
               lineColor: breakingLineColor,
               isMobile: false,
             ),
