@@ -1,3 +1,9 @@
 {
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:docs.flutter.dev)"
+    ]
+  },
   "enableAllProjectMcpServers": false
 }

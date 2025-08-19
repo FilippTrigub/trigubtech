@@ -15,24 +15,31 @@ class CustomBottomSheet extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(8.0),
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
-              AutoSizeText(
-                '$name \n$address',
-                style: TextStyle(
-                  color: kcTextDark,
-                  fontSize: 12,
+              Flexible(
+                child: AutoSizeText(
+                  '$name \n$address',
+                  style: const TextStyle(
+                    color: kcTextDark,
+                    fontSize: 11,
+                  ),
+                  textAlign: TextAlign.center,
+                  maxLines: 4,
+                  minFontSize: 8,
                 ),
-                textAlign: TextAlign.center,
-                maxLines: 4,
               ),
-              AutoSizeText(
-                'Parts of the code, images and text of this website are, of course, AI-generated.',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 134, 134, 134),
-                  fontSize: 12,
+              Flexible(
+                child: AutoSizeText(
+                  'Parts of the code, images and text of this website are, of course, AI-generated.',
+                  style: const TextStyle(
+                    color: Color.fromARGB(255, 134, 134, 134),
+                    fontSize: 11,
+                  ),
+                  textAlign: TextAlign.center,
+                  maxLines: 2,
+                  minFontSize: 8,
                 ),
-                textAlign: TextAlign.center,
-                maxLines: 2,
               ),
             ],
           ),

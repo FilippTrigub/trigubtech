@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import '/ui/common/app_colors.dart';
 import '/ui/common/app_strings.dart';
-import 'package:url_strategy/url_strategy.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:logging/logging.dart';
 
@@ -14,13 +14,14 @@ import 'app/app.locator.dart';
 import 'app/app.router.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  
   Logger.root.level = Level.ALL; // defaults to Level.INFO
-
   Logger.root.onRecord.listen((record) {
     print('${record.level.name}: ${record.time}: ${record.message}');
   });
   
-  setPathUrlStrategy();
+  usePathUrlStrategy();
   setupLocator(
     stackedRouter: stackedRouter,
   );
