@@ -26,36 +26,46 @@ trigubtech/
 
 ### Development Commands
 - `npm install` or `pnpm install` - Install dependencies
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
+- `npm run dev` - Start Vite development server
+- `npm run build` - TypeScript compile and Vite build for production
+- `npm run serve` - Preview production build locally
 - `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript compiler
 
 ### Architecture
-- **Framework**: Next.js 14 with App Router
+- **Framework**: Vite + React with React Router
 - **Language**: TypeScript with strict type checking
 - **Styling**: Tailwind CSS with custom design system
 - **Animations**: Framer Motion for smooth interactions
 - **Icons**: Lucide React
+- **Routing**: React Router DOM
+- **Email**: EmailJS for contact forms
 
 ### Key Directories (TypeScript)
-- `/src/app/` - Next.js App Router pages and layouts
+- `/src/` - Main application source code
 - `/src/components/` - Reusable React components
 - `/src/types/` - TypeScript type definitions
 - `/src/utils/` - Constants and utility functions
+- `/src/main.tsx` - React application entry point
+- `/src/App.tsx` - Main App component with routing
+- `index.html` - Vite entry point (root level)
+- `vite.config.mts` - Vite configuration
+- `dist/` - Built output directory (generated)
 
 ### Core Dependencies (TypeScript)
-- `next` - React framework with SSR/SSG
+- `vite` - Fast build tool and dev server
 - `react` & `react-dom` - React library
+- `react-router-dom` - Client-side routing
 - `framer-motion` - Animation library
 - `lucide-react` - Icon library
 - `tailwindcss` - Utility-first CSS framework
+- `@emailjs/browser` - Email service integration
 
 ### Component Architecture (TypeScript)
 - **Layout Components**: Header, Footer, Layout wrapper
-- **Interactive Components**: StatementBox, ExpandableCard, ProjectCard, TimelineCard
+- **Interactive Components**: StatementBox, ExpandableCard, ProjectCard, TimelineCard, ServiceCard
 - **Animation Components**: AnimatedSection, StaggeredChildren, CountUp, Typewriter
+- **Section Components**: HeroSection, ModernIntroSection, ModernServicesSection, AboutSection, ContactCTASection
+- **Form Components**: ContactForm with EmailJS integration
 - **Page Components**: Mobile-first responsive design
 
 ## Flutter Development (Legacy)
@@ -97,9 +107,10 @@ trigubtech/
 ## Deployment
 
 ### TypeScript Deployment
-- Target: Modern web hosting (Vercel, Netlify, etc.)
+- Target: Static hosting (Vercel, Netlify, GitHub Pages, etc.)
 - Build command: `npm run build`
-- Static export or server-side rendering
+- Output: Static files in `dist/` directory
+- Preview: `npm run serve` for local testing
 
 ### Flutter Deployment (Legacy)
 - Target: DreamHost via SSH
@@ -135,8 +146,17 @@ cd flutter && flutter build web --release && cd build/web && scp -r ./* dh_kn6hn
 - **Page transitions**: Smooth navigation between routes
 - **Staggered reveals**: Sequential animation of multiple elements
 
+### Vite Development Benefits
+- **Lightning-fast HMR**: Instant hot module replacement during development
+- **Native ESM**: Uses ES modules for faster development server startup
+- **TypeScript support**: First-class TypeScript support out of the box
+- **CSS preprocessing**: Built-in support for Tailwind and PostCSS
+- **Path aliases**: `@/` alias configured for clean imports
+
 ### Performance Optimizations
-- **Next.js optimizations**: Automatic code splitting and lazy loading
-- **Image optimization**: Next.js Image component with responsive images
+- **Vite optimizations**: Fast HMR and optimized production builds
+- **Code splitting**: Automatic with Vite and React lazy loading
+- **Bundle optimization**: Tree shaking and minification
 - **Type safety**: Full TypeScript coverage
 - **Modern CSS**: Tailwind for optimal bundle size
+- **Static generation**: Pure static site for fast loading
