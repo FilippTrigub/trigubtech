@@ -10,14 +10,14 @@ const Footer: React.FC = () => {
           {/* Disclaimer */}
           <div className="text-center max-w-sm">
             <p className="text-accent text-xs leading-relaxed">
-              Parts of the code, images and text of this website are, of course, AI-generated.
+              My agents coded this website.
             </p>
           </div>
 
           {/* Copyright */}
           <div className="text-center pt-2 w-full">
             <p className="text-accent text-xs">
-              © 2024 Trigub Tech. All rights reserved.
+              {`2025 Trigub Technologies OÜ. Friedrich-Woehler-Str 1.53117 Bonn Germany`}
             </p>
           </div>
         </div>

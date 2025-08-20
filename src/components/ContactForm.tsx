@@ -1,21 +1,45 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const ContactForm: React.FC = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const form = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState('Send Message');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log({ name, email, message });
+    setStatus('Sending...');
+
+    const serviceID = 'service_o9bi3nh'; // Replace with your EmailJS service ID
+    const templateID = 'template_rl148oq'; // Replace with your EmailJS template ID
+    const userID = '5J_bSKObx3x-Ysl8d'; // Replace with your EmailJS user ID (Public Key)
+
+    if (form.current) {
+      const formData = new FormData(form.current);
+      const templateParams = {
+        name: formData.get('user_name') as string,
+        email: formData.get('user_email') as string,
+        message: formData.get('message') as string,
+        time: new Date().toLocaleString(),
+      };
+
+      emailjs.send(serviceID, templateID, templateParams, userID)
+        .then((result) => {
+          console.log(result.text);
+          setStatus('Message Sent!');
+          form.current?.reset();
+        }, (error) => {
+          console.log(error.text);
+          setStatus('Failed to send');
+        });
+    }
   };
 
   return (
     <motion.form
+      ref={form}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -28,8 +52,7 @@ const ContactForm: React.FC = () => {
         <input
           type="text"
           id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          name="user_name"
           className="w-full px-4 py-2 border border-accent/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           required
         />
@@ -39,8 +62,7 @@ const ContactForm: React.FC = () => {
         <input
           type="email"
           id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          name="user_email"
           className="w-full px-4 py-2 border border-accent/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           required
         />
@@ -49,8 +71,7 @@ const ContactForm: React.FC = () => {
         <label htmlFor="message" className="block text-accent mb-2">Message</label>
         <textarea
           id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          name="message"
           rows={5}
           className="w-full px-4 py-2 border border-accent/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           required
@@ -58,9 +79,10 @@ const ContactForm: React.FC = () => {
       </div>
       <button
         type="submit"
-        className="bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300"
+        className="bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 disabled:opacity-50"
+        disabled={status !== 'Send Message'}
       >
-        Send Message
+        {status}
       </button>
     </motion.form>
   );
