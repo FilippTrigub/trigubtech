@@ -48,20 +48,17 @@ jobs:
         name: production-files
         path: ./dist
 
+    - name: Setup SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.DREAMHOST_SSH_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H pdx1-shared-a1-44.dreamhost.com >> ~/.ssh/known_hosts
+
     - name: Clear remote directory
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: pdx1-shared-a1-44.dreamhost.com
-        username: dh_kn6hnk
-        key: ${{ secrets.DREAMHOST_SSH_KEY }}
-        script: rm -rf ./trigub.tech/*
+      run: |
+        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no dh_kn6hnk@pdx1-shared-a1-44.dreamhost.com 'rm -rf ./trigub.tech/*'
 
     - name: Deploy files to server
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: pdx1-shared-a1-44.dreamhost.com
-        username: dh_kn6hnk
-        key: ${{ secrets.DREAMHOST_SSH_KEY }}
-        source: "./dist/*"
-        target: "./trigub.tech/"
-        strip_components: 1
+      run: |
+        scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r ./dist/* dh_kn6hnk@pdx1-shared-a1-44.dreamhost.com:./trigub.tech/
