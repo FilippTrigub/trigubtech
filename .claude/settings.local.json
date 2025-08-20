@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:docs.flutter.dev)"
+      "WebFetch(domain:docs.flutter.dev)",
+      "Bash(cp:*)",
+      "WebFetch(domain:github.com)"
     ]
   },
   "enableAllProjectMcpServers": false
