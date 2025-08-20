@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Settings, Cpu } from 'lucide-react';
-import { SERVICE_SECTIONS } from '@/utils/constants';
+import { FONT_CONFIG, SERVICE_SECTIONS } from '@/utils/constants';
 
 const iconMap = {
   lightbulb: Lightbulb,
@@ -15,7 +15,9 @@ const ServicesHighlightSection: React.FC = () => {
   return (
     <div className="bg-background py-20 px-4">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-text-dark text-center mb-12">What I Can Do For You</h2>
+        <h2 className={`text-2xl md:text-4xl font-bold text-text-dark text-center mb-12 ${FONT_CONFIG.TITLE_FONT}`}>
+          What I Can Do For You
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {SERVICE_SECTIONS.map((service, index) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap];

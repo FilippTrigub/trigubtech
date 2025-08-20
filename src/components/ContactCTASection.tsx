@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FONT_CONFIG } from '@/utils/constants';
 
 const ContactCTASection: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const ContactCTASection: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-3xl md:text-4xl font-bold text-text-light mb-4"
+        className={`text-2xl md:text-4xl font-bold text-text-light mb-4 ${FONT_CONFIG.TITLE_FONT}`}
       >
         Have a project in mind?
       </motion.h2>

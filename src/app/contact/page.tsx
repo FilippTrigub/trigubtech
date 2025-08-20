@@ -3,7 +3,7 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import ContactForm from '@/components/ContactForm';
-import { PERSONAL_INFO } from '@/utils/constants';
+import { FONT_CONFIG, PERSONAL_INFO } from '@/utils/constants';
 import { Mail, Linkedin, Calendar } from 'lucide-react';
 
 export default function ContactPage() {
@@ -11,7 +11,9 @@ export default function ContactPage() {
     <Layout currentPage="contact">
       <div className="bg-background py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-dark text-center mb-12">Let's Get in Touch</h2>
+          <h2 className={`text-2xl md:text-4xl font-bold text-text-dark text-center mb-12 ${FONT_CONFIG.TITLE_FONT}`}>
+            Let's Get in Touch
+            </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="md:col-span-1">
               <ContactForm />

@@ -1,7 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Font Options - placed after Tailwind to avoid conflicts */
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ithaca';
+  src: url('/fonts/Ithaca-LVB75.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Medodica';
+  src: url('/fonts/MedodicaRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
@@ -18,7 +42,7 @@ body {
 body {
   color: #1A1A1A; /* text-dark */
   background-color: #FDFDFD; /* background */
-  font-family: 'Dosis', sans-serif;
+  /* No font-family set here - let Tailwind font classes control fonts */
 }
 
 a {
@@ -50,3 +74,21 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+/* Font utility classes - explicit declarations */
+.font-vcr-osd {
+  font-family: 'VCR OSD Mono', monospace !important;
+}
+
+.font-medodica {
+  font-family: 'Medodica', sans-serif !important;
+}
+
+.font-ithaca {
+  font-family: 'Ithaca', serif !important;
+}
+
+/* Test classes for debugging */
+.test-vcr { font-family: 'VCR OSD Mono', monospace !important; }
+.test-medodica { font-family: 'Medodica', sans-serif !important; }
+.test-ithaca { font-family: 'Ithaca', serif !important; }

@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { StatementBoxProps } from '@/types';
+import { FONT_CONFIG } from '@/utils/constants';
 
 const StatementBox: React.FC<StatementBoxProps> = ({
   statement,
@@ -29,7 +30,7 @@ const StatementBox: React.FC<StatementBoxProps> = ({
           cursor-default
         `}
       >
-        <p className={`${textColor} ${fontSize} ${fontWeight} text-center leading-relaxed`}>
+        <p className={`${textColor} ${fontSize} ${fontWeight} text-center leading-relaxed ${FONT_CONFIG.BODY_FONT}`}>
           {statement}
         </p>
       </div>
@@ -52,7 +53,7 @@ export const StatementBoxGroup: React.FC<StatementBoxGroupProps> = ({
     <div className={`py-4 ${className}`}>
       {title && (
         <div className="px-4 py-2 mb-4">
-          <h3 className="text-heading-mobile font-bold text-text-dark text-center font-dosis">
+          <h3 className={`text-heading-mobile font-bold text-text-dark text-center ${FONT_CONFIG.TITLE_FONT}`}>
             {title}
           </h3>
         </div>

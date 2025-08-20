@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import ImageSeparator from './ImageSeparator';
+import { FONT_CONFIG } from '@/utils/constants';
 
 interface ExpandableCardProps {
   title: string;
@@ -83,12 +84,12 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({
           
           <div className="absolute inset-0 flex items-center justify-center p-6">
             <div className="text-center">
-              <h3 className={`font-bold font-dosis mb-3 text-xl ${
+              <h3 className={`font-bold mb-3 text-xl ${FONT_CONFIG.TITLE_FONT} ${
                 imagePath ? 'text-white' : 'text-primary'
               }`}>
                 {title}
               </h3>
-              <p className={`text-sm leading-relaxed ${
+              <p className={`text-sm leading-relaxed ${FONT_CONFIG.BODY_FONT} ${
                 imagePath ? 'text-gray-100' : 'text-gray-700'
               }`}>
                 {preview}
@@ -117,10 +118,10 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({
             onClick={toggleExpanded}
           >
             <div className="text-center">
-              <h3 className="font-bold font-dosis mb-3 text-xl text-primary">
+              <h3 className={`font-bold mb-3 text-xl text-primary ${FONT_CONFIG.TITLE_FONT}`}>
                 {title}
               </h3>
-              <p className="text-sm leading-relaxed text-gray-700">
+              <p className={`text-sm leading-relaxed text-gray-700 ${FONT_CONFIG.BODY_FONT}`}>
                 {preview}
               </p>
             </div>
@@ -153,7 +154,7 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({
               className="overflow-hidden"
             >
               <div className="p-6 bg-white">
-                <div className="text-small-body-mobile text-gray-800">
+                <div className={`text-small-body-mobile text-gray-800 ${FONT_CONFIG.BODY_FONT}`}>
                   {formatContent(fullContent)}
                 </div>
               </div>

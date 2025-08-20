@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import StatementBox from './StatementBox';
-import { INTRO_STATEMENTS, PROFESSIONAL_CREDENTIALS } from '@/utils/constants';
+import { INTRO_STATEMENTS, PROFESSIONAL_CREDENTIALS, FONT_CONFIG } from '@/utils/constants';
 
 const ModernIntroSection: React.FC = () => {
   return (
@@ -16,12 +16,12 @@ const ModernIntroSection: React.FC = () => {
         className="mx-4 mb-4"
       >
         <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20">
-          <h3 className="text-big-body-mobile font-bold text-primary text-center mb-3 font-dosis">
+          <h3 className={`text-big-body-mobile font-bold text-primary text-center mb-3 ${FONT_CONFIG.TITLE_FONT}`}>
             Professional Credentials
           </h3>
           <div className="space-y-2">
             {PROFESSIONAL_CREDENTIALS.map((credential, index) => (
-              <p key={index} className="text-small-body-mobile text-text-dark text-left leading-relaxed">
+              <p key={index} className={`text-small-body-mobile text-text-dark text-left leading-relaxed ${FONT_CONFIG.BODY_FONT}`}>
                 • {credential}
               </p>
             ))}

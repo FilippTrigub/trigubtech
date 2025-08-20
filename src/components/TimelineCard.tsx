@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronDown, GraduationCap, Award, Users } from 'lucide-react';
 import ImageSeparator from './ImageSeparator';
+import { FONT_CONFIG } from '@/utils/constants';
 
 interface TimelineCardProps {
   title: string;
@@ -60,7 +61,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
               return (
                 <div key={lineIndex} className="flex items-start space-x-2 mb-2">
                   <span className="text-primary font-bold mt-1 flex-shrink-0">—</span>
-                  <span className="text-small-body-mobile text-gray-700 leading-relaxed">
+                  <span className={`text-small-body-mobile text-gray-700 leading-relaxed ${FONT_CONFIG.BODY_FONT}`}>
                     {line.substring(1).trim()}
                   </span>
                 </div>
@@ -72,7 +73,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
               return (
                 <div key={lineIndex} className="mb-2">
                   <span className="font-semibold text-primary">{label}:</span>
-                  <span className="text-small-body-mobile text-gray-700 ml-1">
+                  <span className={`text-small-body-mobile text-gray-700 ml-1 ${FONT_CONFIG.BODY_FONT}`}>
                     {rest.join(':').trim()}
                   </span>
                 </div>
@@ -80,7 +81,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
             }
             
             return (
-              <p key={lineIndex} className="text-small-body-mobile text-gray-700 leading-relaxed mb-2">
+              <p key={lineIndex} className={`text-small-body-mobile text-gray-700 leading-relaxed mb-2 ${FONT_CONFIG.BODY_FONT}`}>
                 {line}
               </p>
             );
@@ -133,7 +134,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
                 <div className="bg-white bg-opacity-90 rounded-lg p-2">
                   {getIcon()}
                 </div>
-                <h3 className="text-white font-bold text-lg font-dosis">
+                <h3 className={`text-white font-bold text-lg ${FONT_CONFIG.TITLE_FONT}`}>
                   {title}
                 </h3>
               </div>
@@ -158,7 +159,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
                 <div className="bg-white rounded-lg p-2 shadow-sm">
                   {getIcon()}
                 </div>
-                <h3 className="text-primary font-bold text-lg font-dosis">
+                <h3 className={`text-primary font-bold text-lg ${FONT_CONFIG.TITLE_FONT}`}>
                   {title}
                 </h3>
               </div>
