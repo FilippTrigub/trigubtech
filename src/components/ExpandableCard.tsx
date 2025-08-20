@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import ImageSeparator from './ImageSeparator';
 
 interface ExpandableCardProps {
   title: string;
@@ -57,9 +58,18 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({
         whileHover={{ y: -2 }}
         transition={{ duration: 0.2 }}
       >
+        {/* Mobile separator for image cards */}
+        {imagePath && (
+          <div className="md:hidden">
+            <ImageSeparator imagePath={imagePath} altText={title} />
+          </div>
+        )}
+        
         {/* Header with Image/Gradient Background */}
         <div 
-          className="relative h-48 overflow-hidden cursor-pointer"
+          className={`relative overflow-hidden cursor-pointer ${
+            imagePath ? 'hidden md:block h-48' : 'h-48'
+          }`}
           onClick={toggleExpanded}
           style={{
             background: imagePath 
@@ -99,6 +109,38 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({
             )}
           </motion.div>
         </div>
+        
+        {/* Mobile header for image cards */}
+        {imagePath && (
+          <div 
+            className="md:hidden bg-gradient-to-r from-primary/10 to-primary/5 p-6 cursor-pointer"
+            onClick={toggleExpanded}
+          >
+            <div className="text-center">
+              <h3 className="font-bold font-dosis mb-3 text-xl text-primary">
+                {title}
+              </h3>
+              <p className="text-sm leading-relaxed text-gray-700">
+                {preview}
+              </p>
+            </div>
+            
+            {/* Mobile Expand/Collapse Button */}
+            <motion.div
+              className="flex justify-center mt-4"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <div className="bg-white rounded-full p-2 shadow-lg">
+                {isExpanded ? (
+                  <ChevronUp size={20} className="text-primary" />
+                ) : (
+                  <ChevronDown size={20} className="text-primary" />
+                )}
+              </div>
+            </motion.div>
+          </div>
+        )}
 
         {/* Expandable Content */}
         <AnimatePresence>

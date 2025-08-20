@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronDown, GraduationCap, Award, Users } from 'lucide-react';
+import ImageSeparator from './ImageSeparator';
 
 interface TimelineCardProps {
   title: string;
@@ -115,9 +116,14 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
           whileHover={{ y: -2, shadow: '0 10px 25px rgba(0,0,0,0.1)' }}
           transition={{ duration: 0.3 }}
         >
+          {/* Mobile separator */}
+          <div className="md:hidden">
+            <ImageSeparator imagePath={imagePath} altText={title} />
+          </div>
+          
           {/* Header */}
           <div
-            className="relative h-32 bg-cover bg-center cursor-pointer"
+            className="relative h-32 bg-cover bg-center cursor-pointer hidden md:block"
             style={{ backgroundImage: `url(${imagePath})` }}
             onClick={() => setIsExpanded(!isExpanded)}
           >
@@ -134,6 +140,31 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
               
               <motion.div
                 className="bg-white bg-opacity-90 rounded-full p-2"
+                animate={{ rotate: isExpanded ? 90 : 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ChevronRight size={16} className="text-primary" />
+              </motion.div>
+            </div>
+          </div>
+          
+          {/* Mobile header */}
+          <div 
+            className="md:hidden bg-gradient-to-r from-primary/10 to-primary/5 p-4 cursor-pointer"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <div className="bg-white rounded-lg p-2 shadow-sm">
+                  {getIcon()}
+                </div>
+                <h3 className="text-primary font-bold text-lg font-dosis">
+                  {title}
+                </h3>
+              </div>
+              
+              <motion.div
+                className="bg-white rounded-full p-2 shadow-sm"
                 animate={{ rotate: isExpanded ? 90 : 0 }}
                 transition={{ duration: 0.2 }}
               >

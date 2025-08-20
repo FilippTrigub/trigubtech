@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Tag } from 'lucide-react';
+import ImageSeparator from './ImageSeparator';
 
 interface ServiceCardProps {
   imagePath: string;
@@ -32,8 +33,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       transition={{ duration: 0.5 }}
       className="bg-white rounded-lg shadow-md overflow-hidden my-8 mx-4"
     >
+      {/* Mobile separator */}
+      <div className="md:hidden">
+        <ImageSeparator imagePath={imagePath} altText={altText} />
+      </div>
+      
       <div className={`grid grid-cols-1 md:grid-cols-2 gap-0 items-center`}>
-        <div className={`md:col-span-1 ${isImageRight ? 'md:order-2' : ''}`}>
+        <div className={`hidden md:block md:col-span-1 ${isImageRight ? 'md:order-2' : ''}`}>
           <img
             src={imagePath}
             alt={altText}
