@@ -30,10 +30,12 @@ const ServicesHighlightSection: React.FC = () => {
                 className="bg-white p-8 rounded-lg shadow-md text-center"
               >
                 <Icon className="w-12 h-12 text-primary mx-auto mb-6" />
-                <h3 className="text-xl font-bold text-text-dark mb-4">{service.title}</h3>
-                <ul className="text-accent space-y-2">
+                <h3 className={`text-lg md:text-2xl font-bold text-dark mb-4 ${FONT_CONFIG.TITLE_FONT}`}>
+                  {service.title}
+                  </h3>
+                <ul className={`text-lg md:text-2xl space-y-2 ${FONT_CONFIG.BODY_FONT}`}>
                   {service.statements.map((statement, i) => (
-                    <li key={i}>{statement}</li>
+                    <li key={i} className={FONT_CONFIG.BODY_FONT}>{statement}</li>
                   ))}
                 </ul>
               </motion.div>
