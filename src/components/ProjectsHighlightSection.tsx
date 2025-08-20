@@ -37,7 +37,7 @@ const ProjectsHighlightSection: React.FC = () => {
         <div className="text-center mt-12">
           <Link
             to="/projects"
-            className={`bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT}`}
+            className={`text-sm md:text-lg bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT}`}
           >
             View All Projects
           </Link>
