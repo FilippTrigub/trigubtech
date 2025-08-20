@@ -20,7 +20,7 @@ const ContactCTASection: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-lg md:text-xl text-text-light mb-8 max-w-2xl mx-auto"
+        className={`text-lg md:text-xl text-text-light mb-8 max-w-2xl mx-auto ${FONT_CONFIG.BODY_FONT}`}
       >
         Let's talk about how I can help you achieve your goals. I'm always open to new and exciting challenges.
       </motion.p>
@@ -31,7 +31,7 @@ const ContactCTASection: React.FC = () => {
       >
         <Link
           to="/contact"
-          className="bg-secondary text-text-dark font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300"
+          className={`text-lg md:text-2xl bg-secondary text-text-dark font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT}`}
         >
           Get in Touch
         </Link>

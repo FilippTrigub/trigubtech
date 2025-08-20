@@ -27,8 +27,10 @@ const AboutSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="md:col-span-2 text-center md:text-left flex flex-col items-center md:items-start"
         >
-          <h2 className={`text-2xl md:text-4xl font-bold text-text-dark mb-4 ${FONT_CONFIG.TITLE_FONT}`}>About Me</h2>
-          <p className={`text-accent mb-6`}>
+          <h2 className={`text-2xl md:text-4xl font-bold text-text-dark mb-4 ${FONT_CONFIG.TITLE_FONT}`}>
+            About Me
+          </h2>
+          <p className={`text-lg md:text-2xl text-accent mb-6 ${FONT_CONFIG.BODY_FONT}`}>
             I'm more than a software developer; I'm your personal consultant with a M.Sc. in theoretical physics and over 9 years of full-stack experience. My word counts! Decades-long engagements in my communities are the proof.
           </p>
           <Link

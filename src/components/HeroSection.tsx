@@ -28,10 +28,19 @@ const HeroSection: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
+        className="flex flex-col md:flex-column items-center justify-center gap-8 mt-8"
       >
+        <div className="border-none rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.superme.ai/embed/ftrigub?style=minimalistic"
+            width="500"
+            height="150"
+            title="Ask my SuperMe">
+          </iframe>
+        </div>
         <Link
           to="/contact"
-          className={`bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT}`}
+          className={`bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
         >
           Let's Build Together
         </Link>

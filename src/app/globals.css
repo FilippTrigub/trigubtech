@@ -27,6 +27,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Jersey25';
+  src: url('/fonts/Jersey25-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -60,12 +68,12 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8D1B3D; /* primary */
+  background: #8d1b3d6e; /* primary */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6C122D; /* darker primary */
+  background: #63052177; /* darker primary */
 }
 
 /* Smooth animations */
@@ -88,7 +96,12 @@ a {
   font-family: 'Ithaca', serif !important;
 }
 
+.font-jersey25 {
+  font-family: 'Jersey25', sans-serif !important;
+}
+
 /* Test classes for debugging */
 .test-vcr { font-family: 'VCR OSD Mono', monospace !important; }
 .test-medodica { font-family: 'Medodica', sans-serif !important; }
 .test-ithaca { font-family: 'Ithaca', serif !important; }
+.test-jersey25 { font-family: 'Jersey25', sans-serif !important; }

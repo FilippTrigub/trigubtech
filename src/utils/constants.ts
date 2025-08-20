@@ -9,7 +9,7 @@ export const FONT_CONFIG = {
   TITLE_FONT: 'font-vcr-osd',     // Options: font-medodica, font-ithaca, font-vcr-osd
   
   // Body text and descriptions
-  BODY_FONT: 'font-medodica',       // Options: font-vcr-osd, font-medodica, font-ithaca
+  BODY_FONT: 'font-jersey25',       // Options: font-vcr-osd, font-medodica, font-ithaca
   
   // Accent text and special elements  
   ACCENT_FONT: 'font-ithaca',      // Options: font-ithaca, font-medodica, font-vcr-osd
@@ -20,7 +20,12 @@ export const FONT_OPTIONS = {
   'font-vcr-osd': { name: 'VCR OSD Mono', style: 'monospace', description: 'Retro tech/gaming font' },
   'font-medodica': { name: 'Medodica', style: 'sans-serif', description: 'Modern clean font' },
   'font-ithaca': { name: 'Ithaca', style: 'serif', description: 'Classical elegant font' },
+  'font-jersey25': { name: 'Jersey25', style: 'sans-serif', description: 'Modern clean font' },
 };
+
+// export const FONT_SIZE_TITLE = 'text-2xl md:text-4xl';
+// export const FONT_SIZE_SUBTITLE = 'text-2xl md:text-3xl';
+// export const FONT_SIZE_BODY = 'text-xl md:text-2xl';
 
 // Legacy - kept for backward compatibility
 export const CURRENT_FONT = 'Medodica';
