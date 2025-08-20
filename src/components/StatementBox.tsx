@@ -6,9 +6,9 @@ import { StatementBoxProps } from '@/types';
 
 const StatementBox: React.FC<StatementBoxProps> = ({
   statement,
-  backgroundColor = 'bg-very-light-grey bg-opacity-30',
-  hoverColor = 'hover:bg-primary hover:bg-opacity-10',
-  textColor = 'text-black',
+  backgroundColor = 'bg-background',
+  hoverColor = 'hover:bg-primary/10',
+  textColor = 'text-text-dark',
   fontSize = 'text-small-body-mobile',
   fontWeight = 'font-medium',
   className = ''
@@ -21,11 +21,11 @@ const StatementBox: React.FC<StatementBoxProps> = ({
     >
       <div
         className={`
-          px-5 py-4 rounded-xl border border-light-grey border-opacity-20
+          px-5 py-4 rounded-xl border border-accent/20
           ${backgroundColor} ${hoverColor}
           transition-all duration-200 ease-in-out
-          hover:border-primary hover:border-opacity-30
-          hover:shadow-lg hover:shadow-primary hover:shadow-opacity-15
+          hover:border-primary/30
+          hover:shadow-lg hover:shadow-primary/15
           cursor-default
         `}
       >
@@ -52,7 +52,7 @@ export const StatementBoxGroup: React.FC<StatementBoxGroupProps> = ({
     <div className={`py-4 ${className}`}>
       {title && (
         <div className="px-4 py-2 mb-4">
-          <h3 className="text-heading-mobile font-bold text-black text-center font-dosis">
+          <h3 className="text-heading-mobile font-bold text-text-dark text-center font-dosis">
             {title}
           </h3>
         </div>

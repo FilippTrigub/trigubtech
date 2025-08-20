@@ -8,13 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#9600FF',
-        'primary-dark': '#300151',
+        primary: '#8D1B3D', // Burgundy
+        secondary: '#F2C94C', // Gold
+        background: '#FDFDFD',
+        'text-dark': '#1A1A1A',
+        'text-light': '#F5F5F5',
+        accent: '#555555', // Darker Grey
         dark: '#1A1B1E',
         'medium-grey': '#474A54',
         'light-grey': '#BBBBBB',
         'very-light-grey': '#E3E3E3',
-        'text-dark': '#E9E9E9',
         'breaking-line': '#161616',
         attention: '#6E0000',
         bright: '#FFFFFF',

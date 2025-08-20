@@ -3,12 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -22,13 +16,8 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #1A1A1A; /* text-dark */
+  background-color: #FDFDFD; /* background */
   font-family: 'Dosis', sans-serif;
 }
 
@@ -39,20 +28,20 @@ a {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #FDFDFD; /* background */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #9600FF;
-  border-radius: 3px;
+  background: #8D1B3D; /* primary */
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #300151;
+  background: #6C122D; /* darker primary */
 }
 
 /* Smooth animations */
