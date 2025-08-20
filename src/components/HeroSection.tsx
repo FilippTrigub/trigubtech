@@ -40,9 +40,9 @@ const HeroSection: React.FC = () => {
         </div>
         <Link
           to="/contact"
-          className={`bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
+          className={`text-2xl md:text-4xl bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
         >
-          Let's Build Together
+          Connect
         </Link>
       </motion.div>
     </div>
