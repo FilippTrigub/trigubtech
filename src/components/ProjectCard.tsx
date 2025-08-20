@@ -58,8 +58,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           />
         </div>
         <div className="md:col-span-1 p-8">
-          <p className={`text-lg md:text-2xl mb-4 ${FONT_CONFIG.BODY_FONT}`}>{shortDescription}</p>
-          <div className={`text-lg md:text-xl space-y-2 text-text-dark mb-6 ${FONT_CONFIG.BODY_FONT}`}>
+          <p className={`text-sm md:text-lg mb-4 ${FONT_CONFIG.BODY_FONT}`}>{shortDescription}</p>
+          <div className={`text-sm md:text-lg space-y-2 text-text-dark mb-6 ${FONT_CONFIG.BODY_FONT}`}>
             {client && <p><b>Client:</b> {client}</p>}
             <p><b>Duration:</b> {duration}</p>
             <p><b>Goal:</b> {goal}</p>
@@ -69,10 +69,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
       
       {/* Tags below the grid */}
-      <div className="p-6 pt-0">
+      <div className="p-6 pt-6">
         <div className="flex flex-wrap gap-2 justify-center">
           {keyTechnologies.map((tech, index) => (
-            <div key={index} className="text-lg md:text-2xl flex items-center bg-secondary/20 text-secondary-dark rounded-full px-3 py-1 text-sm">
+            <div key={index} className="text-sm md:text-lg flex items-center bg-secondary/20 text-secondary-dark rounded-full px-3 py-1 text-sm">
               <Tag className="w-4 h-4 mr-2" />
               <span className={FONT_CONFIG.BODY_FONT}>{tech}</span>
             </div>
