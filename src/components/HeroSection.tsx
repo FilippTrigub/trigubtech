@@ -1,11 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FONT_CONFIG } from '@/utils/constants';
 
 const HeroSection: React.FC = () => {
+  const [borderColor, setBorderColor] = useState('#E0E0E0');
   return (
     <div className="bg-background text-center py-20 px-4">
       <motion.h1
@@ -30,14 +31,6 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="flex flex-col md:flex-column items-center justify-center gap-8 mt-8"
       >
-        <div className="border-none rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.superme.ai/embed/ftrigub?style=minimalistic"
-            width="500"
-            height="150"
-            title="Ask my SuperMe">
-          </iframe>
-        </div>
         <Link
           to="/contact"
           className={`text-2xl md:text-4xl bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
