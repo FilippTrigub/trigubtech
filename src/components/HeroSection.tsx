@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className={`text-lg md:text-2xl text-accent mb-8 max-w-2xl mx-auto ${FONT_CONFIG.BODY_FONT}`}
+        className={`text-sm md:text-lg text-accent mb-8 max-w-2xl mx-auto ${FONT_CONFIG.BODY_FONT}`}
       >
         From strategy to architecture and implementation, I provide AI consulting and LLM development services to bring your vision to life.
       </motion.p>

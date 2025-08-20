@@ -127,7 +127,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
                     <h2 className={`text-text-light font-extrabold text-2xl ${FONT_CONFIG.TITLE_FONT}`}>
                       {WEBSITE_TITLE}
                     </h2>
-                    <p className="text-accent text-lg md:text-2xlitalic">
+                    <p className="text-accent text-sm md:text-lgitalic">
                       {WEBSITE_SUBTITLE}
                     </p>
                   </div>
