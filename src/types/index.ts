@@ -21,14 +21,33 @@ export interface ServiceSection {
   statements: string[];
 }
 
+export interface ServiceData {
+  title: string;
+  imagePath: string;
+  shortDescription: string;
+  content: string;
+  keyBenefits: string[];
+  keyTech: string[];
+}
+
 export interface ProjectData {
   title: string;
-  client: string;
+  client?: string;
   duration: string;
+  shortDescription: string;
   goal: string;
   solution: string;
   imagePath: string;
+  keyTechnologies: string[];
   isImageOnRight?: boolean;
+}
+
+export interface AboutData {
+  title: string;
+  imagePath: string;
+  shortDescription: string;
+  content: string;
+  tags: string[];
 }
 
 export interface ContactLink {

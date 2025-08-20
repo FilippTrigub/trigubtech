@@ -29,11 +29,11 @@ const TextImageOverlay: React.FC<TextImageOverlayProps> = ({
         alt={altText}
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="relative z-10 bg-white bg-opacity-90 p-6">
-        <h3 className="text-2xl font-bold text-black mb-4 font-dosis text-center">
+      <div className="relative z-10 bg-text-dark bg-opacity-80 p-6">
+        <h3 className="text-2xl font-bold text-text-light mb-4 font-dosis text-center">
           {title}
         </h3>
-        <div className="text-left">{children}</div>
+        <div className="text-left text-text-light">{children}</div>
       </div>
     </motion.div>
   );

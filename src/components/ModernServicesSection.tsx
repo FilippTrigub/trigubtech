@@ -29,19 +29,16 @@ const ModernServicesSection: React.FC = () => {
             {/* Section Header */}
             <div 
               className="p-4 rounded-2xl mb-4 border-2"
-              style={{
-                background: `linear-gradient(135deg, ${section.color}10, ${section.color}05)`,
-                borderColor: `${section.color}4D`
-              }}
+              style={{ borderColor: section.color }}
             >
               <div className="flex items-center justify-center space-x-3">
                 <Icon 
                   size={24} 
-                  style={{ color: `${section.color}CC` }}
+                  style={{ color: section.color }}
                 />
                 <h3 
                   className="text-big-body-mobile font-bold font-dosis"
-                  style={{ color: `${section.color}E6` }}
+                  style={{ color: section.color }}
                 >
                   {section.title}
                 </h3>
@@ -62,8 +59,6 @@ const ModernServicesSection: React.FC = () => {
                 >
                   <StatementBox
                     statement={statement}
-                    backgroundColor={`bg-[${section.color}] bg-opacity-2`}
-                    hoverColor={`hover:bg-[${section.color}] hover:bg-opacity-8`}
                     fontSize="text-small-body-mobile"
                     fontWeight="font-medium"
                   />

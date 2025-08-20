@@ -2,31 +2,27 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Tag } from 'lucide-react';
+import { Check, Tag } from 'lucide-react';
 
-interface ProjectCardProps {
+interface ServiceCardProps {
   imagePath: string;
   altText: string;
   title: string;
   shortDescription: string;
-  client?: string;
-  duration: string;
-  goal: string;
-  solution: string;
-  keyTechnologies: string[];
+  content: string;
+  keyBenefits: string[];
+  keyTech: string[];
   isImageRight?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ServiceCard: React.FC<ServiceCardProps> = ({
   imagePath,
   altText,
   title,
   shortDescription,
-  client,
-  duration,
-  goal,
-  solution,
-  keyTechnologies,
+  content,
+  keyBenefits,
+  keyTech,
   isImageRight = false,
 }) => {
   return (
@@ -47,14 +43,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="md:col-span-1 p-8">
           <h3 className="text-2xl font-bold text-text-dark mb-2">{title}</h3>
           <p className="text-accent mb-4">{shortDescription}</p>
-          <div className="space-y-2 text-text-dark mb-6">
-            {client && <p><b>Client:</b> {client}</p>}
-            <p><b>Duration:</b> {duration}</p>
-            <p><b>Goal:</b> {goal}</p>
-            <p><b>Solution:</b> {solution}</p>
-          </div>
+          <p className="text-text-dark mb-6 whitespace-pre-line">{content}</p>
+          <ul className="space-y-2 mb-6">
+            {keyBenefits.map((benefit, index) => (
+              <li key={index} className="flex items-start">
+                <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-1" />
+                <span className="text-accent">{benefit}</span>
+              </li>
+            ))}
+          </ul>
           <div className="flex flex-wrap gap-2">
-            {keyTechnologies.map((tech, index) => (
+            {keyTech.map((tech, index) => (
               <div key={index} className="flex items-center bg-secondary/20 text-secondary-dark rounded-full px-3 py-1 text-sm">
                 <Tag className="w-4 h-4 mr-2" />
                 <span>{tech}</span>
@@ -67,4 +66,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   );
 };
 
-export default ProjectCard;
+export default ServiceCard;

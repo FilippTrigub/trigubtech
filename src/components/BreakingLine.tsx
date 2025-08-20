@@ -12,10 +12,10 @@ const BreakingLine: React.FC<BreakingLineProps> = ({
   isMobile = true 
 }) => {
   return (
-    <div className="w-full border-b-2 border-very-light-grey">
+    <div className="w-full border-b-2 border-accent">
       <div className="py-1">
         <h2 className={`
-          text-center font-bold text-black font-dosis
+          text-center font-bold text-text-dark font-dosis
           ${isMobile ? 'text-heading-mobile' : 'text-heading-desktop'}
         `}>
           {text}

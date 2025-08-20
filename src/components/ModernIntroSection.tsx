@@ -15,13 +15,13 @@ const ModernIntroSection: React.FC = () => {
         transition={{ duration: 0.6 }}
         className="mx-4 mb-4"
       >
-        <div className="p-4 rounded-2xl bg-gradient-to-br from-primary from-opacity-5 to-primary to-opacity-10 border-2 border-primary border-opacity-20">
+        <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20">
           <h3 className="text-big-body-mobile font-bold text-primary text-center mb-3 font-dosis">
             Professional Credentials
           </h3>
           <div className="space-y-2">
             {PROFESSIONAL_CREDENTIALS.map((credential, index) => (
-              <p key={index} className="text-small-body-mobile text-black text-left leading-relaxed">
+              <p key={index} className="text-small-body-mobile text-text-dark text-left leading-relaxed">
                 • {credential}
               </p>
             ))}
