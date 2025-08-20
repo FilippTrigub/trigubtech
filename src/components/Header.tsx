@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Briefcase, Folder, User, Mail } from 'lucide-react';
-import { WEBSITE_TITLE, WEBSITE_SUBTITLE, NAVIGATION_ITEMS } from '@/utils/constants';
+import { WEBSITE_TITLE, WEBSITE_SUBTITLE, NAVIGATION_ITEMS, FONT_CONFIG } from '@/utils/constants';
 
 const iconMap = {
   home: Home,
@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
               alt="Trigub Tech Logo" 
               className="h-9 w-9 object-contain"
             />
-            <h1 className="text-text-light font-dosis font-bold text-2xl tracking-wide">
+            <h1 className={`text-text-light font-bold text-2xl md:text-4xl tracking-wide ${FONT_CONFIG.TITLE_FONT}`}>
               {WEBSITE_TITLE}
             </h1>
           </Link>
@@ -77,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
               alt="Trigub Tech Logo" 
               className="h-8 w-8 object-contain"
             />
-            <h1 className="text-text-light font-dosis font-bold text-xl tracking-wide">
+            <h1 className={`text-text-light font-bold text-xl tracking-wide ${FONT_CONFIG.TITLE_FONT}`}>
               {WEBSITE_TITLE}
             </h1>
           </Link>
@@ -124,7 +124,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
                     className="h-12 w-12 object-contain"
                   />
                   <div>
-                    <h2 className="text-text-light font-dosis font-extrabold text-2xl">
+                    <h2 className={`text-text-light font-extrabold text-2xl ${FONT_CONFIG.TITLE_FONT}`}>
                       {WEBSITE_TITLE}
                     </h2>
                     <p className="text-accent text-sm italic">

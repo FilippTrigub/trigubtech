@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Settings, Cpu } from 'lucide-react';
 import StatementBox from './StatementBox';
-import { SERVICE_SECTIONS } from '@/utils/constants';
+import { SERVICE_SECTIONS, FONT_CONFIG } from '@/utils/constants';
 
 const iconMap = {
   lightbulb: Lightbulb,
@@ -37,7 +37,7 @@ const ModernServicesSection: React.FC = () => {
                   style={{ color: section.color }}
                 />
                 <h3 
-                  className="text-big-body-mobile font-bold font-dosis"
+                  className={`text-big-body-mobile font-bold ${FONT_CONFIG.TITLE_FONT}`}
                   style={{ color: section.color }}
                 >
                   {section.title}

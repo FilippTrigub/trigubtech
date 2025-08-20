@@ -23,7 +23,16 @@ module.exports = {
         bright: '#FFFFFF',
       },
       fontFamily: {
-        dosis: ['Dosis', 'sans-serif'],
+        // Set default sans-serif as fallback
+        'sans': ['system-ui', 'sans-serif'],
+        
+        // Individual font classes for precise control
+        'vcr-osd': ['VCR OSD Mono', 'monospace'],
+        'ithaca': ['Ithaca', 'serif'], 
+        'medodica': ['Medodica', 'sans-serif'],
+        
+        // Legacy compatibility - kept for existing components
+        dosis: ['VCR OSD Mono', 'monospace'],
       },
       fontSize: {
         'heading-mobile': '26px',

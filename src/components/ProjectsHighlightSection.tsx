@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { PROJECTS_DATA } from '@/utils/constants';
+import { PROJECTS_DATA, FONT_CONFIG } from '@/utils/constants';
 
 const ProjectsHighlightSection: React.FC = () => {
   const highlightedProjects = PROJECTS_DATA.slice(0, 3);
@@ -11,7 +11,7 @@ const ProjectsHighlightSection: React.FC = () => {
   return (
     <div className="bg-white py-20 px-4">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-text-dark text-center mb-12">My Previous Projects</h2>
+        <h2 className={`text-2xl md:text-4xl font-bold text-text-dark text-center mb-12 ${FONT_CONFIG.TITLE_FONT}`}>My Previous Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {highlightedProjects.map((project, index) => (
             <motion.div
