@@ -46,3 +46,5 @@ app.*.map.json
 deployment_commands.txt
 images/*/
 build/*
+node_modules
+flutter/
