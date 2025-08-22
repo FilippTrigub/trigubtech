@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           {/* Copyright */}
           <div className="text-center pt-2 w-full">
             <p className={`text-accent text-xs ${FONT_CONFIG.BODY_FONT}`}>
-              {`2025 Trigub Technologies OÜ. Friedrich-Woehler-Str 1.53117 Bonn Germany`}
+              {`2025 Trigub Technologies OÜ. Harju maakond, Tallinn, Kesklinna linnaosa, Tartu mnt 67/1-13b, 10115 Estonia`}
             </p>
           </div>
         </div>
