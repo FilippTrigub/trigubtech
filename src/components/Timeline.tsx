@@ -25,12 +25,12 @@ const Timeline: React.FC = () => {
                   {index + 1}
                 </div>
                 <div className="ml-8">
-                  <h3 className={`text-sm md:text-lg font-bold text-text-dark mb-2 ${FONT_CONFIG.TITLE_FONT}`}>{item.title}</h3>
-                  <p className={`text-sm md:text-lg mb-4 ${FONT_CONFIG.BODY_FONT}`}>{item.shortDescription}</p>
-                  <p className={`text-sm md:text-lg text-text-dark whitespace-pre-line mb-6 ${FONT_CONFIG.BODY_FONT}`}>{item.content}</p>
+                  <h3 className={`text-xl md:text-2xl font-bold text-text-dark mb-2 ${FONT_CONFIG.TITLE_FONT}`}>{item.title}</h3>
+                  <p className={`text-xl md:text-2xl mb-4 ${FONT_CONFIG.BODY_FONT}`}>{item.shortDescription}</p>
+                  <p className={`text-xl md:text-2xl text-text-dark whitespace-pre-line mb-6 ${FONT_CONFIG.BODY_FONT}`}>{item.content}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag, index) => (
-                      <div key={index} className={`flex items-center bg-secondary/20 text-secondary-dark rounded-full px-3 py-1 text-sm md:text-lg${FONT_CONFIG.BODY_FONT}`}>
+                      <div key={index} className={`flex items-center bg-secondary/20 text-secondary-dark rounded-full px-3 py-1 text-xl md:text-2xl${FONT_CONFIG.BODY_FONT}`}>
                         <Tag className="w-4 h-4 mr-2" />
                         <span className={FONT_CONFIG.BODY_FONT}>{tag}</span>
                       </div>

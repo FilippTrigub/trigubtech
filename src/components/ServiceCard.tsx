@@ -54,13 +54,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           />
         </div>
         <div className="md:col-span-1 p-8">
-          <p className={`text-sm md:text-lg mb-4 ${FONT_CONFIG.BODY_FONT}`}>{shortDescription}</p>
-          <p className={`text-sm md:text-lg text-text-dark mb-6 whitespace-pre-line ${FONT_CONFIG.BODY_FONT}`}>{content}</p>
+          <p className={`text-xl md:text-2xl mb-4 ${FONT_CONFIG.BODY_FONT}`}>{shortDescription}</p>
+          <p className={`text-xl md:text-2xl text-text-dark mb-6 whitespace-pre-line ${FONT_CONFIG.BODY_FONT}`}>{content}</p>
           <ul className="space-y-2 mb-6">
             {keyBenefits.map((benefit, index) => (
               <li key={index} className="flex items-start">
                 <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-1" />
-                <span className={`text-sm md:text-lg text-accent ${FONT_CONFIG.BODY_FONT}`}>{benefit}</span>
+                <span className={`text-xl md:text-2xl text-accent ${FONT_CONFIG.BODY_FONT}`}>{benefit}</span>
               </li>
             ))}
           </ul>
@@ -71,7 +71,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="p-6 pt-6">
         <div className="flex flex-wrap gap-2 justify-center">
           {keyTech.map((tech, index) => (
-            <div key={index} className="text-sm md:text-lg flex items-center bg-secondary/20 text-secondary-dark rounded-full px-3 py-1 text-sm">
+            <div key={index} className="text-xl md:text-2xl flex items-center bg-secondary/20 text-secondary-dark rounded-full px-3 py-1 text-sm">
               <Tag className="w-4 h-4 mr-2" />
               <span className={FONT_CONFIG.BODY_FONT}>{tech}</span>
             </div>

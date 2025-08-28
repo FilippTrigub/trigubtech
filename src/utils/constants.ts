@@ -63,33 +63,33 @@ export const PROFESSIONAL_CREDENTIALS = [
 
 export const SERVICE_SECTIONS: ServiceSection[] = [
   {
-    title: "Make it Clear",
+    title: "Answers",
     icon: "lightbulb",
     color: "#F2C94C", // secondary (gold)
     statements: [
-      "I consult you on what LLM's can do for you",
-      "Together we create the architecture fitting your use case",
-      "The initial consultation is always free so just reach out!"
+      "What's really agentic and do you need that?",
+      "How much will the AI system cost you?",
+      "Can I be sure that it works?"
     ]
   },
   {
-    title: "Make it Fit", 
+    title: "Strategy", 
     icon: "settings",
     color: "#8D1B3D", // primary (burgundy)
     statements: [
-      "Choose the right LLM for your use case based on costs and performance",
-      "Give your bot the ability to do tasks outside of the chat",
-      "Your use case is unique and so is the solution!"
+      "We assess your use case through analysis and interviews.",
+      "We identify where AI really adds value.",
+      "We define system architecture and integrations."
     ]
   },
   {
-    title: "Make the Bots Work",
+    title: "Execution",
     icon: "cpu",
     color: "#A9A9A9", // accent (grey)
     statements: [
-      "Together we will create a holistic solution for your system and needs",
-      "I'll write you clean code that you can use, extend, and modify with little effort",
-      "The task is only done, when you are reaping its benefits"
+      "I'll write you clean, production ready code.",
+      "I'll deploy it to the cloud of your choice.",
+      "I'll train your staff to maintain it."
     ]
   }
 ];
