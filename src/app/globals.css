@@ -35,6 +35,30 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Basis33';
+  src: url('/fonts/basis33.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ByteBounce';
+  src: url('/fonts/ByteBounce.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'pixy';
+  src: url('/fonts/PIXY.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -98,6 +122,18 @@ a {
 
 .font-jersey25 {
   font-family: 'Jersey25', sans-serif !important;
+}
+
+.font-basis33 {
+  font-family: 'Basis33', sans-serif !important;
+}
+
+.font-bytebounce {
+  font-family: 'ByteBounce', sans-serif !important;
+}
+
+.font-pixy {
+  font-family: 'pixy', sans-serif !important;
 }
 
 /* Test classes for debugging */

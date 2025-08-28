@@ -6,10 +6,10 @@ export const WEBSITE_SUBTITLE = 'AI & Software Solutions';
 // FONT CONFIGURATION - Configure fonts for different text types
 export const FONT_CONFIG = {
   // Main titles and headings (like "I Turn Your Ideas into Bots")
-  TITLE_FONT: 'font-vcr-osd',     // Options: font-medodica, font-ithaca, font-vcr-osd
+  TITLE_FONT: 'font-pixy',     // Options: font-medodica, font-ithaca, font-vcr-osd
   
   // Body text and descriptions
-  BODY_FONT: 'font-jersey25',       // Options: font-vcr-osd, font-medodica, font-ithaca
+  BODY_FONT: 'font-basis33',       // Options: font-vcr-osd, font-medodica, font-ithaca
   
   // Accent text and special elements  
   ACCENT_FONT: 'font-ithaca',      // Options: font-ithaca, font-medodica, font-vcr-osd
@@ -21,6 +21,9 @@ export const FONT_OPTIONS = {
   'font-medodica': { name: 'Medodica', style: 'sans-serif', description: 'Modern clean font' },
   'font-ithaca': { name: 'Ithaca', style: 'serif', description: 'Classical elegant font' },
   'font-jersey25': { name: 'Jersey25', style: 'sans-serif', description: 'Modern clean font' },
+  'font-basis33': { name: 'Basis33', style: 'sans-serif', description: 'Modern clean font' },
+  'font-bytebounce': { name: 'ByteBounce', style: 'sans-serif', description: 'Modern clean font' },
+  'font-pixy': { name: 'pixy', style: 'sans-serif', description: 'Modern clean font' },
 };
 
 // export const FONT_SIZE_TITLE = 'text-2xl md:text-4xl';
