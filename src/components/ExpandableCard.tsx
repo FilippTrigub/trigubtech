@@ -89,7 +89,7 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({
               }`}>
                 {title}
               </h3>
-              <p className={`text-sm md:text-lgleading-relaxed ${FONT_CONFIG.BODY_FONT} ${
+              <p className={`text-xl md:text-2xlleading-relaxed ${FONT_CONFIG.BODY_FONT} ${
                 imagePath ? 'text-gray-100' : 'text-gray-700'
               }`}>
                 {preview}
@@ -121,7 +121,7 @@ const ExpandableCard: React.FC<ExpandableCardProps> = ({
               <h3 className={`font-bold mb-3 text-xl text-primary ${FONT_CONFIG.TITLE_FONT}`}>
                 {title}
               </h3>
-              <p className={`text-sm md:text-lgleading-relaxed text-gray-700 ${FONT_CONFIG.BODY_FONT}`}>
+              <p className={`text-xl md:text-2xlleading-relaxed text-gray-700 ${FONT_CONFIG.BODY_FONT}`}>
                 {preview}
               </p>
             </div>
