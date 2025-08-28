@@ -1,5 +1,6 @@
 'use client';
 
+import { FONT_CONFIG } from '@/utils/constants';
 import React from 'react';
 
 interface BreakingLineProps {
@@ -15,7 +16,7 @@ const BreakingLine: React.FC<BreakingLineProps> = ({
     <div className="w-full border-b-2 border-accent">
       <div className="py-1">
         <h2 className={`
-          text-center font-bold text-text-dark font-dosis
+          text-center font-bold text-text-dark ${FONT_CONFIG.TITLE_FONT}
           ${isMobile ? 'text-heading-mobile' : 'text-heading-desktop'}
         `}>
           {text}
