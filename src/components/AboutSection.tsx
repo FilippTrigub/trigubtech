@@ -31,7 +31,7 @@ const AboutSection: React.FC = () => {
             About Me
           </h2>
           <p className={`text-xl md:text-2xl text-accent mb-6 ${FONT_CONFIG.BODY_FONT}`}>
-            I'm more than a software developer; I'm your personal consultant with a M.Sc. in theoretical physics and over 10 years of full-stack experience. My word counts! Decades-long engagements in my communities are the proof.
+            M.Sc. in theoretical physics <br /> 10+ years of full-stack experience. <br /> Decades-long engagements in communities.
           </p>
           <Link
             to="/about"

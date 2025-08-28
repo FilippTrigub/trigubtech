@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 0.8 }}
         className={`text-4xl md:text-6xl font-bold text-text-dark mb-4 ${FONT_CONFIG.TITLE_FONT}`}
       >
-        I Turn Your Ideas Into Bots
+        I build reliable AI systems
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className={`text-xl md:text-2xl text-accent mb-8 max-w-2xl mx-auto ${FONT_CONFIG.BODY_FONT}`}
       >
-        From strategy to architecture and implementation, I provide AI consulting and LLM development services to bring your vision to life.
+        Strategy, Architecture, Implementation; <br/> Agentic AI systems consulting and engineering. <br/> Bring your vision to life.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
