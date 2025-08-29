@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Lightbulb, Settings, Cpu } from 'lucide-react';
+import { Lightbulb, Settings, Cpu, Link } from 'lucide-react';
 import { FONT_CONFIG, SERVICE_SECTIONS } from '@/utils/constants';
 
 const iconMap = {
@@ -32,7 +32,7 @@ const ServicesHighlightSection: React.FC = () => {
                 <Icon className="w-12 h-12 text-primary mx-auto mb-6" />
                 <h3 className={`text-xl md:text-2xl font-bold text-dark mb-4 ${FONT_CONFIG.TITLE_FONT}`}>
                   {service.title}
-                  </h3>
+                </h3>
                 <ul className={`text-xl md:text-2xl space-y-2 ${FONT_CONFIG.BODY_FONT}`}>
                   {service.statements.map((statement, i) => (
                     <li key={i} className={FONT_CONFIG.BODY_FONT}>{statement}</li>

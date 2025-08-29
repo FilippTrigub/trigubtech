@@ -81,7 +81,6 @@ const ProjectsHighlightSection: React.FC = () => {
                   />
                   <div className="p-6">
                     <h3 className={`text-xl md:text-2xl font-bold text-text-dark mb-2 ${FONT_CONFIG.TITLE_FONT}`}>{project.title}</h3>
-                    {/* <p className={`text-accent text-xl md:text-2xl mb-4 ${FONT_CONFIG.BODY_FONT}`}>{project.goal}</p> */}
                     <Link to={`/projects`} className={`text-primary font-bold hover:underline ${FONT_CONFIG.BODY_FONT}`}>Learn More</Link>
                   </div>
                 </motion.div>
