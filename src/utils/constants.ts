@@ -147,13 +147,46 @@ export const SERVICES_DATA: ServiceData[] = [
 
 export const PROJECTS_DATA: ProjectData[] = [
   {
+    title: "Rapid MVP development for geo data startup",
+    client: "HB Partners",
+    duration: "2 month (07.2025-08.2025)",
+    shortDescription: "Refactor and structure a pre-MVP codebase into a reliable app for dynamic KMZ file & web app interaction",
+    goal: "Develop a presentation ready web app interacting dynamically with local KMZ files and supabase in less than 50 hours.",
+    solution: "Establish clear coordination with project lead. Refactor the existing codebase. Formulate clear requirements and implementation steps. Develop rapidly with Claude Code and other agentic tools with a frequently shifting db schema and codebase layout. Assure the required functionality before deadline and within the budget of 50 hours.",
+    imagePath: "/images/projects/1.png",
+    keyTechnologies: ["Material UI", "Python", "Supabase", "KMZ", "Claude Code"],
+    isImageOnRight: false
+  },
+  {
+    title: "Collaborative multi-agent community AI platform",
+    client: "huuh.me",
+    duration: "6 month (01.2025-08.2025)",
+    shortDescription: "Multi-agent AI for community collaboration powered by multi-user agentic multimodal filtered RAG for AI content monetization",
+    goal: "Enable content creators and community leads to monetize content AI-natively.",
+    solution: "Build an advanced knowledge base to power a RAG system with semantic chunking, multi-format input, page attribution and metadata filtering. Enable interaction with the base powered by a multi-agent system. Enable role based access to base and agent to foster community collaboration through contributions and sharing of knkowledge and AI tools. Enable marketplace and monetization via strip integration.",
+    imagePath: "/images/projects/2.png",
+    keyTechnologies: ["React", "Python", "Weaviate", "Azure", "Docker", "Unstructured", "LangGraph", "Weave"],
+    isImageOnRight: true
+  },
+  {
+    title: "Tax consulting bot",
+    client: "Consulting advisory company",
+    duration: "3 month (09.2024-12.2024)",
+    shortDescription: "No-hallucination Linked RAG system based on adaptive chunking and custom parsing apporach and adapted to German speakers",
+    goal: "Enable clients of the cunsulting company to get AI-generated answers they can trust",
+    solution: "Understand the propriatary data. Develop custom parsers for different data structures. Develop custom chunking approaches to preserve coherent text chunks whenever possible and reasonable. Implement alignment optimization based on identified topics and base search as a fallback retreival strategy. Deploy with UI and backend to the cloud.",
+    imagePath: "/images/projects/3.png",
+    keyTechnologies: ["Qdrant", "Python", "Streamlit", "Docling", "Advanced RAG", "Azure", "Docker", "CI/CD"],
+    isImageOnRight: false
+  },
+  {
     title: "Multi-chain LLM copilot for academic teaching and studying",
     client: "Universities",
     duration: "6 month (10.2023-03.2024)",
     shortDescription: "A sophisticated AI copilot to augment the students’ learning experience and provide AI-derived insights to professors.",
     goal: "Build a sophisticated AI copilot to augment the students’ learning experience and provide AI-derived insights to professors.",
     solution: "Build a multi-chain LLM system adapting to user needs at its own accord with a Weaviate vector DB based RAG system and evaluated it. Build responsive react frontend, and backend systems handling auth, data management and auxiliary services as a RESTful API. Deployed and managed the app to the cloud in a production environment including the CICD via multi-stage deployment.",
-    imagePath: "/images/success2.jpg",
+    imagePath: "/images/projects/4.png",
     keyTechnologies: ["React", "Python", "Weaviate", "RESTful API", "Docker", "CI/CD"],
     isImageOnRight: true
   },
@@ -164,7 +197,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     shortDescription: "A GPT-powered chatbot using internal documents to support service staff and interact with customers directly.",
     goal: "Provide a GPT-powered chatbot using internal documents to support service staff and interact with customers directly.",
     solution: "Led the design and development of a lightweight GPT-powered chatbot for service-staff support for an international client. Contributed significantly to the initial design, technology selection, and architecture. Implemented a haystack pipeline with OpenAI embeddings to optimize GPT usage and integrated CI/CD and DevOps for rapid, collaborative development. Spearheaded technical development and introduced agile development practices, setting guidelines and conventions for the team.",
-    imagePath: "/images/arrows.jpg",
+    imagePath: "/images/projects/5.png",
     keyTechnologies: ["GPT", "Haystack", "OpenAI Embeddings", "CI/CD", "DevOps"],
     isImageOnRight: true
   },
@@ -175,7 +208,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     shortDescription: "A holistic application for statistical data analysis, designed and developed to support users on-demand.",
     goal: "Design and develop an application for statistical data analysis holistically and support users on-demand.",
     solution: "Designed and developed architectural extensions based on client demands and limitations. Successfully implemented over 500 stories in a 300k+ LoC codebase, which included a dockerized Python backend hosted in AWS with PostgreSQL and Oracle DB, as well as a dockerized JS frontend, both delivered via CI/CD. Ensured continuous stability through extensive unit and end-to-end testing. Served as Scrum Master for a team of 7 developers for over a year.",
-    imagePath: "/images/computer2.jpg",
+    imagePath: "/images/projects/6.png",
     keyTechnologies: ["Python", "JavaScript", "Docker", "AWS", "PostgreSQL", "Oracle DB", "CI/CD"],
     isImageOnRight: true
   },
@@ -186,7 +219,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     shortDescription: "Augmenting an existing legacy Python codebase to deliver previously unforeseen functionality.",
     goal: "Augment an existing legacy Python codebase to deliver previously unforeseen functionality.",
     solution: "Restructured the existing testing framework to assert the existing functionality using Python pytest and end-to-end testing. Analyzed the complex data processing pipelines and the theoretical proposal to accommodate additional extra-dimensional inputs. Delivered the additional functionality and additional tests.",
-    imagePath: "/images/confluence1.jpg",
+    imagePath: "/images/projects/7.png",
     keyTechnologies: ["Python", "Pytest", "End-to-end testing"],
     isImageOnRight: true
   }
