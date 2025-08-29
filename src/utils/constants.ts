@@ -95,30 +95,30 @@ export const SERVICE_SECTIONS: ServiceSection[] = [
 ];
 
 export const SERVICES_DATA: ServiceData[] = [
-  // {
-  //   title: "Multi-agent System",
-  //   imagePath: "/images/services_RAG.jpg",
-  //   shortDescription: "Unlock the power of your in-house data with a custom-built RAG system that delivers precise, cost-effective results.",
-  //   content: `Retrieval-Augmented Generation is a powerful and flexible approach for the deployment of LLM systems. It allows precise results based on your in-house data at low cost and quick development. Behind the simplicity of the RAG system lies a sophisticated architecture that can be tailored to your specific needs.`,
-  //   keyBenefits: [
-  //     "Leverage your own data for accurate, context-aware AI responses.",
-  //     "Optimize performance and cost-effectiveness with a tailored architecture.",
-  //     "Get expert guidance on choosing the right embeddings, vector databases, and chunking strategies."
-  //   ],
-  //   keyTech: ["RAG", "LLM", "Vector DB", "Embeddings"]
-  // },
-  // {
-  //   title: "Agentic AI Systems",
-  //   imagePath: "/images/services_RAG.jpg",
-  //   shortDescription: "Unlock the power of your in-house data with a custom-built RAG system that delivers precise, cost-effective results.",
-  //   content: `Retrieval-Augmented Generation is a powerful and flexible approach for the deployment of LLM systems. It allows precise results based on your in-house data at low cost and quick development. Behind the simplicity of the RAG system lies a sophisticated architecture that can be tailored to your specific needs.`,
-  //   keyBenefits: [
-  //     "Leverage your own data for accurate, context-aware AI responses.",
-  //     "Optimize performance and cost-effectiveness with a tailored architecture.",
-  //     "Get expert guidance on choosing the right embeddings, vector databases, and chunking strategies."
-  //   ],
-  //   keyTech: ["RAG", "LLM", "Vector DB", "Embeddings"]
-  // },
+  {
+    title: "Multi-Agent Systems",
+    imagePath: "/images/services/1.png",
+    shortDescription: "Enable teams of agents using tools and your data to achieve complex goals on your behalf.",
+    content: `Multi-Agent Systems (MAS) are at the cutting edge of current AI engineering. They act in coordination resolving intrincate tasks with limited supervision. Therefore observability, evaluation and cost control are highly important, requiring disciplined engineering.`,
+    keyBenefits: [
+      "Mimic human teams giving agents their roles and abilities to create complex interaction patterns.",
+      "Enable teams of agents using tools and your data to achieve complex goals on your behalf.",
+      "Enforce observability, evaluation and cost control with a holistic approach."
+    ],
+    keyTech: ["orchestration", "parallelization", "agent hierarchies", "observability", "evaluation"]
+  },
+  {
+    title: "Agentic AI Systems",
+    imagePath: "/images/services/2.png",
+    shortDescription: "Make AI actually do things for you. Search the internet, send emails, update records, create charts, etc.",
+    content: `AI Systems fit perfectly to use cases where a logical program isn't enough, but full human intelligence is not required. Agentic systems can be triggered old school with a prompt, run on a schedule or respond to an event, like an incoming email. Any digital process can be turned into a tool and provided to the agent.`,
+    keyBenefits: [
+      "Define adequately scoped Agentic AI systems for your use case.",
+      "Choose the right framework and tool setup.",
+      "Integrate with your exsiting workflows to provide maximum value."
+    ],
+    keyTech: ["LangGraph", "MCP", "smolagents", "DSPy", "tool streaming", "context engineering"]
+  },
   {
     title: "Optimized Retrieval-Augmented Generation (RAG) System",
     imagePath: "/images/services/3.png",
@@ -141,7 +141,7 @@ export const SERVICES_DATA: ServiceData[] = [
       "Optimize system components for cost-effectiveness.",
       "Incorporate user feedback to continuously improve your system."
     ],
-    keyTech: ["Ragas", "AutoRAG", "LLM-based evaluation"]
+    keyTech: ["LangSmith", "Weave", "Ragas", "AutoRAG", "DeepEval", "LLM as a judge"]
   },
   {
     title: "Security and Privacy",
@@ -165,7 +165,7 @@ export const SERVICES_DATA: ServiceData[] = [
       "Ensure consistent up-time and reliability with a robust deployment strategy.",
       "Get a holistic solution that is tailored to your specific needs and infrastructure."
     ],
-    keyTech: ["CI/CD", "Docker", "Vercel", "Azure"]
+    keyTech: ["Azure", "AWS", "GCP", "GitHub", "GitLab", "Docker", "Vercel", "Terraform", "CI/CD"]
   }
 ];
 
