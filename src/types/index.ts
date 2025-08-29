@@ -24,6 +24,7 @@ export interface ServiceSection {
 export interface ServiceData {
   title: string;
   imagePath: string;
+  altText: string;
   shortDescription: string;
   content: string;
   keyBenefits: string[];
@@ -38,6 +39,7 @@ export interface ProjectData {
   goal: string;
   solution: string;
   imagePath: string;
+  altText: string;
   keyTechnologies: string[];
   isImageOnRight?: boolean;
 }
