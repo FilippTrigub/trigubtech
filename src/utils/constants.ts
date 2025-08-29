@@ -95,9 +95,33 @@ export const SERVICE_SECTIONS: ServiceSection[] = [
 ];
 
 export const SERVICES_DATA: ServiceData[] = [
+  // {
+  //   title: "Multi-agent System",
+  //   imagePath: "/images/services_RAG.jpg",
+  //   shortDescription: "Unlock the power of your in-house data with a custom-built RAG system that delivers precise, cost-effective results.",
+  //   content: `Retrieval-Augmented Generation is a powerful and flexible approach for the deployment of LLM systems. It allows precise results based on your in-house data at low cost and quick development. Behind the simplicity of the RAG system lies a sophisticated architecture that can be tailored to your specific needs.`,
+  //   keyBenefits: [
+  //     "Leverage your own data for accurate, context-aware AI responses.",
+  //     "Optimize performance and cost-effectiveness with a tailored architecture.",
+  //     "Get expert guidance on choosing the right embeddings, vector databases, and chunking strategies."
+  //   ],
+  //   keyTech: ["RAG", "LLM", "Vector DB", "Embeddings"]
+  // },
+  // {
+  //   title: "Agentic AI Systems",
+  //   imagePath: "/images/services_RAG.jpg",
+  //   shortDescription: "Unlock the power of your in-house data with a custom-built RAG system that delivers precise, cost-effective results.",
+  //   content: `Retrieval-Augmented Generation is a powerful and flexible approach for the deployment of LLM systems. It allows precise results based on your in-house data at low cost and quick development. Behind the simplicity of the RAG system lies a sophisticated architecture that can be tailored to your specific needs.`,
+  //   keyBenefits: [
+  //     "Leverage your own data for accurate, context-aware AI responses.",
+  //     "Optimize performance and cost-effectiveness with a tailored architecture.",
+  //     "Get expert guidance on choosing the right embeddings, vector databases, and chunking strategies."
+  //   ],
+  //   keyTech: ["RAG", "LLM", "Vector DB", "Embeddings"]
+  // },
   {
     title: "Optimized Retrieval-Augmented Generation (RAG) System",
-    imagePath: "/images/services_RAG.jpg",
+    imagePath: "/images/services/3.png",
     shortDescription: "Unlock the power of your in-house data with a custom-built RAG system that delivers precise, cost-effective results.",
     content: `Retrieval-Augmented Generation is a powerful and flexible approach for the deployment of LLM systems. It allows precise results based on your in-house data at low cost and quick development. Behind the simplicity of the RAG system lies a sophisticated architecture that can be tailored to your specific needs.`,
     keyBenefits: [
@@ -105,11 +129,11 @@ export const SERVICES_DATA: ServiceData[] = [
       "Optimize performance and cost-effectiveness with a tailored architecture.",
       "Get expert guidance on choosing the right embeddings, vector databases, and chunking strategies."
     ],
-    keyTech: ["RAG", "LLM", "Vector DB", "Embeddings"]
+    keyTech: ["GraphRAG", "question labelling", "document parsing", "semantic chunking", "LLM", "Vector DB", "Embeddings"]
   },
   {
     title: "LLM System Evaluation",
-    imagePath: "/images/services_evaluation.jpg",
+    imagePath: "/images/services/4.png",
     shortDescription: "Ensure your LLM system is performing at its best with a comprehensive evaluation framework.",
     content: `Evaluating and deploying LLM systems can be a daunting task. Originally human evaluators are used to assess the quality of the LLM system. However, this is time-consuming and expensive.`,
     keyBenefits: [
@@ -121,7 +145,7 @@ export const SERVICES_DATA: ServiceData[] = [
   },
   {
     title: "Security and Privacy",
-    imagePath: "/images/services_security.jpg",
+    imagePath: "/images/services/5.png",
     shortDescription: "Protect your sensitive data and prevent prompt injection attacks with a robust security strategy.",
     content: `Prompt injection is probably the most common security issue in LLM systems. It is a form of attack where the attacker coerces the system to give up private data the LLM has been given. Solutions to this novel concern are still developing, but rule-engines, LLM guard systems or prompt engineering can provide some relief.`,
     keyBenefits: [
@@ -133,7 +157,7 @@ export const SERVICES_DATA: ServiceData[] = [
   },
   {
     title: "Integration and Deployment",
-    imagePath: "/images/services_deployment.jpg",
+    imagePath: "/images/services/6.png",
     shortDescription: "Seamlessly integrate your LLM system into your existing infrastructure and deploy it with confidence.",
     content: `Even a well-designed LLM system is useless if it is not integrated into your existing infrastructure. You want it to be connected to your databases, your UI and your CI/CD pipeline. Tools for Integration are plentiful, but their adoption for LLM systems is still in progress.`,
     keyBenefits: [
