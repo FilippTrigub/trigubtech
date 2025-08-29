@@ -77,9 +77,9 @@ export const SERVICE_SECTIONS: ServiceSection[] = [
     icon: "settings",
     color: "#8D1B3D", // primary (burgundy)
     statements: [
-      "We assess your use case through analysis and interviews.",
-      "We identify where AI really adds value.",
-      "We define system architecture and integrations."
+      "You and me assess your use case through analysis and interviews.",
+      "You and me identify where AI really adds value.",
+      "You and me define system architecture and integrations."
     ]
   },
   {
@@ -170,7 +170,7 @@ export const PROJECTS_DATA: ProjectData[] = [
   },
   {
     title: "Tax consulting bot",
-    client: "Consulting advisory company",
+    client: "colmo Ltd.",
     duration: "3 month (09.2024-12.2024)",
     shortDescription: "No-hallucination Linked RAG system based on adaptive chunking and custom parsing apporach and adapted to German speakers",
     goal: "Enable clients of the cunsulting company to get AI-generated answers they can trust",
@@ -181,7 +181,7 @@ export const PROJECTS_DATA: ProjectData[] = [
   },
   {
     title: "Multi-chain LLM copilot for academic teaching and studying",
-    client: "Universities",
+    client: "infolab.ai",
     duration: "6 month (10.2023-03.2024)",
     shortDescription: "A sophisticated AI copilot to augment the students’ learning experience and provide AI-derived insights to professors.",
     goal: "Build a sophisticated AI copilot to augment the students’ learning experience and provide AI-derived insights to professors.",
@@ -232,7 +232,7 @@ export const POC_PROJECTS = [
     shortDescription: "A sales bot for a wine store with consistent identification and memorization of customer preferences.",
     goal: "Build a sales bot for a wine store with consistent identification and memorization of customer preferences to provide the customer with a sommelier-like experience.",
     solution: "Build an LLM agent with a recommendation tool based on a general haystack agent pattern design with a Streamlit UI. Implemented a specified meta-prompt to correctly and consistently identify customer preferences and remember them. Extracted these preferences programmatically to force usage of tool after a set number of preferences has been identified. Dockerized and deployed to Azure with Terraform.",
-    imagePath: "/images/cartoon_bot.jpg",
+    imagePath: "/images/projects/8.png",
     keyTechnologies: ["LLM Agent", "Haystack", "Streamlit", "Azure", "Terraform"]
   },
   {
@@ -241,7 +241,7 @@ export const POC_PROJECTS = [
     shortDescription: "Summarize audio recordings, specifically books, into concise bullet-point style summaries.",
     goal: "Summarize audio recordings, specifically books, into concise bullet-point style summaries.",
     solution: "Engineered a meta-prompt and summarization loop subdividing the recording in user designated parts (chapters) and then token-limit enforced chunks to extract a sensible and concise summary for each part as well as the entire recoding. Build a Flutter based UI allowing users to summarize their recordings and receive the summary by mail. Dockerized and deployed to Vercel and Azure with Terraform and CI/CD.",
-    imagePath: "/images/sound.jpg",
+    imagePath: "/images/projects/9.png",
     keyTechnologies: ["Flutter", "Vercel", "Azure", "Terraform", "CI/CD"]
   },
   {
@@ -250,7 +250,7 @@ export const POC_PROJECTS = [
     shortDescription: "Make Telegram searchable and allow the automated exploration of a multitude of telegram channels.",
     goal: "Make Telegram searchable. Allow the automated exploration of a multitude of telegram channels via a GPT-bot fed by vectorized documents found by a search mechanism.",
     solution: "Retrieved chat contents from Telegram with Telethon and loaded these to a FAISS DB with OpenAI embeddings hosted in a FastAPI backend. Implemented question-answer pipeline with Haystack, using Dense Passage Retrieval and OpenAI generation. Provided a light-weight UI with user authentication to Telegram and subsequent chat window. Deployed the bot to Azure with Docker.",
-    imagePath: "/images/confluence2.jpg",
+    imagePath: "/images/projects/10.png",
     keyTechnologies: ["Telegram", "Telethon", "FAISS", "OpenAI", "FastAPI", "Haystack", "Docker", "Azure"]
   }
 ];
