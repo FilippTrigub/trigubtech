@@ -136,6 +136,144 @@ a {
   font-family: 'pixy', sans-serif !important;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Options - placed after Tailwind to avoid conflicts */
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ithaca';
+  src: url('/fonts/Ithaca-LVB75.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Medodica';
+  src: url('/fonts/MedodicaRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jersey25';
+  src: url('/fonts/Jersey25-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Basis33';
+  src: url('/fonts/basis33.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ByteBounce';
+  src: url('/fonts/ByteBounce.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'pixy';
+  src: url('/fonts/PIXY.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: #1A1A1A; /* text-dark */
+  background-color: #FDFDFD; /* background */
+  /* No font-family set here - let Tailwind font classes control fonts */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDFDFD; /* background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8d1b3d6e; /* primary */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #63052177; /* darker primary */
+}
+
+/* Smooth animations */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.2, 0.1, 0.2, 1);
+  transition-duration: 350ms;
+}
+
+/* Font utility classes - explicit declarations */
+.font-vcr-osd {
+  font-family: 'VCR OSD Mono', monospace !important;
+}
+
+.font-medodica {
+  font-family: 'Medodica', sans-serif !important;
+}
+
+.font-ithaca {
+  font-family: 'Ithaca', serif !important;
+}
+
+.font-jersey25 {
+  font-family: 'Jersey25', sans-serif !important;
+}
+
+.font-basis33 {
+  font-family: 'Basis33', sans-serif !important;
+}
+
+.font-bytebounce {
+  font-family: 'ByteBounce', sans-serif !important;
+}
+
+.font-pixy {
+  font-family: 'pixy', sans-serif !important;
+}
+
 /* Test classes for debugging */
 .test-vcr { font-family: 'VCR OSD Mono', monospace !important; }
 .test-medodica { font-family: 'Medodica', sans-serif !important; }
