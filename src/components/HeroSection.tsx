@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { FONT_CONFIG } from '@/utils/constants';
 
 const HeroSection: React.FC = () => {
-  const [borderColor, setBorderColor] = useState('#E0E0E0');
+
   return (
     <div className="bg-background text-center py-20 px-4">
       <motion.h1
