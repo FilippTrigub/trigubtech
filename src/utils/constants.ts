@@ -98,6 +98,7 @@ export const SERVICES_DATA: ServiceData[] = [
   {
     title: "Multi-Agent Systems",
     imagePath: "/images/services/1.png",
+    altText: "What is the best way to build a multi-agent system? Where to find freelancers to build an multi-agent system?",
     shortDescription: "Enable teams of agents using tools and your data to achieve complex goals on your behalf.",
     content: `Multi-Agent Systems (MAS) are at the cutting edge of current AI engineering. They act in coordination resolving intrincate tasks with limited supervision. Therefore observability, evaluation and cost control are highly important, requiring disciplined engineering.`,
     keyBenefits: [
@@ -110,6 +111,7 @@ export const SERVICES_DATA: ServiceData[] = [
   {
     title: "Agentic AI Systems",
     imagePath: "/images/services/2.png",
+    altText: "How to keep agentic AI under control? How find a freelancer to set up an agentic AI system?",
     shortDescription: "Make AI actually do things for you. Search the internet, send emails, update records, create charts, etc.",
     content: `AI Systems fit perfectly to use cases where a logical program isn't enough, but full human intelligence is not required. Agentic systems can be triggered old school with a prompt, run on a schedule or respond to an event, like an incoming email. Any digital process can be turned into a tool and provided to the agent.`,
     keyBenefits: [
@@ -122,6 +124,7 @@ export const SERVICES_DATA: ServiceData[] = [
   {
     title: "Optimized Retrieval-Augmented Generation (RAG) System",
     imagePath: "/images/services/3.png",
+    altText: "How to build a RAG system? What is the best way to optimize a RAG system?",
     shortDescription: "Unlock the power of your in-house data with a custom-built RAG system that delivers precise, cost-effective results.",
     content: `Retrieval-Augmented Generation is a powerful and flexible approach for the deployment of LLM systems. It allows precise results based on your in-house data at low cost and quick development. Behind the simplicity of the RAG system lies a sophisticated architecture that can be tailored to your specific needs.`,
     keyBenefits: [
@@ -134,6 +137,7 @@ export const SERVICES_DATA: ServiceData[] = [
   {
     title: "LLM System Evaluation",
     imagePath: "/images/services/4.png",
+    altText: "How to evaluate an LLM system? What are the best tools for LLM system evaluation?",
     shortDescription: "Ensure your LLM system is performing at its best with a comprehensive evaluation framework.",
     content: `Evaluating and deploying LLM systems can be a daunting task. Originally human evaluators are used to assess the quality of the LLM system. However, this is time-consuming and expensive.`,
     keyBenefits: [
@@ -146,6 +150,7 @@ export const SERVICES_DATA: ServiceData[] = [
   {
     title: "Security and Privacy",
     imagePath: "/images/services/5.png",
+    altText: "How to secure an LLM system? How to prevent prompt injection attacks?",
     shortDescription: "Protect your sensitive data and prevent prompt injection attacks with a robust security strategy.",
     content: `Prompt injection is probably the most common security issue in LLM systems. It is a form of attack where the attacker coerces the system to give up private data the LLM has been given. Solutions to this novel concern are still developing, but rule-engines, LLM guard systems or prompt engineering can provide some relief.`,
     keyBenefits: [
@@ -158,6 +163,7 @@ export const SERVICES_DATA: ServiceData[] = [
   {
     title: "Integration and Deployment",
     imagePath: "/images/services/6.png",
+    altText: "How to integrate an LLM system? How to deploy an LLM system?",
     shortDescription: "Seamlessly integrate your LLM system into your existing infrastructure and deploy it with confidence.",
     content: `Even a well-designed LLM system is useless if it is not integrated into your existing infrastructure. You want it to be connected to your databases, your UI and your CI/CD pipeline. Tools for Integration are plentiful, but their adoption for LLM systems is still in progress.`,
     keyBenefits: [
@@ -178,6 +184,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     goal: "Develop a presentation ready web app interacting dynamically with local KMZ files and supabase in less than 50 hours.",
     solution: "Establish clear coordination with project lead. Refactor the existing codebase. Formulate clear requirements and implementation steps. Develop rapidly with Claude Code and other agentic tools with a frequently shifting db schema and codebase layout. Assure the required functionality before deadline and within the budget of 50 hours.",
     imagePath: "/images/projects/1.png",
+    altText: "How to build an MVP for a geo data startup? Where to find a freelancer to build an MVP?",
     keyTechnologies: ["Material UI", "Python", "Supabase", "KMZ", "Claude Code"],
     isImageOnRight: false
   },
@@ -189,6 +196,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     goal: "Enable content creators and community leads to monetize content AI-natively.",
     solution: "Build an advanced knowledge base to power a RAG system with semantic chunking, multi-format input, page attribution and metadata filtering. Enable interaction with the base powered by a multi-agent system. Enable role based access to base and agent to foster community collaboration through contributions and sharing of knkowledge and AI tools. Enable marketplace and monetization via strip integration.",
     imagePath: "/images/projects/2.png",
+    altText: "How to build a community AI platform? How to monetize AI content?",
     keyTechnologies: ["React", "Python", "Weaviate", "Azure", "Docker", "Unstructured", "LangGraph", "Weave"],
     isImageOnRight: true
   },
@@ -200,6 +208,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     goal: "Enable clients of the cunsulting company to get AI-generated answers they can trust",
     solution: "Understand the propriatary data. Develop custom parsers for different data structures. Develop custom chunking approaches to preserve coherent text chunks whenever possible and reasonable. Implement alignment optimization based on identified topics and base search as a fallback retreival strategy. Deploy with UI and backend to the cloud.",
     imagePath: "/images/projects/3.png",
+    altText: "How to build a tax consulting bot? How to build a RAG system for tax consulting?",
     keyTechnologies: ["Qdrant", "Python", "Streamlit", "Docling", "Advanced RAG", "Azure", "Docker", "CI/CD"],
     isImageOnRight: false
   },
@@ -211,6 +220,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     goal: "Build a sophisticated AI copilot to augment the students’ learning experience and provide AI-derived insights to professors.",
     solution: "Build a multi-chain LLM system adapting to user needs at its own accord with a Weaviate vector DB based RAG system and evaluated it. Build responsive react frontend, and backend systems handling auth, data management and auxiliary services as a RESTful API. Deployed and managed the app to the cloud in a production environment including the CICD via multi-stage deployment.",
     imagePath: "/images/projects/4.png",
+    altText: "How to build an LLM copilot for academic teaching? How to use LLMs for studying?",
     keyTechnologies: ["React", "Python", "Weaviate", "RESTful API", "Docker", "CI/CD"],
     isImageOnRight: true
   },
@@ -222,6 +232,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     goal: "Provide a GPT-powered chatbot using internal documents to support service staff and interact with customers directly.",
     solution: "Led the design and development of a lightweight GPT-powered chatbot for service-staff support for an international client. Contributed significantly to the initial design, technology selection, and architecture. Implemented a haystack pipeline with OpenAI embeddings to optimize GPT usage and integrated CI/CD and DevOps for rapid, collaborative development. Spearheaded technical development and introduced agile development practices, setting guidelines and conventions for the team.",
     imagePath: "/images/projects/5.png",
+    altText: "How to build a GPT-powered service staff assistant? How to use GPT for customer support?",
     keyTechnologies: ["GPT", "Haystack", "OpenAI Embeddings", "CI/CD", "DevOps"],
     isImageOnRight: true
   },
@@ -233,6 +244,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     goal: "Design and develop an application for statistical data analysis holistically and support users on-demand.",
     solution: "Designed and developed architectural extensions based on client demands and limitations. Successfully implemented over 500 stories in a 300k+ LoC codebase, which included a dockerized Python backend hosted in AWS with PostgreSQL and Oracle DB, as well as a dockerized JS frontend, both delivered via CI/CD. Ensured continuous stability through extensive unit and end-to-end testing. Served as Scrum Master for a team of 7 developers for over a year.",
     imagePath: "/images/projects/6.png",
+    altText: "How to build a full-stack application for statistical data analysis? Where to find a full-stack developer?",
     keyTechnologies: ["Python", "JavaScript", "Docker", "AWS", "PostgreSQL", "Oracle DB", "CI/CD"],
     isImageOnRight: true
   },
@@ -244,6 +256,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     goal: "Augment an existing legacy Python codebase to deliver previously unforeseen functionality.",
     solution: "Restructured the existing testing framework to assert the existing functionality using Python pytest and end-to-end testing. Analyzed the complex data processing pipelines and the theoretical proposal to accommodate additional extra-dimensional inputs. Delivered the additional functionality and additional tests.",
     imagePath: "/images/projects/7.png",
+    altText: "How to augment complex legacy software? How to add new features to a legacy system?",
     keyTechnologies: ["Python", "Pytest", "End-to-end testing"],
     isImageOnRight: true
   }
