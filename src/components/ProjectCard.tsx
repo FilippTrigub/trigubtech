@@ -17,6 +17,7 @@ interface ProjectCardProps {
   solution: string;
   keyTechnologies: string[];
   isImageRight?: boolean;
+  projectLink: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -30,6 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   solution,
   keyTechnologies,
   isImageRight = false,
+  projectLink
 }) => {
   return (
     <motion.div
@@ -42,12 +44,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="p-6 pb-0">
         <h3 className={`text-2xl font-bold text-text-dark text-center ${FONT_CONFIG.TITLE_FONT}`}>{title}</h3>
       </div>
-      
+
       {/* Mobile separator */}
       <div className="md:hidden">
         <ImageSeparator imagePath={imagePath} altText={altText} />
       </div>
-      
+
       {/* Grid with image and content */}
       <div className={`grid grid-cols-1 md:grid-cols-2 gap-0 items-center`}>
         <div className={`hidden md:block md:col-span-1 ${isImageRight ? 'md:order-2' : ''}`}>
@@ -67,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
       </div>
-      
+
       {/* Tags below the grid */}
       <div className="p-6 pt-6">
         <div className="flex flex-wrap gap-2 justify-center">
@@ -78,6 +80,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           ))}
         </div>
+      </div>
+
+      {/* New Button Section */}
+      <div className="flex justify-center p-6 pt-0">
+        <a
+          href={projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-primary text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-primary-dark transition-colors duration-300"
+        >
+          Ask my AI Agent
+        </a>
       </div>
     </motion.div>
   );

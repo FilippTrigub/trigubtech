@@ -3,6 +3,8 @@ import { NavigationItem, ServiceSection, ProjectData, ServiceData, AboutData } f
 export const WEBSITE_TITLE = 'Trigub Tech';
 export const WEBSITE_SUBTITLE = 'AI & Software Solutions';
 
+const huuh_public_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGIyZTIzZTU3ODBhNThmZjUzNDk2MmIiLCJ0eXBlIjoiYXBpX2tleSIsImV4cCI6MTc4ODA4OTc5MH0.ZvUDHZCL-MqM-FzAvuyvD3OshJeus_CrNA0MCk1bauc'
+
 // FONT CONFIGURATION - Configure fonts for different text types
 export const FONT_CONFIG = {
   // Main titles and headings (like "I Turn Your Ideas into Bots")
@@ -106,7 +108,8 @@ export const SERVICES_DATA: ServiceData[] = [
       "Enable teams of agents using tools and your data to achieve complex goals on your behalf.",
       "Enforce observability, evaluation and cost control with a holistic approach."
     ],
-    keyTech: ["orchestration", "parallelization", "agent hierarchies", "observability", "evaluation"]
+    keyTech: ["orchestration", "parallelization", "agent hierarchies", "observability", "evaluation"],
+    serviceLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=1`
   },
   {
     title: "Agentic AI Systems",
@@ -119,7 +122,8 @@ export const SERVICES_DATA: ServiceData[] = [
       "Choose the right framework and tool setup.",
       "Integrate with your exsiting workflows to provide maximum value."
     ],
-    keyTech: ["LangGraph", "MCP", "smolagents", "DSPy", "tool streaming", "context engineering"]
+    keyTech: ["LangGraph", "MCP", "smolagents", "DSPy", "tool streaming", "context engineering"],
+    serviceLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=2`
   },
   {
     title: "Optimized Retrieval-Augmented Generation (RAG) System",
@@ -132,7 +136,8 @@ export const SERVICES_DATA: ServiceData[] = [
       "Optimize performance and cost-effectiveness with a tailored architecture.",
       "Get expert guidance on choosing the right embeddings, vector databases, and chunking strategies."
     ],
-    keyTech: ["GraphRAG", "question labelling", "document parsing", "semantic chunking", "LLM", "Vector DB", "Embeddings"]
+    keyTech: ["GraphRAG", "question labelling", "document parsing", "semantic chunking", "LLM", "Vector DB", "Embeddings"],
+    serviceLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=3`
   },
   {
     title: "LLM System Evaluation",
@@ -145,33 +150,36 @@ export const SERVICES_DATA: ServiceData[] = [
       "Optimize system components for cost-effectiveness.",
       "Incorporate user feedback to continuously improve your system."
     ],
-    keyTech: ["LangSmith", "Weave", "Ragas", "AutoRAG", "DeepEval", "LLM as a judge"]
+    keyTech: ["LangSmith", "Weave", "Ragas", "AutoRAG", "DeepEval", "LLM as a judge"],
+    serviceLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=4`
   },
   {
     title: "Security and Privacy",
     imagePath: "/images/services/5.png",
     altText: "How to secure an LLM system? How to prevent prompt injection attacks?",
     shortDescription: "Protect your sensitive data and prevent prompt injection attacks with a robust security strategy.",
-    content: `Prompt injection is probably the most common security issue in LLM systems. It is a form of attack where the attacker coerces the system to give up private data the LLM has been given. Solutions to this novel concern are still developing, but rule-engines, LLM guard systems or prompt engineering can provide some relief.`,
+    content: `Prompt injection is probably the most common security issue in LLM systems. It is a form of attack where the attacker coerces the system to give up private data the LLM has been given. Solutions to this novel concern are still developing, but rule-engines, LLM guard systems or prompt engineering can provide some relief.`, 
     keyBenefits: [
       "Assess the sensitivity of your data and implement the right level of protection.",
       "Balance security with performance to create a system that is both safe and efficient.",
       "Stay ahead of emerging security threats with expert guidance."
     ],
-    keyTech: ["Prompt Injection", "LLM Guard", "Rule Engines"]
+    keyTech: ["Prompt Injection", "LLM Guard", "Rule Engines"],
+    serviceLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=5`
   },
   {
     title: "Integration and Deployment",
     imagePath: "/images/services/6.png",
     altText: "How to integrate an LLM system? How to deploy an LLM system?",
     shortDescription: "Seamlessly integrate your LLM system into your existing infrastructure and deploy it with confidence.",
-    content: `Even a well-designed LLM system is useless if it is not integrated into your existing infrastructure. You want it to be connected to your databases, your UI and your CI/CD pipeline. Tools for Integration are plentiful, but their adoption for LLM systems is still in progress.`,
+    content: `Even a well-designed LLM system is useless if it is not integrated into your existing infrastructure. You want it to be connected to your databases, your UI and your CI/CD pipeline. Tools for Integration are plentiful, but their adoption for LLM systems is still in progress.`, 
     keyBenefits: [
       "Connect your LLM system to your databases and UI for a seamless user experience.",
       "Ensure consistent up-time and reliability with a robust deployment strategy.",
       "Get a holistic solution that is tailored to your specific needs and infrastructure."
     ],
-    keyTech: ["Azure", "AWS", "GCP", "GitHub", "GitLab", "Docker", "Vercel", "Terraform", "CI/CD"]
+    keyTech: ["Azure", "AWS", "GCP", "GitHub", "GitLab", "Docker", "Vercel", "Terraform", "CI/CD"],
+    serviceLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=6`
   }
 ];
 
@@ -186,7 +194,8 @@ export const PROJECTS_DATA: ProjectData[] = [
     imagePath: "/images/projects/1.png",
     altText: "How to build an MVP for a geo data startup? Where to find a freelancer to build an MVP?",
     keyTechnologies: ["Material UI", "Python", "Supabase", "KMZ", "Claude Code"],
-    isImageOnRight: false
+    isImageOnRight: false,
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
     title: "Collaborative multi-agent community AI platform",
@@ -198,7 +207,8 @@ export const PROJECTS_DATA: ProjectData[] = [
     imagePath: "/images/projects/2.png",
     altText: "How to build a community AI platform? How to monetize AI content?",
     keyTechnologies: ["React", "Python", "Weaviate", "Azure", "Docker", "Unstructured", "LangGraph", "Weave"],
-    isImageOnRight: true
+    isImageOnRight: true,
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
     title: "Tax consulting bot",
@@ -210,7 +220,8 @@ export const PROJECTS_DATA: ProjectData[] = [
     imagePath: "/images/projects/3.png",
     altText: "How to build a tax consulting bot? How to build a RAG system for tax consulting?",
     keyTechnologies: ["Qdrant", "Python", "Streamlit", "Docling", "Advanced RAG", "Azure", "Docker", "CI/CD"],
-    isImageOnRight: false
+    isImageOnRight: false,
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
     title: "Multi-chain LLM copilot for academic teaching and studying",
@@ -222,7 +233,8 @@ export const PROJECTS_DATA: ProjectData[] = [
     imagePath: "/images/projects/4.png",
     altText: "How to build an LLM copilot for academic teaching? How to use LLMs for studying?",
     keyTechnologies: ["React", "Python", "Weaviate", "RESTful API", "Docker", "CI/CD"],
-    isImageOnRight: true
+    isImageOnRight: true,
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
     title: "GPT-powered service staff assistant",
@@ -234,7 +246,8 @@ export const PROJECTS_DATA: ProjectData[] = [
     imagePath: "/images/projects/5.png",
     altText: "How to build a GPT-powered service staff assistant? How to use GPT for customer support?",
     keyTechnologies: ["GPT", "Haystack", "OpenAI Embeddings", "CI/CD", "DevOps"],
-    isImageOnRight: true
+    isImageOnRight: true,
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
     title: "Full-stack application design and development",
@@ -246,7 +259,8 @@ export const PROJECTS_DATA: ProjectData[] = [
     imagePath: "/images/projects/6.png",
     altText: "How to build a full-stack application for statistical data analysis? Where to find a full-stack developer?",
     keyTechnologies: ["Python", "JavaScript", "Docker", "AWS", "PostgreSQL", "Oracle DB", "CI/CD"],
-    isImageOnRight: true
+    isImageOnRight: true,
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
     title: "Complex legacy software augmentation",
@@ -258,7 +272,8 @@ export const PROJECTS_DATA: ProjectData[] = [
     imagePath: "/images/projects/7.png",
     altText: "How to augment complex legacy software? How to add new features to a legacy system?",
     keyTechnologies: ["Python", "Pytest", "End-to-end testing"],
-    isImageOnRight: true
+    isImageOnRight: true,
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   }
 ];
 
@@ -270,7 +285,8 @@ export const POC_PROJECTS = [
     goal: "Build a sales bot for a wine store with consistent identification and memorization of customer preferences to provide the customer with a sommelier-like experience.",
     solution: "Build an LLM agent with a recommendation tool based on a general haystack agent pattern design with a Streamlit UI. Implemented a specified meta-prompt to correctly and consistently identify customer preferences and remember them. Extracted these preferences programmatically to force usage of tool after a set number of preferences has been identified. Dockerized and deployed to Azure with Terraform.",
     imagePath: "/images/projects/8.png",
-    keyTechnologies: ["LLM Agent", "Haystack", "Streamlit", "Azure", "Terraform"]
+    keyTechnologies: ["LLM Agent", "Haystack", "Streamlit", "Azure", "Terraform"],
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
     title: "Audio-Summarizer",
@@ -279,7 +295,8 @@ export const POC_PROJECTS = [
     goal: "Summarize audio recordings, specifically books, into concise bullet-point style summaries.",
     solution: "Engineered a meta-prompt and summarization loop subdividing the recording in user designated parts (chapters) and then token-limit enforced chunks to extract a sensible and concise summary for each part as well as the entire recoding. Build a Flutter based UI allowing users to summarize their recordings and receive the summary by mail. Dockerized and deployed to Vercel and Azure with Terraform and CI/CD.",
     imagePath: "/images/projects/9.png",
-    keyTechnologies: ["Flutter", "Vercel", "Azure", "Terraform", "CI/CD"]
+    keyTechnologies: ["Flutter", "Vercel", "Azure", "Terraform", "CI/CD"],
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
     title: "Telegram Search&Chat",
@@ -288,7 +305,8 @@ export const POC_PROJECTS = [
     goal: "Make Telegram searchable. Allow the automated exploration of a multitude of telegram channels via a GPT-bot fed by vectorized documents found by a search mechanism.",
     solution: "Retrieved chat contents from Telegram with Telethon and loaded these to a FAISS DB with OpenAI embeddings hosted in a FastAPI backend. Implemented question-answer pipeline with Haystack, using Dense Passage Retrieval and OpenAI generation. Provided a light-weight UI with user authentication to Telegram and subsequent chat window. Deployed the bot to Azure with Docker.",
     imagePath: "/images/projects/10.png",
-    keyTechnologies: ["Telegram", "Telethon", "FAISS", "OpenAI", "FastAPI", "Haystack", "Docker", "Azure"]
+    keyTechnologies: ["Telegram", "Telethon", "FAISS", "OpenAI", "FastAPI", "Haystack", "Docker", "Azure"],
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   }
 ];
 
@@ -338,4 +356,3 @@ I am grateful to the people I've met on this path and for the experiences I've m
     tags: ["Leadership", "Management", "NGO"]
   }
 ];
-

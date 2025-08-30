@@ -15,6 +15,7 @@ interface ServiceCardProps {
   keyBenefits: string[];
   keyTech: string[];
   isImageRight?: boolean;
+  serviceLink: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -26,6 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   keyBenefits,
   keyTech,
   isImageRight = false,
+  serviceLink
 }) => {
   return (
     <motion.div
@@ -77,6 +79,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </div>
           ))}
         </div>
+      </div>
+
+      {/* New Button Section */}
+      <div className="flex justify-center p-6 pt-0">
+        <a
+          href={serviceLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-primary text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-primary-dark transition-colors duration-300"
+        >
+          Ask my AI Agent
+        </a>
       </div>
     </motion.div>
   );
