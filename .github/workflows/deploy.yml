@@ -71,6 +71,6 @@ jobs:
         host: pdx1-shared-a1-44.dreamhost.com
         username: dh_kn6hnk
         password: ${{ secrets.DREAMHOST_SSH_KEY }}
-        source: "./dist/*"
+        source: "./dist/*,./dist/.htaccess"
         target: "./trigub.tech/"
         strip_components: 1
