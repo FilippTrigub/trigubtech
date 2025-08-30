@@ -3,7 +3,7 @@ import { NavigationItem, ServiceSection, ProjectData, ServiceData, AboutData } f
 export const WEBSITE_TITLE = 'Trigub Tech';
 export const WEBSITE_SUBTITLE = 'AI & Software Solutions';
 
-const huuh_public_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGIyZTIzZTU3ODBhNThmZjUzNDk2MmIiLCJ0eXBlIjoiYXBpX2tleSIsImV4cCI6MTc4ODA4OTc5MH0.ZvUDHZCL-MqM-FzAvuyvD3OshJeus_CrNA0MCk1bauc'
+export const huuh_public_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGIyZTIzZTU3ODBhNThmZjUzNDk2MmIiLCJ0eXBlIjoiYXBpX2tleSIsImV4cCI6MTc4ODA4OTc5MH0.ZvUDHZCL-MqM-FzAvuyvD3OshJeus_CrNA0MCk1bauc'
 
 // FONT CONFIGURATION - Configure fonts for different text types
 export const FONT_CONFIG = {
