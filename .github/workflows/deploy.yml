@@ -34,7 +34,9 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: production-files
-        path: ./dist
+        path: |
+          ./dist
+          ./dist/.htaccess
 
   deploy:
     needs: build
@@ -71,6 +73,6 @@ jobs:
         host: pdx1-shared-a1-44.dreamhost.com
         username: dh_kn6hnk
         password: ${{ secrets.DREAMHOST_SSH_KEY }}
-        source: "./dist/*,./dist/.htaccess"
+        source: "./dist/**,./dist/.htaccess"
         target: "./trigub.tech/"
         strip_components: 1
