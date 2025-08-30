@@ -25,6 +25,7 @@ export default function ProjectsPage() {
               solution={project.solution}
               keyTechnologies={project.keyTechnologies}
               isImageRight={index % 2 !== 0}
+              projectLink={project.projectLink}
             />
           ))}
         </div>
@@ -42,6 +43,7 @@ export default function ProjectsPage() {
               solution={project.solution}
               keyTechnologies={project.keyTechnologies}
               isImageRight={index % 2 !== 0}
+              projectLink={project.projectLink}
             />
           ))}
         </div>

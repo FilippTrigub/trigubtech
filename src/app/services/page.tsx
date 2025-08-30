@@ -23,6 +23,7 @@ export default function ServicesPage() {
               keyBenefits={service.keyBenefits}
               keyTech={service.keyTech}
               isImageRight={index % 2 !== 0}
+              serviceLink={service.serviceLink}
             />
           ))}
         </div>

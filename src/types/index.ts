@@ -29,6 +29,7 @@ export interface ServiceData {
   content: string;
   keyBenefits: string[];
   keyTech: string[];
+  serviceLink: string;
 }
 
 export interface ProjectData {
@@ -42,6 +43,7 @@ export interface ProjectData {
   altText: string;
   keyTechnologies: string[];
   isImageOnRight?: boolean;
+  projectLink: string;
 }
 
 export interface AboutData {
