@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FONT_CONFIG } from '@/utils/constants';
+import { FONT_CONFIG, huuh_public_key } from '@/utils/constants';
 
 const HeroSection: React.FC = () => {
 
@@ -31,12 +31,20 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="flex flex-col md:flex-column items-center justify-center gap-8 mt-8"
       >
-        <Link
-          to="/contact"
-          className={`text-2xl md:text-4xl bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
-        >
-          Connect
-        </Link>
+        <div className="flex flex-col md:flex-row gap-4">
+          <Link
+            to={`https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}`}
+            className={`text-2xl md:text-4xl border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary/10 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
+          >
+            Ask my AI
+          </Link>
+          <Link
+            to="/contact"
+            className={`text-2xl md:text-4xl bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
+          >
+            Book a Call
+          </Link>
+        </div>
       </motion.div>
     </div>
   );
