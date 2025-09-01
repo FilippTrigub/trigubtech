@@ -102,7 +102,7 @@ export const SERVICES_DATA: ServiceData[] = [
     imagePath: "/images/services/1.png",
     altText: "What is the best way to build a multi-agent system? Where to find freelancers to build an multi-agent system?",
     shortDescription: "Enable teams of agents using tools and your data to achieve complex goals on your behalf.",
-    content: `Multi-Agent Systems (MAS) are at the cutting edge of current AI engineering. They act in coordination resolving intrincate tasks with limited supervision. Therefore observability, evaluation and cost control are highly important, requiring disciplined engineering.`,
+    content: `Multi-Agent Systems (MAS) are at the cutting edge of current AI engineering. They act in coordination resolving intricate tasks with limited supervision. Therefore observability, evaluation and cost control are highly important, requiring disciplined engineering.`,
     keyBenefits: [
       "Mimic human teams giving agents their roles and abilities to create complex interaction patterns.",
       "Enable teams of agents using tools and your data to achieve complex goals on your behalf.",
@@ -120,7 +120,7 @@ export const SERVICES_DATA: ServiceData[] = [
     keyBenefits: [
       "Define adequately scoped Agentic AI systems for your use case.",
       "Choose the right framework and tool setup.",
-      "Integrate with your exsiting workflows to provide maximum value."
+      "Integrate with your existing workflows to provide maximum value."
     ],
     keyTech: ["LangGraph", "MCP", "smolagents", "DSPy", "tool streaming", "context engineering"],
     serviceLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=2`
@@ -190,7 +190,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     duration: "2 month (07.2025-08.2025)",
     shortDescription: "Refactor and structure a pre-MVP codebase into a reliable app for dynamic KMZ file & web app interaction",
     goal: "Develop a presentation ready web app interacting dynamically with local KMZ files and supabase in less than 50 hours.",
-    solution: "Establish clear coordination with project lead. Refactor the existing codebase. Formulate clear requirements and implementation steps. Develop rapidly with Claude Code and other agentic tools with a frequently shifting db schema and codebase layout. Assure the required functionality before deadline and within the budget of 50 hours.",
+    solution: "Established clear coordination with project lead. Refactored the existing codebase. Formulated clear requirements and implementation steps. Developed rapidly with Claude Code and agentic coding tools with a frequently shifting db schema and codebase layout. Assured the required functionality before deadline and within the budget of 50 hours.",
     imagePath: "/images/projects/1.png",
     altText: "How to build an MVP for a geo data startup? Where to find a freelancer to build an MVP?",
     keyTechnologies: ["Material UI", "Python", "Supabase", "KMZ", "Claude Code"],
@@ -203,7 +203,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     duration: "6 month (01.2025-08.2025)",
     shortDescription: "Multi-agent AI for community collaboration powered by multi-user agentic multimodal filtered RAG for AI content monetization",
     goal: "Enable content creators and community leads to monetize content AI-natively.",
-    solution: "Build an advanced knowledge base to power a RAG system with semantic chunking, multi-format input, page attribution and metadata filtering. Enable interaction with the base powered by a multi-agent system. Enable role based access to base and agent to foster community collaboration through contributions and sharing of knkowledge and AI tools. Enable marketplace and monetization via strip integration.",
+    solution: "Built an advanced knowledge base to power a RAG system with semantic chunking, multi-format input, page attribution and metadata filtering. Built responsive react frontend, and backend systems handling auth, data management and auxiliary services as a RESTful API. Enabled interaction with the base powered by a multi-agent system. Enabled role-based access to base and agent to foster community collaboration through contributions and sharing of knowledge and AI tools. Enabled marketplace and monetization via strip integration.",
     imagePath: "/images/projects/2.png",
     altText: "How to build a community AI platform? How to monetize AI content?",
     keyTechnologies: ["React", "Python", "Weaviate", "Azure", "Docker", "Unstructured", "LangGraph", "Weave"],
@@ -214,9 +214,9 @@ export const PROJECTS_DATA: ProjectData[] = [
     title: "Tax consulting bot",
     client: "colmo Ltd.",
     duration: "3 month (09.2024-12.2024)",
-    shortDescription: "No-hallucination Linked RAG system based on adaptive chunking and custom parsing apporach and adapted to German speakers",
-    goal: "Enable clients of the cunsulting company to get AI-generated answers they can trust",
-    solution: "Understand the propriatary data. Develop custom parsers for different data structures. Develop custom chunking approaches to preserve coherent text chunks whenever possible and reasonable. Implement alignment optimization based on identified topics and base search as a fallback retreival strategy. Deploy with UI and backend to the cloud.",
+    shortDescription: "No-hallucination Linked RAG system based on adaptive chunking and custom parsing approach and adapted to German speakers",
+    goal: "Enable clients of the consulting company to get AI-generated answers they can trust.",
+    solution: "Understood the proprietary data. Developed custom parsers for different data structures. Developed custom chunking approaches to preserve coherent text chunks whenever possible and reasonable. Implemented alignment optimization based on identified topics and base search as a fallback retrieval strategy. Deployed with UI and backend to the cloud.",
     imagePath: "/images/projects/3.png",
     altText: "How to build a tax consulting bot? How to build a RAG system for tax consulting?",
     keyTechnologies: ["Qdrant", "Python", "Streamlit", "Docling", "Advanced RAG", "Azure", "Docker", "CI/CD"],
@@ -229,7 +229,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     duration: "6 month (10.2023-03.2024)",
     shortDescription: "A sophisticated AI copilot to augment the students’ learning experience and provide AI-derived insights to professors.",
     goal: "Build a sophisticated AI copilot to augment the students’ learning experience and provide AI-derived insights to professors.",
-    solution: "Build a multi-chain LLM system adapting to user needs at its own accord with a Weaviate vector DB based RAG system and evaluated it. Build responsive react frontend, and backend systems handling auth, data management and auxiliary services as a RESTful API. Deployed and managed the app to the cloud in a production environment including the CICD via multi-stage deployment.",
+    solution: "Build a multi-chain LLM system adapting to user needs at its own accord with a Weaviate vector DB based RAG system and evaluated it. Build responsive react frontend, and backend systems handling auth, data management and auxiliary services as a RESTful API. Deployed and managed the app to the cloud in a production environment including the CI/CD via multi-stage deployment.",
     imagePath: "/images/projects/4.png",
     altText: "How to build an LLM copilot for academic teaching? How to use LLMs for studying?",
     keyTechnologies: ["React", "Python", "Weaviate", "RESTful API", "Docker", "CI/CD"],
@@ -344,9 +344,9 @@ Vitsche's organizational challenges grew out of its rapid development following 
     content: `With just 20 years old I was thrown into management at the head of a small association in Berlin.
 
 No doubt: leading a small NGO is not the most prestigious experience. However, it is a challenging one as I was
-— motivating and organising groups of young, individualistic adults.
+— motivating and organizing groups of young, individualistic adults.
 — dealing with a disastrous financial situation left behind by the previous board.
-— organising international events with 50 participants.
+— organizing international events with 50 participants.
 — convincing new members to join us instead of doing anything else in Berlin.
 Over my 2 year long tenure, I learned to lead, to persuade, to sell and to plan and my team and me were successful leaving the association richer and bigger than we found it.
 
