@@ -1,4 +1,4 @@
-import { NavigationItem, ServiceSection, ProjectData, ServiceData, AboutData } from '@/types';
+import { NavigationItem, ServiceSection, ProjectData, ServiceData, AboutData, IntroSummaryData } from '@/types';
 
 export const WEBSITE_TITLE = 'Trigub Tech';
 export const WEBSITE_SUBTITLE = 'AI & Software Solutions';
@@ -302,7 +302,7 @@ export const POC_PROJECTS = [
     title: "Telegram Search&Chat",
     duration: "1 month (03-04.2023)",
     shortDescription: "Make Telegram searchable and allow the automated exploration of a multitude of telegram channels.",
-    goal: "Make Telegram searchable. Allow the automated exploration of a multitude of telegram channels via a GPT-bot fed by vectorized documents found by a search mechanism.",
+    goal: "Make Telegram searchable. Allow the automated exploration of a multitude of telegram channels via a GPT-bot fed by a search mechanism.",
     solution: "Retrieved chat contents from Telegram with Telethon and loaded these to a FAISS DB with OpenAI embeddings hosted in a FastAPI backend. Implemented question-answer pipeline with Haystack, using Dense Passage Retrieval and OpenAI generation. Provided a light-weight UI with user authentication to Telegram and subsequent chat window. Deployed the bot to Azure with Docker.",
     imagePath: "/images/projects/10.png",
     keyTechnologies: ["Telegram", "Telethon", "FAISS", "OpenAI", "FastAPI", "Haystack", "Docker", "Azure"],
@@ -354,5 +354,35 @@ Afterwards I continued to serve among others in the leadership of the Eastern Pa
 
 I am grateful to the people I've met on this path and for the experiences I've made.`,
     tags: ["Leadership", "Management", "NGO"]
+  }
+];
+
+export const INTRO_SUMMARY_DATA: IntroSummaryData[] = [
+  {
+    title: "About Me",
+    imagePath: "/images/me1.jpg",
+    altText: "Filipp Trigub",
+    content: "M.Sc. in theoretical physics <br /> 10+ years of full-stack experience. <br /> Decades-long engagements in communities.",
+    tags: [],
+    link: "/about",
+    imagePath2: "https://ghchart.rshah.org/FilippTrigub",
+    altText2: "GitHub Contributions Chart",
+    content2: "Over 4000 contributions over the last year. <br /> 2 hackathon victories. <br /> Actively staying up to date on the fastest way to build reliably with AI."
+  },
+  {
+    title: "Stack",
+    imagePath: "/images/landing/stack.png", // Placeholder
+    altText: "My Tech Stack",
+    content: "",
+    tags: ["Agentic Coding","Python", "TS", "Oracle & PostgreSQL", "MongoDB, Weaviate & Qdrant", "Github Actions", "GitLab", "Docker", "Terraform",  "Azure", "GCP"],
+    link: "/projects"
+  },
+  {
+    title: "Specialty",
+    imagePath: "/images/landing/specs.png", // Placeholder
+    altText: "My Specialty",
+    content: "",
+    tags: ["Multi-Agent Systems", "Agentic AI", "Advanced RAG", "MCP servers & client", "Document Parsing & Chunking", "LLM Evaluation & LLMOps", "LLM Security"],
+    link: "/services"
   }
 ];

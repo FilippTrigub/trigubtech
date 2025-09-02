@@ -54,6 +54,18 @@ export interface AboutData {
   tags: string[];
 }
 
+export interface IntroSummaryData {
+  title: string;
+  imagePath: string;
+  altText: string;
+  content: string;
+  tags: string[];
+  link: string;
+  imagePath2?: string;
+  altText2?: string;
+  content2?: string;
+}
+
 export interface ContactLink {
   text: string;
   url?: string;

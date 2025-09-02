@@ -35,11 +35,11 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
     <>
       {/* Desktop Header - stays at top */}
       <header className="hidden md:block bg-text-dark shadow-lg relative z-50">
-        <div className="flex items-center justify-center px-4 h-20 relative">
+        <div className="flex items-center px-4 h-20 relative">
           {/* Logo and Title - Centered */}
           <Link 
             to="/"
-            className="flex items-center space-x-4 hover:opacity-80 transition-opacity duration-200"
+            className="flex items-center justify-center w-full space-x-4 hover:opacity-80 transition-opacity duration-200"
             onClick={closeMenu}
           >
             <img 
@@ -65,11 +65,11 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
 
       {/* Mobile Header - moved to bottom */}
       <header className="md:hidden fixed bottom-0 left-0 right-0 bg-text-dark shadow-lg z-50">
-        <div className="flex items-center justify-center px-4 h-16 relative">
+        <div className="flex items-center px-4 h-16 relative">
           {/* Logo and Title - Centered */}
           <Link 
             to="/"
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
+            className="flex items-center justify-center w-full space-x-3 hover:opacity-80 transition-opacity duration-200"
             onClick={closeMenu}
           >
             <img 
