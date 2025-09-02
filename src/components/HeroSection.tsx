@@ -8,14 +8,14 @@ import { FONT_CONFIG, huuh_public_key } from '@/utils/constants';
 const HeroSection: React.FC = () => {
 
   return (
-    <div className="bg-background text-center py-20 px-4">
+    <div className="bg-background text-center py-4 px-4">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className={`text-4xl md:text-6xl font-bold text-text-dark mb-4 ${FONT_CONFIG.TITLE_FONT}`}
       >
-        Build reliable AI systems
+        Rapid Reliable AI systems
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -31,22 +31,22 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="flex flex-col md:flex-column items-center justify-center gap-8 mt-8"
       >
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col md:flex-row gap-4 md:w-auto justify-center">
           <Link
             to={`https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}`}
-            className={`text-2xl md:text-4xl border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary/10 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
+            className={`w-full text-2xl md:text-4xl border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary/10 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
           >
             Ask my AI
           </Link>
           <Link
             to="/contact"
-            className={`text-2xl md:text-4xl bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
+            className={`w-full text-2xl md:text-4xl bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
           >
             Book a Call
           </Link>
           <Link
             to="/projects"
-            className={`text-2xl md:text-4xl border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary/10 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
+            className={`w-full text-2xl md:text-4xl border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary/10 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
           >
             View my Work
           </Link>
