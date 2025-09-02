@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 0.8 }}
         className={`text-4xl md:text-6xl font-bold text-text-dark mb-4 ${FONT_CONFIG.TITLE_FONT}`}
       >
-        I build reliable AI systems
+        Build reliable AI systems
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -43,6 +43,12 @@ const HeroSection: React.FC = () => {
             className={`text-2xl md:text-4xl bg-primary text-text-light font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
           >
             Book a Call
+          </Link>
+          <Link
+            to="/projects"
+            className={`text-2xl md:text-4xl border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary/10 transition-colors duration-300 ${FONT_CONFIG.BODY_FONT} whitespace-nowrap`}
+          >
+            View my Work
           </Link>
         </div>
       </motion.div>
