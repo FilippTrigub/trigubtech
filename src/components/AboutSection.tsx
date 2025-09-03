@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FONT_CONFIG } from '@/utils/constants';
+import CVDownload from './CVDownload';
 
 const AboutSection: React.FC = () => {
   return (
@@ -33,12 +34,7 @@ const AboutSection: React.FC = () => {
           <p className={`text-xl md:text-2xl text-accent mb-6 ${FONT_CONFIG.BODY_FONT}`}>
             M.Sc. in theoretical physics <br /> 10+ years of full-stack experience. <br /> Decades-long engagements in communities.
           </p>
-          <Link
-            to="/about"
-            className={`text-primary text-lg font-bold hover:underline mx-auto md:mx-0 ${FONT_CONFIG.BODY_FONT}`}
-          >
-            Learn More About My Journey
-          </Link>
+          <CVDownload />
         </motion.div>
       </div>
     </div>

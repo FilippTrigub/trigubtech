@@ -4,6 +4,7 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import AboutSection from '@/components/AboutSection';
 import Timeline from '@/components/Timeline';
+import CVDownload from '@/components/CVDownload';
 
 export default function AboutPage() {
   return (
