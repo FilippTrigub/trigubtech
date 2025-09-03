@@ -47,6 +47,7 @@ export const PERSONAL_INFO = {
   name: 'Filipp Trigub',
   email: 'filipp@trigub.tech',
   linkedin: 'https://www.linkedin.com/in/filipp-trigub/',
+  github: 'https://github.com/FilippTrigub',
   calendly: 'https://my.meetergo.com/filipp-trigub/get-to-know-meeting',
   address: 'Berlin, Germany',
 };

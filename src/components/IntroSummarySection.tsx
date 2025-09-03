@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Tag } from 'lucide-react';
-import { FONT_CONFIG, INTRO_SUMMARY_DATA } from '@/utils/constants';
+import { FONT_CONFIG, INTRO_SUMMARY_DATA, PERSONAL_INFO } from '@/utils/constants';
 
 const IntroSummarySection: React.FC = () => {
   return (
@@ -35,11 +35,13 @@ const IntroSummarySection: React.FC = () => {
               )}
               {index === 0 && item.imagePath2 && (
                 <>
-                  <img
-                    src={item.imagePath2}
-                    alt={item.altText2}
-                    className="shadow-lg mx-auto w-full object-contain mb-6"
-                  />
+                  <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={item.imagePath2}
+                      alt={item.altText2}
+                      className="shadow-lg mx-auto w-full object-contain mb-6"
+                    />
+                  </a>
                   {item.content2 && (
                     <p
                       className={`text-lg md:text-xl text-accent mb-6 ${FONT_CONFIG.BODY_FONT}`}

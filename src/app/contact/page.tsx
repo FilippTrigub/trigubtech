@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import ContactForm from '@/components/ContactForm';
 import { FONT_CONFIG, PERSONAL_INFO } from '@/utils/constants';
-import { Mail, Linkedin, Calendar } from 'lucide-react';
+import { Mail, Linkedin, Calendar, Github } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -38,6 +38,12 @@ export default function ContactPage() {
                     <Calendar className="w-6 h-6 text-primary" />
                     <a href={PERSONAL_INFO.calendly} target="_blank" rel="noopener noreferrer" className="text-accent hover:text-primary">
                       Book a Call
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Github className="w-6 h-6 text-primary" />
+                    <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="text-accent hover:text-primary">
+                      GitHub
                     </a>
                   </div>
                 </div>
