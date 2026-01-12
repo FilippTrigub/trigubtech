@@ -9,10 +9,10 @@ export const huuh_public_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI
 export const FONT_CONFIG = {
   // Main titles and headings (like "I Turn Your Ideas into Bots")
   TITLE_FONT: 'font-pixy',     // Options: font-medodica, font-ithaca, font-vcr-osd
-  
+
   // Body text and descriptions
   BODY_FONT: 'font-basis33',       // Options: font-vcr-osd, font-medodica, font-ithaca
-  
+
   // Accent text and special elements  
   ACCENT_FONT: 'font-ithaca',      // Options: font-ithaca, font-medodica, font-vcr-osd
 };
@@ -76,7 +76,7 @@ export const SERVICE_SECTIONS: ServiceSection[] = [
     ]
   },
   {
-    title: "Strategy", 
+    title: "Strategy",
     icon: "settings",
     color: "#8D1B3D", // primary (burgundy)
     statements: [
@@ -159,7 +159,7 @@ export const SERVICES_DATA: ServiceData[] = [
     imagePath: "/images/services/5.png",
     altText: "How to secure an LLM system? How to prevent prompt injection attacks?",
     shortDescription: "Protect your sensitive data and prevent prompt injection attacks with a robust security strategy.",
-    content: `Prompt injection is probably the most common security issue in LLM systems. It is a form of attack where the attacker coerces the system to give up private data the LLM has been given. Solutions to this novel concern are still developing, but rule-engines, LLM guard systems or prompt engineering can provide some relief.`, 
+    content: `Prompt injection is probably the most common security issue in LLM systems. It is a form of attack where the attacker coerces the system to give up private data the LLM has been given. Solutions to this novel concern are still developing, but rule-engines, LLM guard systems or prompt engineering can provide some relief.`,
     keyBenefits: [
       "Assess the sensitivity of your data and implement the right level of protection.",
       "Balance security with performance to create a system that is both safe and efficient.",
@@ -173,7 +173,7 @@ export const SERVICES_DATA: ServiceData[] = [
     imagePath: "/images/services/6.png",
     altText: "How to integrate an LLM system? How to deploy an LLM system?",
     shortDescription: "Seamlessly integrate your LLM system into your existing infrastructure and deploy it with confidence.",
-    content: `Even a well-designed LLM system is useless if it is not integrated into your existing infrastructure. You want it to be connected to your databases, your UI and your CI/CD pipeline. Tools for Integration are plentiful, but their adoption for LLM systems is still in progress.`, 
+    content: `Even a well-designed LLM system is useless if it is not integrated into your existing infrastructure. You want it to be connected to your databases, your UI and your CI/CD pipeline. Tools for Integration are plentiful, but their adoption for LLM systems is still in progress.`,
     keyBenefits: [
       "Connect your LLM system to your databases and UI for a seamless user experience.",
       "Ensure consistent up-time and reliability with a robust deployment strategy.",
@@ -186,16 +186,16 @@ export const SERVICES_DATA: ServiceData[] = [
 
 export const PROJECTS_DATA: ProjectData[] = [
   {
-    title: "Rapid MVP development for geo data startup",
-    client: "HB Partners",
-    duration: "2 month (07.2025-08.2025)",
-    shortDescription: "Refactor and structure a pre-MVP codebase into a reliable app for dynamic KMZ file & web app interaction",
-    goal: "Develop a presentation ready web app interacting dynamically with local KMZ files and supabase in less than 50 hours.",
-    solution: "Established clear coordination with project lead. Refactored the existing codebase. Formulated clear requirements and implementation steps. Developed rapidly with Claude Code and agentic coding tools with a frequently shifting db schema and codebase layout. Assured the required functionality before deadline and within the budget of 50 hours.",
-    imagePath: "/images/projects/1.png",
-    altText: "How to build an MVP for a geo data startup? Where to find a freelancer to build an MVP?",
-    keyTechnologies: ["Material UI", "Python", "Supabase", "KMZ", "Claude Code"],
-    isImageOnRight: false,
+    title: "Parallelized integrated agentic task execution",
+    client: "blackbox.ai",
+    duration: "3 month (09.2025-present)",
+    shortDescription: "Multi-agent AI for community collaboration powered by multi-user agentic multimodal filtered RAG for AI content monetization",
+    goal: "Enabled developers and data scientists to run multiple development and analysis tasks in parallel remotely on their own codebase.",
+    solution: "Implement rapidly scaling deployment of isolated execution environments. Enabled deployment of agents to these environments for blackbox, claude, gemini and codex. Built responsive frontend, and backend systems for task handling. Enabled integrations with Slack, Discord, telephone and 11.ai as well as general access via MPC and API. Enabled deployment of integrations to third party services such as MongoDb and supabase to isolated environments. Enabled automatic deployment of the task result to Vercel and GCP",
+    imagePath: "/images/projects/11.png",
+    altText: "How to build a distributed and isolate agentic AI? How to parallelize AI execution?",
+    keyTechnologies: ["NextJS", "TypeScript", "Vercel Sandboxes", "GCP", "Kubernetes","LiveKit", "ElevenLabs", "Gemini", "Codex", "Claude"],
+    isImageOnRight: true,
     projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
@@ -209,6 +209,19 @@ export const PROJECTS_DATA: ProjectData[] = [
     altText: "How to build a community AI platform? How to monetize AI content?",
     keyTechnologies: ["React", "Python", "Weaviate", "Azure", "Docker", "Unstructured", "LangGraph", "Weave"],
     isImageOnRight: true,
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
+  },
+  {
+    title: "Rapid MVP development for geo data startup",
+    client: "HB Partners",
+    duration: "2 month (07.2025-08.2025)",
+    shortDescription: "Refactor and structure a pre-MVP codebase into a reliable app for dynamic KMZ file & web app interaction",
+    goal: "Develop a presentation ready web app interacting dynamically with local KMZ files and supabase in less than 50 hours.",
+    solution: "Established clear coordination with project lead. Refactored the existing codebase. Formulated clear requirements and implementation steps. Developed rapidly with Claude Code and agentic coding tools with a frequently shifting db schema and codebase layout. Assured the required functionality before deadline and within the budget of 50 hours.",
+    imagePath: "/images/projects/1.png",
+    altText: "How to build an MVP for a geo data startup? Where to find a freelancer to build an MVP?",
+    keyTechnologies: ["Material UI", "Python", "Supabase", "KMZ", "Claude Code"],
+    isImageOnRight: false,
     projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
@@ -235,6 +248,19 @@ export const PROJECTS_DATA: ProjectData[] = [
     altText: "How to build an LLM copilot for academic teaching? How to use LLMs for studying?",
     keyTechnologies: ["React", "Python", "Weaviate", "RESTful API", "Docker", "CI/CD"],
     isImageOnRight: true,
+    projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
+  },
+  {
+    title: "Advanced LLM document-to-decision engine workflow",
+    client: "Decisimo Ltd.",
+    duration: "2 month (07.2023-08.2023)",
+    shortDescription: "Design and optimize multi-step LLM workflow to convert long structured documents into decision trees.",
+    goal: "Convert a provided insurance document into a decision tree in JSON format to be used by the decision engine.",
+    solution: "Understood how the insurance policy specifies the decision process. Developed a multi-step workflow to analyze the document in chunks, extract relevant decision types and execute conditional logic to fill out the decision tree. Developed a LLM workflow to execute this workflow and produce a decision tree in JSON format. Built an evaluation framework and used it to optimize prompts.",
+    imagePath: "/images/projects/12.png",
+    altText: "How to build LLM workflows to process large documents? How to use LLMs for document processing?",
+    keyTechnologies: ["Prompt Optimization", "LLM evaluation"],
+    isImageOnRight: false,
     projectLink: `https://app.huuh.me/public/courses/68b2e0e85780a58ff534962a/chat?api_key=${huuh_public_key}&blocks=7`
   },
   {
@@ -265,7 +291,7 @@ export const PROJECTS_DATA: ProjectData[] = [
   },
   {
     title: "Complex legacy software augmentation",
-    client: "Major German bank", 
+    client: "Major German bank",
     duration: "2 month (02-03.2023)",
     shortDescription: "Augmenting an existing legacy Python codebase to deliver previously unforeseen functionality.",
     goal: "Augment an existing legacy Python codebase to deliver previously unforeseen functionality.",
@@ -375,7 +401,7 @@ export const INTRO_SUMMARY_DATA: IntroSummaryData[] = [
     imagePath: "/images/landing/stack.png", // Placeholder
     altText: "My Tech Stack",
     content: "",
-    tags: ["Agentic Coding","Python", "TS", "Oracle & PostgreSQL", "MongoDB, Weaviate & Qdrant", "Github Actions", "GitLab", "Docker", "Terraform",  "Azure", "GCP"],
+    tags: ["Agentic Coding", "Python", "TS", "Oracle & PostgreSQL", "MongoDB, Weaviate & Qdrant", "Github Actions", "GitLab", "Docker", "Terraform", "Azure", "GCP"],
     link: "/projects"
   },
   {
