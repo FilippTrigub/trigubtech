@@ -2,14 +2,15 @@ name: Deploy
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
+  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
 
 jobs:
   build:
@@ -24,11 +25,10 @@ jobs:
       with:
         node-version: 23
 
-    - name: Install dependencies
-      run: npm install
-
     - name: Build dist
-      run: npm run build
+      # env:
+      #   VITE_AMPLITUDE_API_KEY: ${{ secrets.VITE_AMPLITUDE_API_KEY }}
+      run: npm run predeploy
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
@@ -41,39 +41,32 @@ jobs:
 
   deploy:
     needs: build
+    permissions:
+      pages: write
+      contents: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: 'https://huuh.me'
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-    
+    if: github.ref == 'refs/heads/main'
+
     steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: production-files
-        path: ./dist
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-files
+          path: ./dist
 
-    - name: Setup SSH key
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.DREAMHOST_SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H pdx1-shared-a1-44.dreamhost.com >> ~/.ssh/known_hosts
-        # Validate key format
-        ssh-keygen -l -f ~/.ssh/id_rsa || echo "Key validation failed, will try password auth"
+      - name: Set permissions
+        run: chmod -R a+rX ./dist
 
-    - name: Clear remote directory
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: pdx1-shared-a1-44.dreamhost.com
-        username: dh_kn6hnk
-        password: ${{ secrets.DREAMHOST_SSH_KEY }}
-        script: rm -rf ./trigub.tech/*
-
-    - name: Deploy files to server
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: pdx1-shared-a1-44.dreamhost.com
-        username: dh_kn6hnk
-        password: ${{ secrets.DREAMHOST_SSH_KEY }}
-        source: "./dist/**,./dist/.htaccess"
-        target: "./trigub.tech/"
-        strip_components: 1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          force: true
+          
