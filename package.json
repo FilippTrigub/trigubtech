@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "predeploy": "npm install && npm run build && npm run add-domain",
+    "add-domain": "echo \"trigub.tech\" > dist/CNAME",
     "serve": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
