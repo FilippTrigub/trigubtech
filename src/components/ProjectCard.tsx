@@ -17,7 +17,6 @@ interface ProjectCardProps {
   solution: string;
   keyTechnologies: string[];
   isImageRight?: boolean;
-  projectLink: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -30,8 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   goal,
   solution,
   keyTechnologies,
-  isImageRight = false,
-  projectLink
+  isImageRight = false
 }) => {
   return (
     <motion.div
@@ -80,18 +78,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           ))}
         </div>
-      </div>
-
-      {/* New Button Section */}
-      <div className="flex justify-center p-6 pt-0">
-        <a
-          href={projectLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-primary text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-primary-dark transition-colors duration-300"
-        >
-          Ask my AI Agent
-        </a>
       </div>
     </motion.div>
   );
