@@ -81,7 +81,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </div>
       </div>
 
-      {/* New Button Section */}
       <div className="flex justify-center p-6 pt-0">
         <a
           href={serviceLink}
@@ -89,7 +88,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           rel="noopener noreferrer"
           className="bg-primary text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-primary-dark transition-colors duration-300"
         >
-          Ask my AI Agent
+          View Service
         </a>
       </div>
     </motion.div>

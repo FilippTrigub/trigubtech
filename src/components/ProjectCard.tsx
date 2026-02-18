@@ -82,7 +82,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
 
-      {/* New Button Section */}
       <div className="flex justify-center p-6 pt-0">
         <a
           href={projectLink}
@@ -90,7 +89,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           rel="noopener noreferrer"
           className="bg-primary text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-primary-dark transition-colors duration-300"
         >
-          Ask my AI Agent
+          View Project
         </a>
       </div>
     </motion.div>
