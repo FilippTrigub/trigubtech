@@ -47,7 +47,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: 'https://huuh.me'
+      url: 'https://trigub.tech'
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
 
