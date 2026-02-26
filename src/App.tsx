@@ -7,15 +7,19 @@ import ServicesPage from './app/services/page';
 import ProjectsPage from './app/projects/page';
 import AboutPage from './app/about/page';
 import ContactPage from './app/contact/page';
+import EnvDebugOverlay from './components/EnvDebugOverlay';
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/services" element={<ServicesPage />} />
-      <Route path="/projects" element={<ProjectsPage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-    </Routes>
+    <>
+      <EnvDebugOverlay />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </>
   );
 }
