@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const ProjectsHighlightSection: React.FC = () => {
   const highlightedProjects = PROJECTS_DATA.slice(0, 5);
-  const sliderRef = useRef<Slider>(null);
+  const sliderRef = useRef<any>(null);
   const [isHovering, setIsHovering] = useState(false);
 
   const settings = {

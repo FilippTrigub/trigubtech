@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const ServicesSliderSection: React.FC = () => {
-  const sliderRef = useRef<Slider>(null);
+  const sliderRef = useRef<any>(null);
   const [isHovering, setIsHovering] = useState(false);
 
   const settings = {
