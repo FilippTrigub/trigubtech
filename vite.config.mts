@@ -10,4 +10,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  define: {
+    'import.meta.env.VITE_FOOBAR': JSON.stringify(process.env.FOOBAR),
+    'import.meta.env.VITE_NEXT_PUBLIC_FOOBAR': JSON.stringify(process.env.NEXT_PUBLIC_FOOBAR),
+  },
 })
