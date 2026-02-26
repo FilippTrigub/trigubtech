@@ -24,15 +24,24 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copy built assets from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# The PORT environment variable will be set by Cloud Run
-# We'll use a startup script to inject it into nginx config
+# Install gettext for envsubst
 RUN apk add --no-cache gettext
 
-# Create entrypoint script
-RUN echo '#!/bin/sh' > /docker-entrypoint.sh && \
-    echo 'export PORT=${PORT:-8080}' >> /docker-entrypoint.sh && \
-    echo 'envsubst '\''$PORT'\'' < /etc/nginx/conf.d/default.conf > /tmp/default.conf && mv /tmp/default.conf /etc/nginx/conf.d/default.conf' >> /docker-entrypoint.sh && \
-    echo 'nginx -g "daemon off;"' >> /docker-entrypoint.sh && \
+# Create entrypoint script that properly sets PORT and starts nginx
+RUN printf '#!/bin/sh\n\
+set -e\n\
+export PORT=${PORT:-8080}\n\
+echo "Starting nginx on port $PORT"\n\
+envsubst '"'"'$PORT'"'"' < /etc/nginx/conf.d/default.conf > /tmp/nginx.conf\n\
+mv /tmp/nginx.conf /etc/nginx/conf.d/default.conf\n\
+echo "Nginx configuration:"\n\
+cat /etc/nginx/conf.d/default.conf\n\
+echo "Testing nginx configuration..."\n\
+nginx -t\n\
+echo "Starting nginx..."\n\
+exec nginx -g "daemon off;"\n' > /docker-entrypoint.sh && \
     chmod +x /docker-entrypoint.sh
+
+EXPOSE 8080
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
