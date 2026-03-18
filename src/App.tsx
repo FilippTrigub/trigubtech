@@ -8,6 +8,7 @@ import ProjectsPage from './app/projects/page';
 import AboutPage from './app/about/page';
 import ContactPage from './app/contact/page';
 import DataProtectionPolicyPage from './app/abra/data-protection-policy/page';
+import TermsAndConditionsPage from './app/abra/terms-and-conditions/page';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/abra/data-protection-policy" element={<DataProtectionPolicyPage />} />
+      <Route path="/abra/terms-and-conditions" element={<TermsAndConditionsPage />} />
     </Routes>
   );
 }
