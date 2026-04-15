@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Download } from 'lucide-react';
 import { FONT_CONFIG } from '@/utils/constants';
+import { analytics } from '@/utils/analytics';
 
 const CVDownload: React.FC = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -35,7 +36,7 @@ const CVDownload: React.FC = () => {
           id="options-menu"
           aria-haspopup="true"
           aria-expanded={isDropdownOpen}
-          onClick={() => setDropdownOpen(!isDropdownOpen)}
+          onClick={() => { setDropdownOpen(!isDropdownOpen); if (!isDropdownOpen) analytics.cvDownloadOpened(); }}
         >
           <Download className="mr-2 -ml-1 h-5 w-5" />
           Download CV
@@ -57,7 +58,7 @@ const CVDownload: React.FC = () => {
                 download
                 className={`block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 ${FONT_CONFIG.BODY_FONT}`}
                 role="menuitem"
-                onClick={() => setDropdownOpen(false)}
+                onClick={() => { setDropdownOpen(false); analytics.cvDownloaded(cv.lang); }}
               >
                 {cv.lang}
               </a>

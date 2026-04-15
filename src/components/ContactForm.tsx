@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { FONT_CONFIG } from '@/utils/constants';
+import { analytics } from '@/utils/analytics';
 
 const ContactForm: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -29,10 +30,12 @@ const ContactForm: React.FC = () => {
       emailjs.send(serviceID, templateID, templateParams, userID)
         .then((result) => {
           console.log(result.text);
+          analytics.contactFormSubmitted();
           setStatus('Message Sent!');
           form.current?.reset();
         }, (error) => {
           console.log(error.text);
+          analytics.contactFormFailed(error.text);
           setStatus('Failed to send');
         });
     }

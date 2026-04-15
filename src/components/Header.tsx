@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Briefcase, Folder, User, Mail } from 'lucide-react';
 import { WEBSITE_TITLE, WEBSITE_SUBTITLE, NAVIGATION_ITEMS, FONT_CONFIG } from '@/utils/constants';
+import { analytics } from '@/utils/analytics';
 
 const iconMap = {
   home: Home,
@@ -24,7 +25,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
   const pathname = location.pathname;
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    const next = !isMenuOpen;
+    setIsMenuOpen(next);
+    if (next) analytics.navMenuOpened(); else analytics.navMenuClosed();
   };
 
   const closeMenu = () => {
@@ -145,8 +148,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
                       <li key={item.href} className="px-3">
                         <Link
                           to={item.href}
-                          onClick={closeMenu}
-                          className={`flex items-center space-x-4 px-4 py-3 rounded-lg transition-all duration-200 ${ 
+                          onClick={() => { closeMenu(); analytics.navItemClicked(item.href, item.label); }}
+                          className={`flex items-center space-x-4 px-4 py-3 rounded-lg transition-all duration-200 ${
                             isActive
                               ? 'bg-primary/10 text-text-light font-semibold'
                               : 'text-accent hover:bg-primary/5 hover:text-text-light'
@@ -194,8 +197,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage }) => {
                       <Link
                         key={item.href}
                         to={item.href}
-                        onClick={closeMenu}
-                        className={`flex flex-col items-center justify-center py-3 px-2 rounded-lg transition-all duration-200 ${ 
+                        onClick={() => { closeMenu(); analytics.navItemClicked(item.href, item.label); }}
+                        className={`flex flex-col items-center justify-center py-3 px-2 rounded-lg transition-all duration-200 ${
                           isActive
                             ? 'bg-primary/20 text-secondary'
                             : 'text-accent hover:bg-primary/10 hover:text-text-light'
